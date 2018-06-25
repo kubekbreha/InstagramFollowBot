@@ -2,8 +2,8 @@ package com.kubekbreha.instagrambot
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
 import org.jetbrains.anko.progressDialog
 import org.jetbrains.anko.toast
@@ -42,3 +42,4 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 }
+
