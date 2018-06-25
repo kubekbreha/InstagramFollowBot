@@ -8,6 +8,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import dev.niekirk.com.instagram4android.Instagram4Android
+import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest
+import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.progressDialog
 
@@ -16,12 +18,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var username: String
     private lateinit var password: String
+    lateinit var instagramUser: Instagram4Android
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(bottom_app_bar)
+        setSupportActionBar(activity_main_bottom_app_bar)
 
 
         //get values from loginActivity
@@ -32,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         //start logging
         val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
         dialog.show()
-        val instagramUser = Instagram4Android.builder().username(username).password(password).build()
+        instagramUser = Instagram4Android.builder().username(username).password(password).build()
         val thread = Thread(Runnable {
             try {
                 instagramUser.setup()
@@ -44,9 +48,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
         thread.start()
-//        button.setOnClickListener {
-//            toast(instagramUser.isLoggedIn.toString())
-//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -57,7 +58,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            R.id.app_bar_settings -> toast("settings")
+            R.id.app_bar_settings ->  toast(instagramUser.isLoggedIn.toString())
+            R.id.app_bar_logOut -> follow()
             android.R.id.home -> {
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
@@ -73,4 +75,17 @@ class MainActivity : AppCompatActivity() {
         toast.show()
     }
 
+
+    fun follow(){
+        val thread = Thread(Runnable {
+            try {
+                val result = instagramUser.sendRequest(InstagramSearchUsernameRequest("therock"))
+                val user = result.getUser()
+                instagramUser.sendRequest(InstagramFollowRequest(user.getPk()))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+    }
 }

@@ -8,7 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest
 import kotlinx.android.synthetic.main.fragment_bottomsheet.*
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUser
+import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
+import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
+
+
 
 
 class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
@@ -20,7 +26,7 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        navigation_view.setNavigationItemSelectedListener { menuItem ->
+        fragment_bottomsheet_navigation_view.setNavigationItemSelectedListener { menuItem ->
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
                 R.id.bottom_menu_follow -> context!!.toast(getString(R.string.bottom_menu_follow))
@@ -33,6 +39,10 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
             true
         }
     }
+
+
+
+
 
     // This is an extension method for easy Toast call
     fun Context.toast(message: CharSequence) {

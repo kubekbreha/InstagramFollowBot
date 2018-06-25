@@ -6,7 +6,6 @@
     android:background="?colorPrimary"
     tools:context=".LoginActivity">
 
-
     <EditText
         android:id="@+id/activity_login_editText_username"
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
         android:layout_marginTop="64dp"
         android:background="@drawable/edit_rounded_dark"
         android:ems="10"
-        android:hint="username"
+        android:hint="Username"
         android:maxLines="1"
         android:paddingStart="12dp"
         android:shadowColor="#ffffff"
@@ -25,7 +24,6 @@
         android:textColor="#ffffff"
         android:textColorHint="#6e6e6e"
         android:textColorLink="#ffffff" />
-
 
     <EditText
         android:id="@+id/activity_login_editText_password"
@@ -38,7 +36,7 @@
         android:layout_marginTop="64dp"
         android:background="@drawable/edit_rounded_dark"
         android:ems="10"
-        android:hint="passwsord"
+        android:hint="Passwsord"
         android:inputType="textPassword"
         android:maxLines="1"
         android:paddingStart="12dp"
@@ -48,19 +46,17 @@
         android:textColorHint="#6e6e6e"
         android:textColorLink="#ffffff" />
 
-
     <Button
         android:id="@+id/activity_login_button_logIn"
         android:layout_width="match_parent"
         android:layout_height="48dp"
+        android:layout_alignTop="@id/activity_login_editText_password"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="80dp"
-        android:layout_alignTop="@id/activity_login_editText_password"
-        android:text="LogIn"
         android:background="@drawable/button_rounded_dark"
+        android:text="LogIn"
         android:textAllCaps="false" />
-
 
 </RelativeLayout>
