@@ -1,6 +1,7 @@
 package com.kubekbreha.instagrambot
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.Gravity
 import android.view.Menu
@@ -93,5 +94,15 @@ class MainActivity : AppCompatActivity() {
             }
         })
         thread.start()
+    }
+
+    fun logOut(){
+        val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
+        editor.putString("username", "")
+        editor.putString("password", "")
+        editor.apply()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }

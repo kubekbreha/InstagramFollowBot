@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra("userName", username)
                 intent.putExtra("userPassword", password)
                 startActivity(intent)
-
+                finish()
             }
         }
     }
