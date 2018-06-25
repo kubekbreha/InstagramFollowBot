@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
         username = bundle.get("userName") as String
         password = bundle.get("userPassword") as String
 
+        //put shared preferences
+        val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
+        editor.putString("username", username)
+        editor.putString("password", password)
+        editor.apply()
+
         //start logging
         val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
         dialog.show()

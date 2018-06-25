@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -18,6 +19,18 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val prefs = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE)
+        username = prefs.getString("username", "")
+        password = prefs.getString("password", "")
+        if (username != "" && password != "") {
+            toast("$username $password")
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("userName", username)
+            intent.putExtra("userPassword", password)
+            startActivity(intent)
+        }
+
+
 
         activity_login_button_logIn.setOnClickListener(this)
     }
@@ -28,8 +41,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
                 username = activity_login_editText_username.text.toString()
                 password = activity_login_editText_password.text.toString()
-                toast(username + " " + password)
-
+                toast("$username $password")
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("userName", username)
                 intent.putExtra("userPassword", password)
