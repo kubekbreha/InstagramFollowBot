@@ -23,9 +23,10 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
         navigation_view.setNavigationItemSelectedListener { menuItem ->
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
-                R.id.nav1 -> context!!.toast(getString(R.string.nav1_clicked))
-                R.id.nav2 -> context!!.toast(getString(R.string.nav2_clicked))
-                R.id.nav3 -> context!!.toast(getString(R.string.nav3_clicked))
+                R.id.bottom_menu_follow -> context!!.toast(getString(R.string.bottom_menu_follow))
+                R.id.bottom_menu_unfollow -> context!!.toast(getString(R.string.bottom_menu_unfollow))
+                R.id.bottom_menu_comment -> context!!.toast(getString(R.string.bottom_menu_comment))
+                R.id.bottom_menu_like -> context!!.toast(getString(R.string.bottom_menu_like))
             }
             // Add code here to update the UI based on the item selected
             // For example, swap UI fragments here

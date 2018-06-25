@@ -25,9 +25,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.activity_login_button_logIn -> {
-                val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
 
-                dialog.show()
                 username = activity_login_editText_username.text.toString()
                 password = activity_login_editText_password.text.toString()
                 toast(username + " " + password)
