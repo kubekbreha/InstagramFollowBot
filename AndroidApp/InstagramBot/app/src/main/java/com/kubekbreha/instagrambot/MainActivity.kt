@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
 import com.kubekbreha.instagrambot.fragments.FollowFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
@@ -43,6 +44,12 @@ class MainActivity : AppCompatActivity() {
 
         //start logging
         User.logIn(username, password, this)
+
+
+        activity_main_fab.setOnClickListener {
+            val intent = Intent(this, ListsActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

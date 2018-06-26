@@ -45,7 +45,3 @@ dependencies {
     implementation "org.jetbrains.anko:anko-design:0.10.5" // For SnackBars
 
 }
-
-
-
-

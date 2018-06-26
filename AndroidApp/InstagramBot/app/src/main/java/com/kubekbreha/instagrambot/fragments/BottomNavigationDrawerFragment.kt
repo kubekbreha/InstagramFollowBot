@@ -1,6 +1,5 @@
-package com.kubekbreha.instagrambot
+package com.kubekbreha.instagrambot.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.kubekbreha.instagrambot.fragments.CommentFragment
-import com.kubekbreha.instagrambot.fragments.FollowFragment
-import com.kubekbreha.instagrambot.fragments.LikeFragment
+import com.kubekbreha.instagrambot.R
+import com.kubekbreha.instagrambot.User
 import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
@@ -28,9 +26,6 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-
-        onStart()
-
         return inflater.inflate(R.layout.fragment_bottomsheet, container, false)
     }
 
