@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import com.kubekbreha.instagrambot.fragments.FollowFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
@@ -22,6 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(activity_main_bottom_app_bar)
 
+        val newFragment = FollowFragment.newInstance()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.activity_main_frame, newFragment)
+        transaction.commit()
+
+
 
         //get values from loginActivity
         val bundle = intent.extras
@@ -36,7 +43,6 @@ class MainActivity : AppCompatActivity() {
 
         //start logging
         User.logIn(username, password, this)
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -49,7 +55,6 @@ class MainActivity : AppCompatActivity() {
         when (item!!.itemId) {
             R.id.app_bar_settings ->  toast(User.getUser().isLoggedIn.toString())
             R.id.app_bar_logOut -> logOut()
-
             android.R.id.home -> {
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
@@ -57,7 +62,6 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
-
 
     fun logOut(){
         val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
@@ -68,4 +72,5 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
 }

@@ -28,6 +28,9 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
+        onStart()
+
         return inflater.inflate(R.layout.fragment_bottomsheet, container, false)
     }
 
@@ -37,11 +40,6 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
         fragment_bottomsheet_navigation_view.setNavigationItemSelectedListener { menuItem ->
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
-//                R.id.bottom_menu_follow -> follow("therock")
-//                R.id.bottom_menu_unfollow -> unFollow("therock")
-//                R.id.bottom_menu_comment -> getPostIDs("therock")
-//                R.id.bottom_menu_like -> like(tagFeedClass.items[0].pk)
-
 
                 R.id.bottom_menu_follow -> {
                     val followFragment = FollowFragment.newInstance()
@@ -65,52 +63,12 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
 
-
-    override fun onStart() {
-        super.onStart()
-        val songsFragment = FollowFragment.newInstance()
-        openFragment(songsFragment)
-    }
-
-
     private fun openFragment(fragment: Fragment) {
         val transaction = fragmentManager!!.beginTransaction()
         transaction.replace(R.id.activity_main_frame, fragment)
-
-        //transaction.addToBackStack(null)
         transaction.commit()
     }
 
-
-
-
-
-    fun follow(user: String){
-        val thread = Thread(Runnable {
-            try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
-                val user = result.user
-                User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        })
-        thread.start()
-    }
-
-
-    fun unFollow(user: String){
-        val thread = Thread(Runnable {
-            try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
-                val user = result.user
-                User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        })
-        thread.start()
-    }
 
 
 
@@ -127,7 +85,7 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
     private fun getPostIDs(userName: String){
-        var tagFeed: InstagramFeedResult? = null
+        var tagFeed: InstagramFeedResult?
         val thread = Thread(Runnable {
             try {
                 val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))

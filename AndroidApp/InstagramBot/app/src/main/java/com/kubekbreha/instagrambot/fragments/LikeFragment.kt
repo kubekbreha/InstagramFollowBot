@@ -24,3 +24,7 @@ class LikeFragment : Fragment() {
 
 
 }
+
+
+//                R.id.bottom_menu_comment -> getPostIDs("therock")
+//                R.id.bottom_menu_like -> like(tagFeedClass.items[0].pk)
