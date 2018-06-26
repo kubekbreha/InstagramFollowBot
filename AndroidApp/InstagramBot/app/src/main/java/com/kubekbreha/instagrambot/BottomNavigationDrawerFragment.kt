@@ -35,8 +35,8 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
             when (menuItem.itemId) {
                 R.id.bottom_menu_follow -> follow("therock")
                 R.id.bottom_menu_unfollow -> unFollow("therock")
-                R.id.bottom_menu_comment -> like(tagFeedClass.items[0].pk)
-                R.id.bottom_menu_like -> getFirstPostID("kosice")
+                R.id.bottom_menu_comment -> getPostIDs("therock")
+                R.id.bottom_menu_like -> like(tagFeedClass.items[0].pk)
             }
             // Add code here to update the UI based on the item selected
             // For example, swap UI fragments here
@@ -75,34 +75,32 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
     fun like(pk: Long) {
-        User.getUser().sendRequest(InstagramLikeRequest(pk))
+        val thread = Thread(Runnable {
+            try {
+                User.getUser().sendRequest(InstagramLikeRequest(pk))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
     }
 
 
-    fun getTagPostIDs(tag: String):  InstagramFeedResult?{
-        val tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "5"))
-        for (feedResult in tagFeed.items) {
-            println("Post ID: " + feedResult.getPk())
-        }
-        return tagFeed
-    }
-
-
-    private fun getFirstPostID(tag: String){
+    private fun getPostIDs(userName: String){
         var tagFeed: InstagramFeedResult? = null
         val thread = Thread(Runnable {
             try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest("therock"))
-                val user = result.user
-                tagFeed = User.getUser().sendRequest(InstagramUserFeedRequest(user.pk, 5.toString(), 5000))
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))
+                tagFeed = User.getUser().sendRequest(InstagramUserFeedRequest(result.user.pk, 5.toString(), 50))
                 for (feedResult in tagFeed!!.items) {
                     Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())
                 }
-                Log.e("POSTDEBUG", "Post ID count: " +  tagFeed!!.items)
+                tagFeedClass = tagFeed!!
+                Log.e("POSTDEBUG", "Finished")
+
+
             } catch (e: Exception) {
                 e.printStackTrace()
-            }finally {
-                tagFeedClass = tagFeed!!
             }
         })
         thread.start()
