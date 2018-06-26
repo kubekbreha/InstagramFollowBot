@@ -17,14 +17,14 @@
         android:textAllCaps="false" />
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_comment_recyclerView"
         android:layout_marginTop="72dp"
         android:layout_alignTop="@id/fragment_comment_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </RelativeLayout>
