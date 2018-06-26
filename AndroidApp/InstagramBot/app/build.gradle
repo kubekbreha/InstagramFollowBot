@@ -44,4 +44,9 @@ dependencies {
 
     //sql lite
     implementation "org.jetbrains.anko:anko-sqlite:0.10.5"
+
+    //cardView
+    //noinspection GradleCompatible
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
 }
