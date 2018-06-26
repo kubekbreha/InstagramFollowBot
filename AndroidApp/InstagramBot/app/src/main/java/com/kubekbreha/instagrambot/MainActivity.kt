@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
 
         activity_main_fab.setOnClickListener {
-            val intent = Intent(this, ListsActivity::class.java)
+            val intent = Intent(this, AddListActivity::class.java)
             startActivity(intent)
         }
     }
