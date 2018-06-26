@@ -12,6 +12,9 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import kotlinx.android.synthetic.main.fragment_bottomsheet.*
+import dev.niekirk.com.instagram4android.requests.InstagramUserFeedRequest
+
+
 
 
 class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
@@ -33,7 +36,7 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
                 R.id.bottom_menu_follow -> follow("therock")
                 R.id.bottom_menu_unfollow -> unFollow("therock")
                 R.id.bottom_menu_comment -> like(tagFeedClass.items[0].pk)
-                R.id.bottom_menu_like -> getFirstPostID("#kosice")
+                R.id.bottom_menu_like -> getFirstPostID("kosice")
             }
             // Add code here to update the UI based on the item selected
             // For example, swap UI fragments here
@@ -89,7 +92,9 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
         var tagFeed: InstagramFeedResult? = null
         val thread = Thread(Runnable {
             try {
-                tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "10"))
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest("therock"))
+                val user = result.user
+                tagFeed = User.getUser().sendRequest(InstagramUserFeedRequest(user.pk, 5.toString(), 5000))
                 for (feedResult in tagFeed!!.items) {
                     Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())
                 }

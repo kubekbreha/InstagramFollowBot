@@ -53,7 +53,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
             R.id.app_bar_settings ->  toast(User.getUser().isLoggedIn.toString())
-            R.id.app_bar_logOut -> toast("hello")
+            R.id.app_bar_logOut -> logOut()
+
             android.R.id.home -> {
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
