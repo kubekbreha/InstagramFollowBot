@@ -59,3 +59,11 @@ y
 Iapp/src/main/java/com/kubekbreha/instagrambot/fragments/FollowFragment.kt,5/7/57c2a10b8e769c3b98173f768d9d037accc1f2d3
 ‰
 Yapp/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragment.kt,5/6/56235fe4e608d068144092dfac6e7bf2e1492ba1
+z
+Japp/src/main/java/com/kubekbreha/instagrambot/util/DatabaseHandlerLists.kt,8/f/8f9c3f197a4504a1b9330bc9a552b60afc4e7ca9
+j
+:app/src/main/java/com/kubekbreha/instagrambot/UsersList.kt,3/7/371f3fc95f4a0810ff16ad0eabd0948469357c0b
+m
+=app/src/main/java/com/kubekbreha/instagrambot/ListsAdapter.kt,6/d/6daaa0466fcc6e3263f7e4c59c65f0112cf80d14
+U
+%app/src/main/res/layout/list_item.xml,0/e/0e2dbde10fa21a69e5da23f2681513bb29e1a4c4

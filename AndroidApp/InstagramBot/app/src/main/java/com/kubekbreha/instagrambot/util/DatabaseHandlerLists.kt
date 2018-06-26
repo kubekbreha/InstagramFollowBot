@@ -14,7 +14,7 @@ val COL_ID = "id"
 val COL_NAME = "name"
 val COL_LIST = "users"
 
-class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,1){
+class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,1){
     override fun onCreate(db: SQLiteDatabase?) {
 
         val createTable = "CREATE TABLE " + TABLE_NAME +" (" +
