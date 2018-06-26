@@ -28,6 +28,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             intent.putExtra("userName", username)
             intent.putExtra("userPassword", password)
             startActivity(intent)
+            finish()
         }
 
         activity_login_button_logIn.setOnClickListener(this)

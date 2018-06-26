@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -7,26 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dev.niekirk.com.instagram4android.requests.*
-import dev.niekirk.com.instagram4android.requests.payload.InstagramComment
-import kotlinx.android.synthetic.main.fragment_bottomsheet.*
-import org.jetbrains.anko.toast
-import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
-import dev.niekirk.com.instagram4android.requests.payload.InstagramGetUserFollowersResult
-import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
-import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedItem
-import dev.niekirk.com.instagram4android.requests.InstagramTagFeedRequest
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
-
-
-
-
-
-
+import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
+import kotlinx.android.synthetic.main.fragment_bottomsheet.*
 
 
 class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
-    private val TAG = BottomNavigationDrawerFragment::class.qualifiedName
+    private val TAG = "BotNavDrawFrag"
+    lateinit var tagFeedClass: InstagramFeedResult
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_bottomsheet, container, false)
@@ -40,8 +32,8 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
             when (menuItem.itemId) {
                 R.id.bottom_menu_follow -> follow("therock")
                 R.id.bottom_menu_unfollow -> unFollow("therock")
-                R.id.bottom_menu_comment -> context!!.toast(getString(R.string.bottom_menu_comment))
-                R.id.bottom_menu_like -> context!!.toast(getString(R.string.bottom_menu_like))
+                R.id.bottom_menu_comment -> like(tagFeedClass.items[0].pk)
+                R.id.bottom_menu_like -> getFirstPostID("#kosice")
             }
             // Add code here to update the UI based on the item selected
             // For example, swap UI fragments here
@@ -79,12 +71,36 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
 
 
 
-    fun comment(tag: String): InstagramFeedResult? {
+    fun like(pk: Long) {
+        User.getUser().sendRequest(InstagramLikeRequest(pk))
+    }
+
+
+    fun getTagPostIDs(tag: String):  InstagramFeedResult?{
         val tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "5"))
         for (feedResult in tagFeed.items) {
             println("Post ID: " + feedResult.getPk())
         }
         return tagFeed
+    }
+
+
+    private fun getFirstPostID(tag: String){
+        var tagFeed: InstagramFeedResult? = null
+        val thread = Thread(Runnable {
+            try {
+                tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "10"))
+                for (feedResult in tagFeed!!.items) {
+                    Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())
+                }
+                Log.e("POSTDEBUG", "Post ID count: " +  tagFeed!!.items)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }finally {
+                tagFeedClass = tagFeed!!
+            }
+        })
+        thread.start()
     }
 
 
