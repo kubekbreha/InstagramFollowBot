@@ -13,6 +13,7 @@ import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.progressDialog
+import org.jetbrains.anko.toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,20 +41,6 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
 
         //start logging
-//        val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
-//        dialog.show()
-//        instagramUser = Instagram4Android.builder().username(username).password(password).build()
-//        val thread = Thread(Runnable {
-//            try {
-//                instagramUser.setup()
-//                instagramUser.login()
-//            } catch (e: Exception) {
-//                e.printStackTrace()
-//            } finally {
-//                dialog.dismiss()
-//            }
-//        })
-//        thread.start()
         User.logIn(username, password, this)
     }
 
@@ -66,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
             R.id.app_bar_settings ->  toast(User.getUser().isLoggedIn.toString())
-            R.id.app_bar_logOut -> follow()
+            R.id.app_bar_logOut -> toast("hello")
             android.R.id.home -> {
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
@@ -75,26 +62,6 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    // This is an extension method for easy Toast call
-    fun Context.toast(message: CharSequence) {
-        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
-        toast.setGravity(Gravity.BOTTOM, 0, 325)
-        toast.show()
-    }
-
-
-    fun follow(){
-        val thread = Thread(Runnable {
-            try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest("therock"))
-                val user = result.getUser()
-                User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        })
-        thread.start()
-    }
 
     fun logOut(){
         val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()

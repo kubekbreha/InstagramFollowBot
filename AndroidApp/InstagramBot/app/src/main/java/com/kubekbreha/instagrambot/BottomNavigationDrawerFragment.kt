@@ -1,23 +1,32 @@
 package com.kubekbreha.instagrambot
 
-import android.content.Context
 import android.os.Bundle
-import android.view.Gravity
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest
+import dev.niekirk.com.instagram4android.requests.*
+import dev.niekirk.com.instagram4android.requests.payload.InstagramComment
 import kotlinx.android.synthetic.main.fragment_bottomsheet.*
-import dev.niekirk.com.instagram4android.requests.payload.InstagramUser
-import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
+import org.jetbrains.anko.toast
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
+import dev.niekirk.com.instagram4android.requests.payload.InstagramGetUserFollowersResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedItem
+import dev.niekirk.com.instagram4android.requests.InstagramTagFeedRequest
+import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
+
+
+
+
 
 
 
 
 class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
+
+    private val TAG = BottomNavigationDrawerFragment::class.qualifiedName
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_bottomsheet, container, false)
@@ -29,8 +38,8 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
         fragment_bottomsheet_navigation_view.setNavigationItemSelectedListener { menuItem ->
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
-                R.id.bottom_menu_follow -> context!!.toast(getString(R.string.bottom_menu_follow))
-                R.id.bottom_menu_unfollow -> context!!.toast(getString(R.string.bottom_menu_unfollow))
+                R.id.bottom_menu_follow -> follow("therock")
+                R.id.bottom_menu_unfollow -> unFollow("therock")
                 R.id.bottom_menu_comment -> context!!.toast(getString(R.string.bottom_menu_comment))
                 R.id.bottom_menu_like -> context!!.toast(getString(R.string.bottom_menu_like))
             }
@@ -41,14 +50,59 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
     }
 
 
+    fun follow(user: String){
+        val thread = Thread(Runnable {
+            try {
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
+                val user = result.user
+                User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+    }
+
+
+    fun unFollow(user: String){
+        val thread = Thread(Runnable {
+            try {
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
+                val user = result.user
+                User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+    }
 
 
 
-    // This is an extension method for easy Toast call
-    fun Context.toast(message: CharSequence) {
-        val toast = Toast.makeText(this, message, Toast.LENGTH_SHORT)
-        toast.setGravity(Gravity.BOTTOM, 0, 600)
-        toast.show()
+    fun comment(tag: String): InstagramFeedResult? {
+        val tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "5"))
+        for (feedResult in tagFeed.items) {
+            println("Post ID: " + feedResult.getPk())
+        }
+        return tagFeed
+    }
+
+
+    fun getUserFollowers(userResult : InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
+        val githubFollowers = User.getUser().sendRequest(InstagramGetUserFollowersRequest(userResult.user.getPk()))
+        val users = githubFollowers.getUsers()
+        for (user in users) {
+            println("User " + user.getUsername() + " follows " + userResult.user.username)
+        }
+        return users
+    }
+
+
+    fun searchUser(userName: String): InstagramSearchUsernameResult {
+        val userResult = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))
+        Log.i(TAG,"ID for @"+ userResult.user.username +" " + userResult.user.getPk())
+        Log.i(TAG, "Number of followers: " + userResult.user.getFollower_count())
+        return userResult
     }
 
 }

@@ -30,10 +30,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
 
-
-
         activity_login_button_logIn.setOnClickListener(this)
     }
+
 
     override fun onClick(v: View?) {
         when (v!!.id) {
@@ -50,6 +49,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+
 
 }
 
