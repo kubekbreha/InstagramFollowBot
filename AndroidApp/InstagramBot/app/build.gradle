@@ -35,6 +35,9 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
 
+    //noinspection GradleCompatible
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
     //instagram4android
     implementation 'com.github.charlieAndroidDev:Instagram4Android:0.2.7'
 

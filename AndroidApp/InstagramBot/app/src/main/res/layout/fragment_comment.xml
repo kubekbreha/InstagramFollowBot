@@ -8,13 +8,23 @@
         android:id="@+id/fragment_comment_button"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
         android:text="Comment"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_comment_recyclerView"
+        android:layout_marginTop="72dp"
+        android:layout_alignTop="@id/fragment_comment_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
 
 
 </RelativeLayout>
