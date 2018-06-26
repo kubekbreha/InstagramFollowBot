@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var username: String
     private lateinit var password: String
-    lateinit var instagramUser: Instagram4Android
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,20 +40,21 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
 
         //start logging
-        val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
-        dialog.show()
-        instagramUser = Instagram4Android.builder().username(username).password(password).build()
-        val thread = Thread(Runnable {
-            try {
-                instagramUser.setup()
-                instagramUser.login()
-            } catch (e: Exception) {
-                e.printStackTrace()
-            } finally {
-                dialog.dismiss()
-            }
-        })
-        thread.start()
+//        val dialog = progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
+//        dialog.show()
+//        instagramUser = Instagram4Android.builder().username(username).password(password).build()
+//        val thread = Thread(Runnable {
+//            try {
+//                instagramUser.setup()
+//                instagramUser.login()
+//            } catch (e: Exception) {
+//                e.printStackTrace()
+//            } finally {
+//                dialog.dismiss()
+//            }
+//        })
+//        thread.start()
+        User.logIn(username, password, this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            R.id.app_bar_settings ->  toast(instagramUser.isLoggedIn.toString())
+            R.id.app_bar_settings ->  toast(User.getUser().isLoggedIn.toString())
             R.id.app_bar_logOut -> follow()
             android.R.id.home -> {
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
@@ -86,9 +86,9 @@ class MainActivity : AppCompatActivity() {
     fun follow(){
         val thread = Thread(Runnable {
             try {
-                val result = instagramUser.sendRequest(InstagramSearchUsernameRequest("therock"))
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest("therock"))
                 val user = result.getUser()
-                instagramUser.sendRequest(InstagramFollowRequest(user.getPk()))
+                User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
             } catch (e: Exception) {
                 e.printStackTrace()
             }
