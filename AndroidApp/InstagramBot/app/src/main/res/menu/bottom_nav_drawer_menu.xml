@@ -6,9 +6,6 @@
             android:id="@+id/bottom_menu_follow"
             android:title="@string/bottom_menu_follow" />
         <item
-            android:id="@+id/bottom_menu_unfollow"
-            android:title="@string/bottom_menu_unfollow" />
-        <item
             android:id="@+id/bottom_menu_comment"
             android:title="@string/bottom_menu_comment" />
         <item

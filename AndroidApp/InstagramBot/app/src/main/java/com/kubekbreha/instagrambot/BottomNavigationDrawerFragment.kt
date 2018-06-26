@@ -6,7 +6,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.kubekbreha.instagrambot.fragments.CommentFragment
+import com.kubekbreha.instagrambot.fragments.FollowFragment
+import com.kubekbreha.instagrambot.fragments.LikeFragment
 import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
@@ -33,16 +37,52 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
         fragment_bottomsheet_navigation_view.setNavigationItemSelectedListener { menuItem ->
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
-                R.id.bottom_menu_follow -> follow("therock")
-                R.id.bottom_menu_unfollow -> unFollow("therock")
-                R.id.bottom_menu_comment -> getPostIDs("therock")
-                R.id.bottom_menu_like -> like(tagFeedClass.items[0].pk)
+//                R.id.bottom_menu_follow -> follow("therock")
+//                R.id.bottom_menu_unfollow -> unFollow("therock")
+//                R.id.bottom_menu_comment -> getPostIDs("therock")
+//                R.id.bottom_menu_like -> like(tagFeedClass.items[0].pk)
+
+
+                R.id.bottom_menu_follow -> {
+                    val followFragment = FollowFragment.newInstance()
+                    openFragment(followFragment)
+                }
+                R.id.bottom_menu_comment -> {
+                    val commentFragment = CommentFragment.newInstance()
+                    openFragment(commentFragment)
+                }
+                R.id.bottom_menu_like -> {
+                    val likeFragment = LikeFragment.newInstance()
+                    openFragment(likeFragment)
+                }
+
             }
             // Add code here to update the UI based on the item selected
             // For example, swap UI fragments here
             true
         }
     }
+
+
+
+
+    override fun onStart() {
+        super.onStart()
+        val songsFragment = FollowFragment.newInstance()
+        openFragment(songsFragment)
+    }
+
+
+    private fun openFragment(fragment: Fragment) {
+        val transaction = fragmentManager!!.beginTransaction()
+        transaction.replace(R.id.activity_main_frame, fragment)
+
+        //transaction.addToBackStack(null)
+        transaction.commit()
+    }
+
+
+
 
 
     fun follow(user: String){

@@ -3,16 +3,10 @@ package com.kubekbreha.instagrambot
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.Gravity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import dev.niekirk.com.instagram4android.Instagram4Android
-import dev.niekirk.com.instagram4android.requests.InstagramFollowRequest
-import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.progressDialog
 import org.jetbrains.anko.toast
 
 
@@ -42,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
         //start logging
         User.logIn(username, password, this)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
