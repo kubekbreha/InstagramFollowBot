@@ -51,10 +51,6 @@ Y
 +app/src/main/res/layout/fragment_follow.xml,2/8/28c17157296d70ad92286c5f6f05df52a83f1bf6
 e
 5app/src/main/java/com/kubekbreha/instagrambot/User.kt,4/3/435e5e347b21367d9e92d1b8aa913d1ce08e73bd
-Z
-*app/src/main/res/layout/activity_lists.xml,f/a/fa3fbd451eda2cf4bad4a8406ef415ff1fa6e922
-n
->app/src/main/java/com/kubekbreha/instagrambot/ListsActivity.kt,4/d/4d49851420f1b4f6451ffc0fa1a7042e1155350f
 y
 Iapp/src/main/java/com/kubekbreha/instagrambot/fragments/FollowFragment.kt,5/7/57c2a10b8e769c3b98173f768d9d037accc1f2d3
 ‰
@@ -67,3 +63,7 @@ m
 =app/src/main/java/com/kubekbreha/instagrambot/ListsAdapter.kt,6/d/6daaa0466fcc6e3263f7e4c59c65f0112cf80d14
 U
 %app/src/main/res/layout/list_item.xml,0/e/0e2dbde10fa21a69e5da23f2681513bb29e1a4c4
+]
+-app/src/main/res/layout/activity_add_list.xml,7/e/7efcebf558b37fa69b22fadf06ba50e658aa423f
+p
+@app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt,a/1/a114985f2af6633f7272ae585c211def07475a3c

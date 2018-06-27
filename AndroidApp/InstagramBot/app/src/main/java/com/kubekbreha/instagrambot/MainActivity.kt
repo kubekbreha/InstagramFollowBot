@@ -2,9 +2,11 @@ package com.kubekbreha.instagrambot
 
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
 import com.kubekbreha.instagrambot.fragments.FollowFragment
@@ -28,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.activity_main_frame, newFragment)
         transaction.commit()
-
-
 
         //get values from loginActivity
         val bundle = intent.extras
