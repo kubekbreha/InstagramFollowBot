@@ -14,7 +14,7 @@ class AddListActivity : AppCompatActivity() {
         val database = DatabaseHandlerLists(this)
 
         activity_add_list_button.setOnClickListener{
-            database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
+            database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", 2))
         }
 
     }

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:orientation="vertical">
 
 
@@ -13,6 +14,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        card_view:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="8dp">
 
 
@@ -21,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="17dp"
+            android:background="#00ffffff"
             android:text="hello"
             android:textStyle="bold"
             android:textSize="20sp" />

@@ -13,5 +13,11 @@ class UsersList {
         this.list = list
     }
 
+    constructor(name: String, list: String, id:Int) {
+        this.name = name
+        this.list = list
+        this.id = id
+    }
+
     constructor()
 }

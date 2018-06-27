@@ -15,6 +15,7 @@ val COL_NAME = "name"
 val COL_LIST = "users"
 
 class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context,DATABASE_NAME,null,1){
+
     override fun onCreate(db: SQLiteDatabase?) {
 
         val createTable = "CREATE TABLE " + TABLE_NAME +" (" +
@@ -26,9 +27,25 @@ class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context,DATA
 
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?,oldVersion: Int,newVersion: Int) {
+
+    override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+
+    fun updateTask(list: UsersList) {
+        val db = this.writableDatabase
+        val values = ContentValues()
+        values.put(COL_NAME, list.name)
+        values.put(COL_LIST, list.list)
+        val _success = db.update(TABLE_NAME, values, "Id" + "=?", arrayOf(list.id.toString())).toLong()
+        db.close()
+        if(_success == (-1).toLong())
+            Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show()
+        else
+            Toast.makeText(context,"Success",Toast.LENGTH_SHORT).show()
+    }
+
 
     fun insertData(list : UsersList){
         val db = this.writableDatabase
