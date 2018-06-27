@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         activity_main_fab.setOnClickListener {
             val intent = Intent(this, AddListActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
     }
 
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
         editor.apply()
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
     }
 

@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -28,6 +29,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             intent.putExtra("userName", username)
             intent.putExtra("userPassword", password)
             startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
         }
 
@@ -46,6 +48,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                 intent.putExtra("userName", username)
                 intent.putExtra("userPassword", password)
                 startActivity(intent)
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 finish()
             }
         }

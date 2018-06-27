@@ -16,6 +16,11 @@ class AddListActivity : AppCompatActivity() {
         activity_add_list_button.setOnClickListener{
             database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", 2))
         }
+    }
 
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
     }
 }
