@@ -12,6 +12,10 @@ import com.kubekbreha.instagrambot.ListsAdapter
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersList
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
+import android.widget.Toast
+import android.widget.AdapterView
+
+
 
 
 class CommentFragment : Fragment() {
@@ -39,6 +43,8 @@ class CommentFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         //rv_animal_list.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = ListsAdapter(listsArray, context!!)
+
+
 
         return view
     }
