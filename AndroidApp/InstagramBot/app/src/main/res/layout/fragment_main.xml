@@ -5,23 +5,20 @@
     android:background="@color/colorPrimaryDark"
     tools:context="com.kubekbreha.instagrambot.fragments.MainFragment">
 
-    <Button
-        android:id="@+id/fragment_comment_button"
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Comment"
-        android:textAllCaps="false" />
+        android:layout_height="72dp"
+        android:textStyle="bold"
+        android:text="Lists of peoples:"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:padding="16dp"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_comment_recyclerView"
         android:layout_marginTop="72dp"
-        android:layout_alignTop="@id/fragment_comment_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

@@ -12,28 +12,38 @@
         android:id="@+id/activity_add_list_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="listName"
         android:inputType="textPersonName"
         android:tag="#"
-        android:hint="listName"
-        android:textStyle="bold"
-        android:textColor="#ffffff"/>
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
 
     <Button
         android:id="@+id/activity_add_list_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/activity_add_list_editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:textStyle="bold"
-        android:textAllCaps="false"/>
+        android:layout_alignBottom="@+id/activity_add_list_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_add_list_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_alignTop="@id/activity_add_list_button"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="72dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 
 </RelativeLayout>

@@ -8,11 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.kubekbreha.instagrambot.ListsAdapter
+import com.kubekbreha.instagrambot.adapters.ListsAdapter
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersList
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainFragment : Fragment() {
@@ -38,7 +37,7 @@ class MainFragment : Fragment() {
         recyclerView = view.findViewById(R.id.fragment_comment_recyclerView)
         getLists()
         recyclerView.layoutManager = LinearLayoutManager(context)
-        //rv_animal_list.layoutManager = GridLayoutManager(this, 2)
+        //recyclerView.layoutManager = GridLayoutManager(context, 2)
         recyclerView.adapter = ListsAdapter(listsArray, context!!)
 
         return view
@@ -50,6 +49,7 @@ class MainFragment : Fragment() {
         allLists = database.readData()
         getLists()
         recyclerView.layoutManager = LinearLayoutManager(context)
+        //recyclerView.layoutManager = GridLayoutManager(context, 2)
         recyclerView.adapter = ListsAdapter(listsArray, context!!)
     }
 
