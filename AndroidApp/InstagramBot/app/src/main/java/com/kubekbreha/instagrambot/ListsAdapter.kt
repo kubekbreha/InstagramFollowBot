@@ -24,7 +24,7 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.listType.text = items[position]
+        holder.listType.text = "#" + items[position]
 
         holder.itemView.setOnClickListener {
             val intent = Intent(context, AddListActivity::class.java)

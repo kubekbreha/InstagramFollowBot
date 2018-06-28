@@ -17,8 +17,10 @@
         android:layout_marginTop="67dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:tag="+61 "
-        android:text="1234"/>
+        android:tag="#"
+        android:hint="listName"
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
 
 
     <Button
@@ -28,7 +30,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="154dp"
-        android:text="Button" />
+        android:text="Button"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
 
 
 
