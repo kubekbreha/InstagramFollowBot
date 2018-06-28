@@ -36,18 +36,9 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
 
-                R.id.bottom_menu_follow -> {
-                    val followFragment = FollowFragment.newInstance()
-                    openFragment(followFragment)
-                }
-                R.id.bottom_menu_comment -> {
-                    val commentFragment = CommentFragment.newInstance()
-                    openFragment(commentFragment)
-                }
-                R.id.bottom_menu_like -> {
-                    val likeFragment = LikeFragment.newInstance()
-                    openFragment(likeFragment)
-                }
+                R.id.bottom_menu_follow -> {                }
+                R.id.bottom_menu_comment -> {                }
+                R.id.bottom_menu_like -> {                }
 
             }
             // Add code here to update the UI based on the item selected
@@ -118,3 +109,32 @@ class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
     }
 
 }
+
+
+
+//fun follow(user: String) {
+//    val thread = Thread(Runnable {
+//        try {
+//            val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
+//            val user = result.user
+//            User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
+//    })
+//    thread.start()
+//}
+//
+//
+//fun unFollow(user: String) {
+//    val thread = Thread(Runnable {
+//        try {
+//            val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
+//            val user = result.user
+//            User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
+//    })
+//    thread.start()
+//}

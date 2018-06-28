@@ -12,13 +12,9 @@ import com.kubekbreha.instagrambot.ListsAdapter
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersList
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
-import android.widget.Toast
-import android.widget.AdapterView
 
 
-
-
-class CommentFragment : Fragment() {
+class MainFragment : Fragment() {
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerView : RecyclerView
@@ -27,13 +23,13 @@ class CommentFragment : Fragment() {
 
 
     companion object {
-        fun newInstance(): CommentFragment = CommentFragment()
+        fun newInstance(): MainFragment = MainFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_comment, container, false)
+        val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         database = DatabaseHandlerLists(context!!)
         allLists = database.readData()
@@ -58,3 +54,6 @@ class CommentFragment : Fragment() {
     }
 
 }
+
+
+

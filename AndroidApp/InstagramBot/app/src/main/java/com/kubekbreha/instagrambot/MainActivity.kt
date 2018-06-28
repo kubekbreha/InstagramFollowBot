@@ -2,14 +2,12 @@ package com.kubekbreha.instagrambot
 
 import android.content.Context
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
-import com.kubekbreha.instagrambot.fragments.FollowFragment
+import com.kubekbreha.instagrambot.fragments.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(activity_main_bottom_app_bar)
 
-        val newFragment = FollowFragment.newInstance()
+        val newFragment = MainFragment.newInstance()
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.activity_main_frame, newFragment)
         transaction.commit()
