@@ -29,7 +29,7 @@ class AddListActivity : AppCompatActivity() {
         editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
 
         activity_add_list_button.setOnClickListener{
-            database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId))
+            database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
         }
     }
 
