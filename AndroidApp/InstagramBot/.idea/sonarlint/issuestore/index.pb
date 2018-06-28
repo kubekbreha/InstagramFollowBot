@@ -67,3 +67,5 @@ U
 -app/src/main/res/layout/activity_add_list.xml,7/e/7efcebf558b37fa69b22fadf06ba50e658aa423f
 p
 @app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt,a/1/a114985f2af6633f7272ae585c211def07475a3c
+Q
+!app/src/main/res/anim/fade_in.xml,8/1/8100e04b0cee48bb99d93aca317b87373fbba39a
