@@ -20,7 +20,6 @@ class MainFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var database: DatabaseHandlerLists
     private lateinit var allLists: MutableList<UsersList>
-    private var allowRefresh = true
 
     companion object {
         fun newInstance(): MainFragment = MainFragment()
@@ -28,7 +27,6 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         database = DatabaseHandlerLists(context!!)
@@ -54,7 +52,6 @@ class MainFragment : Fragment() {
     }
 
 
-    // Adds animals to the empty animals ArrayList
     fun getLists() {
         allLists.forEach { oneList ->
             listsArray.add(oneList.name)

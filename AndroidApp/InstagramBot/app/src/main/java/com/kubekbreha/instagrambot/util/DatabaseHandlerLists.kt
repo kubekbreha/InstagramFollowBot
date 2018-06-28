@@ -4,10 +4,8 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import android.util.Log
 import android.widget.Toast
 import com.kubekbreha.instagrambot.UsersList
-
 
 val DATABASE_NAME = "InstagramBotDatabase"
 val TABLE_NAME = "Lists"
@@ -28,11 +26,9 @@ class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context, DAT
 
     }
 
-
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
-
 
     fun updateTask(list: UsersList) {
         val db = this.writableDatabase
