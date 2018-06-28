@@ -12,7 +12,9 @@ import org.jetbrains.anko.toast
 
 class AddListActivity : AppCompatActivity() {
 
-    var openedListId: Int = 0
+    private val ADD_NEW_LIST = -1
+
+    private var openedListId: Int = ADD_NEW_LIST
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,15 +23,24 @@ class AddListActivity : AppCompatActivity() {
         val database = DatabaseHandlerLists(this)
 
         val bundle = intent.extras
-        openedListId = bundle.get("openedListId") as Int
+        if(bundle != null) {
+            openedListId = bundle.get("openedListId") as Int
+        }
 
-        val oneListItem = database.readOneListData(openedListId)
 
-        val editText = findViewById<View>(R.id.activity_add_list_editText) as EditText
-        editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
+        if(openedListId != ADD_NEW_LIST) {
+            val oneListItem = database.readOneListData(openedListId)
 
-        activity_add_list_button.setOnClickListener{
-            database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
+            val editText = findViewById<View>(R.id.activity_add_list_editText) as EditText
+            editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
+
+            activity_add_list_button.setOnClickListener {
+                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId + 1))
+            }
+        }else{
+            activity_add_list_button.setOnClickListener {
+                database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
+            }
         }
     }
 
