@@ -29,6 +29,8 @@ class AddListActivity : AppCompatActivity() {
 
 
         if(openedListId != ADD_NEW_LIST) {
+            activity_add_list_button.text = "Update"
+            activity_add_list_button.isAllCaps = false
             val oneListItem = database.readOneListData(openedListId)
 
             val editText = findViewById<View>(R.id.activity_add_list_editText) as EditText
@@ -38,6 +40,8 @@ class AddListActivity : AppCompatActivity() {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId + 1))
             }
         }else{
+            activity_add_list_button.text = "Add"
+            activity_add_list_button.isAllCaps = false
             activity_add_list_button.setOnClickListener {
                 database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
             }

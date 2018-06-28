@@ -10,11 +10,13 @@
 
     <com.kubekbreha.instagrambot.util.PrefixEditText
         android:id="@+id/activity_add_list_editText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:tag="#"
@@ -27,16 +29,11 @@
         android:id="@+id/activity_add_list_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignTop="@id/activity_add_list_editText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="154dp"
-        android:text="Button"
+        android:layout_marginTop="64dp"
         android:textStyle="bold"
         android:textAllCaps="false"/>
-
-
-
-
 
 
 </RelativeLayout>
