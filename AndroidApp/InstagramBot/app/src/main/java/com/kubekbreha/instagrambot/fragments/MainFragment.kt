@@ -12,15 +12,16 @@ import com.kubekbreha.instagrambot.ListsAdapter
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersList
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainFragment : Fragment() {
 
     var listsArray: ArrayList<String> = ArrayList()
-    private lateinit var recyclerView : RecyclerView
+    private lateinit var recyclerView: RecyclerView
     private lateinit var database: DatabaseHandlerLists
     private lateinit var allLists: MutableList<UsersList>
-
+    private var allowRefresh = true
 
     companion object {
         fun newInstance(): MainFragment = MainFragment()
@@ -40,9 +41,16 @@ class MainFragment : Fragment() {
         //rv_animal_list.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = ListsAdapter(listsArray, context!!)
 
-
-
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        database = DatabaseHandlerLists(context!!)
+        allLists = database.readData()
+        getLists()
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = ListsAdapter(listsArray, context!!)
     }
 
 
