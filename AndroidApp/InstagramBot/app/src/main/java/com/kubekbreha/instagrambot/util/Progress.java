@@ -2,8 +2,6 @@ package com.kubekbreha.instagrambot.util;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.ColorStateList;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -30,53 +28,18 @@ public class Progress {
     }
 
     void init() {
-        msg = (TextView) view.findViewById(R.id.msg);
-        progressBar = ((ProgressBar) view.findViewById(R.id.loader));
-        ll = ((LinearLayout) view.findViewById(R.id.ll));
+        msg =  view.findViewById(R.id.msg);
+        progressBar = ( view.findViewById(R.id.loader));
+        ll = ( view.findViewById(R.id.ll));
         builder = new AlertDialog.Builder(view.getContext());
     }
 
-    public void light(String message) {
-        setBackgroundColor(view.getResources().getColor(R.color.white));
-        setProgressColor(view.getResources().getColor(R.color.black));
-        setMessageColor(view.getResources().getColor(R.color.black));
-        setMessage(message);
-        show();
-    }
-
-    public void dark(String message) {
-        setBackgroundColor(view.getResources().getColor(R.color.black));
-        setProgressColor(view.getResources().getColor(R.color.white));
-        setMessageColor(view.getResources().getColor(R.color.white));
-        setMessage(message);
-        show();
-    }
-
-    public Progress setBackgroundDrawable(Drawable drawable) {
-        ll.setBackgroundDrawable(drawable);
-        ll.setPadding(30, 30, 30, 30);
-        return this;
-    }
-
-    public Progress setBackgroundColor(int color) {
-        ll.setBackgroundColor(color);
-        return this;
-    }
-
-    public Progress setProgressColor(int color) {
-        progressBar.setIndeterminateTintList(ColorStateList.valueOf(color));
-        return this;
-    }
 
     public Progress setMessage(String message) {
         msg.setText(message);
         return this;
     }
 
-    public Progress setMessageColor(int color) {
-        msg.setTextColor(color);
-        return this;
-    }
 
     public void show() {
         builder.setView(view);

@@ -1,9 +1,9 @@
 package com.kubekbreha.instagrambot
 
 import android.content.Context
-import android.view.View
+import com.kubekbreha.instagrambot.util.Progress
 import dev.niekirk.com.instagram4android.Instagram4Android
-import org.jetbrains.anko.progressDialog
+
 
 class User {
     companion object {
@@ -13,8 +13,10 @@ class User {
 
 
         fun logIn(username: String, password: String, context: Context) {
-            val dialog = context.progressDialog(message = "Please wait a bit ...", title = "Logging in ...")
-            dialog.show()
+
+            val progress = Progress(context)
+            progress.setMessage("Logging in ...")
+            progress.show()
             instagramUser = Instagram4Android.builder().username(username).password(password).build()
             val thread = Thread(Runnable {
                 try {
@@ -23,7 +25,7 @@ class User {
                 } catch (e: Exception) {
                     e.printStackTrace()
                 } finally {
-                    dialog.dismiss()
+                    progress.dismiss()
                 }
             })
             thread.start()
