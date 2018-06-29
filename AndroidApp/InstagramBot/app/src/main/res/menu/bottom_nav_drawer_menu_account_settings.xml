@@ -7,7 +7,7 @@
             android:title="@string/action_settings" />
 
         <item
-            android:id="@+id/app_bar_account_logput"
+            android:id="@+id/app_bar_account_logout"
             android:title="@string/action_logout" />
 
     </group>

@@ -49,6 +49,9 @@ class MainActivity : AppCompatActivity() {
             val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAccountSettings()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
+
+
+
     }
 
 
@@ -63,15 +66,5 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    fun logOut(){
-        val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
-        editor.putString("username", "")
-        editor.putString("password", "")
-        editor.apply()
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        finish()
-    }
 
 }
