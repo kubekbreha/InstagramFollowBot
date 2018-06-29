@@ -5,11 +5,18 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
         <item name="android:colorBackground">@color/colorPrimaryDark</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:itemTextAppearance">@style/itemTextStyle.AppTheme</item>
     </style>
 
+
+    <style name="itemTextStyle.AppTheme" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/white</item>
+    </style>
 
 </resources>
