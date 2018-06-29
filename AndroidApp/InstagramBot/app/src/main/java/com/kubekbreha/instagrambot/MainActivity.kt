@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddListActivity::class.java)
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            finish()
         }
 
         activity_main_bottom_account_settings_menu.setOnClickListener{
