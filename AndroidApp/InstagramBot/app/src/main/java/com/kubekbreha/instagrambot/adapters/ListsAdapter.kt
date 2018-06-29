@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot.adapters
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -34,6 +35,8 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
             b.putInt("openedListId", position)
             intent.putExtras(b)
             context.startActivity(intent)
+            (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            (context).finish()
         }
 
     }

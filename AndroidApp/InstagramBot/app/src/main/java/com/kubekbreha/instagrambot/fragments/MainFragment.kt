@@ -35,6 +35,7 @@ class MainFragment : Fragment() {
         allLists = database.readData()
 
         recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
+        recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
         recyclerViewListEmpty = view.findViewById(R.id.fragment_comment_empty_relativeLayout)
 
         getLists()
@@ -44,20 +45,12 @@ class MainFragment : Fragment() {
         if(listsArray.isEmpty()){
             recyclerViewList.visibility = View.GONE
             recyclerViewListEmpty.visibility = View.VISIBLE
+        }else{
+            recyclerViewList.visibility = View.VISIBLE
+            recyclerViewListEmpty.visibility = View.GONE
         }
 
         return view
-    }
-
-
-    override fun onResume() {
-        super.onResume()
-        database = DatabaseHandlerLists(context!!)
-        allLists = database.readData()
-        getLists()
-        recyclerViewList.layoutManager = LinearLayoutManager(context)
-        //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        recyclerViewList.adapter = ListsAdapter(listsArray, context!!)
     }
 
 

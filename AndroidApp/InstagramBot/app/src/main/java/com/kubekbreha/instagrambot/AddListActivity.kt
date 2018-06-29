@@ -1,5 +1,7 @@
 package com.kubekbreha.instagrambot
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
@@ -16,7 +18,7 @@ import org.jetbrains.anko.toast
 
 class AddListActivity : AppCompatActivity() {
 
-    private val ADD_NEW_LIST = -1
+    private val ADD_NEW_LIST = -100
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerView: RecyclerView
@@ -37,6 +39,7 @@ class AddListActivity : AppCompatActivity() {
 
 
         if (openedListId != ADD_NEW_LIST) {
+            toast(openedListId.toString())
             activity_add_list_button.text = "Update"
             activity_add_list_button.isAllCaps = false
             val oneListItem = database.readOneListData(openedListId)
@@ -45,8 +48,9 @@ class AddListActivity : AppCompatActivity() {
             editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
 
             activity_add_list_button.setOnClickListener {
-                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId + 1))
+                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
             }
+
         } else {
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
@@ -54,22 +58,16 @@ class AddListActivity : AppCompatActivity() {
                 database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
             }
         }
-
-
-
-        list = database.readOneListData(openedListId)!!
-        recyclerView = findViewById(R.id.activity_add_list_recyclerView)
-        getPeoples()
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        recyclerView.adapter = PeopleInListAdapter(listsArray, this)
-
     }
 
 
     override fun onBackPressed() {
         super.onBackPressed()
+        //TODO That is no way close to effectiveness
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        finish()
     }
 
 

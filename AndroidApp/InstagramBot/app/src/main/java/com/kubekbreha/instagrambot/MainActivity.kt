@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
 import com.kubekbreha.instagrambot.fragments.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setSupportActionBar(activity_main_bottom_app_bar)
+        setSupportActionBar(activity_main_bottom_app_bar as Toolbar?)
 
         val newFragment = MainFragment.newInstance()
         val transaction = supportFragmentManager.beginTransaction()
@@ -33,10 +34,10 @@ class MainActivity : AppCompatActivity() {
         if(intent.extras != null) {
             username = bundle.get("userName") as String
             password = bundle.get("userPassword") as String
+            User.logIn(username, password, this)
         }
 
-        //start logging
-        User.logIn(username, password, this)
+
 
 
         activity_main_fab.setOnClickListener {
