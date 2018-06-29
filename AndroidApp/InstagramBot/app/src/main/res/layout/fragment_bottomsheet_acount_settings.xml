@@ -20,6 +20,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/bottom_nav_drawer_menu"/>
+        app:menu="@menu/bottom_nav_drawer_menu_account_settings"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,6 @@
     <string name="bottom_menu_follow">Follow</string>
     <string name="bottom_menu_comment">Comment</string>
     <string name="bottom_menu_like">Like</string>
+    <string name="bottom_menu_settings">Settings</string>
+    <string name="bottom_menu_logout">Logout</string>
 </resources>

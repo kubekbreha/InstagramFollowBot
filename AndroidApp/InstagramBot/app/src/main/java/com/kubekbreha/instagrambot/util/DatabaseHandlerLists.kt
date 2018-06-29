@@ -82,8 +82,6 @@ class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context, DAT
     }
 
     fun readOneListData(listId: Int): UsersList? {
-        val list: MutableList<UsersList> = ArrayList()
-
         val db = this.readableDatabase
         val query = "Select * from " + TABLE_NAME
         val result = db.rawQuery(query, null)

@@ -7,7 +7,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
+import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAccountSettings
+import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentActions
 import com.kubekbreha.instagrambot.fragments.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -43,19 +44,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         }
+
+        activity_main_bottom_account_settings_menu.setOnClickListener{
+            val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAccountSettings()
+                bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+        }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.bottomappbar_menu, menu)
-        return true
-    }
+
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            R.id.app_bar_logOut -> logOut()
             android.R.id.home -> {
-                val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
+                val bottomNavDrawerFragment = BottomNavigationDrawerFragmentActions()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
             }
         }

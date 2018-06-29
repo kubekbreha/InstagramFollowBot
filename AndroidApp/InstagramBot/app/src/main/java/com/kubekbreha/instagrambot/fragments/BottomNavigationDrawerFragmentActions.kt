@@ -13,20 +13,20 @@ import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
-import kotlinx.android.synthetic.main.fragment_bottomsheet.*
+import kotlinx.android.synthetic.main.fragment_bottomsheet_actions.*
 import dev.niekirk.com.instagram4android.requests.InstagramUserFeedRequest
 
 
 
 
-class BottomNavigationDrawerFragment: BottomSheetDialogFragment() {
+class BottomNavigationDrawerFragmentActions: BottomSheetDialogFragment() {
 
     private val TAG = "BotNavDrawFrag"
     lateinit var tagFeedClass: InstagramFeedResult
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_bottomsheet, container, false)
+        return inflater.inflate(R.layout.fragment_bottomsheet_actions, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
