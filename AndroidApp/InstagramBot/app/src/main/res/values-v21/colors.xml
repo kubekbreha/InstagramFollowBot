@@ -5,10 +5,11 @@
     <color name="colorAccent">#6D8DFA</color>
     <color name="colorAccentDark">#6052E5</color>
 
-
     <color name="colorCardDark">#272A3B</color>
     <color name="colorCardLight">#4B4E68</color>
 
-
     <color name="colorGray">#378f8f8f</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
 </resources>
