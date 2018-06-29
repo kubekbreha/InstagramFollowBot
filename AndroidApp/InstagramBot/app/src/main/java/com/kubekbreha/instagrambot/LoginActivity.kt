@@ -22,7 +22,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         username = prefs.getString("username", "")
         password = prefs.getString("password", "")
         if (username != "" && password != "") {
-            toast("$username $password")
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("userName", username)
             intent.putExtra("userPassword", password)
@@ -41,7 +40,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
                 username = activity_login_editText_username.text.toString()
                 password = activity_login_editText_password.text.toString()
-                toast("$username $password")
                 val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("userName", username)
                 intent.putExtra("userPassword", password)

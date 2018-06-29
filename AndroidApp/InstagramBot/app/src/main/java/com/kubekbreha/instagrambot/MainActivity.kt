@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragment
 import com.kubekbreha.instagrambot.fragments.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.toast
 
 
 class MainActivity : AppCompatActivity() {
