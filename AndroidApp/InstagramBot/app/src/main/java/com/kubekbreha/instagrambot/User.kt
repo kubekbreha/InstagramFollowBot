@@ -1,6 +1,8 @@
 package com.kubekbreha.instagrambot
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import com.kubekbreha.instagrambot.util.Progress
 import dev.niekirk.com.instagram4android.Instagram4Android
 
@@ -8,9 +10,7 @@ import dev.niekirk.com.instagram4android.Instagram4Android
 class User {
     companion object {
 
-
         lateinit var instagramUser: Instagram4Android
-
 
         fun logIn(username: String, password: String, context: Context) {
 
@@ -26,11 +26,16 @@ class User {
                     e.printStackTrace()
                 } finally {
                     progress.dismiss()
+                    if(!User.getUser().isLoggedIn){
+                        val intent = Intent(context, LoginActivity::class.java)
+                        context.startActivity(intent)
+                        (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        (context).finish()
+                    }
                 }
             })
             thread.start()
         }
-
 
 
         fun getUser(): Instagram4Android {
