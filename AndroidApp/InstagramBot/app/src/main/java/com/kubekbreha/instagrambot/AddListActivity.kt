@@ -51,6 +51,10 @@ class AddListActivity : AppCompatActivity() {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
             }
 
+
+
+
+
         } else {
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
@@ -69,6 +73,10 @@ class AddListActivity : AppCompatActivity() {
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
         finish()
     }
+
+
+
+
 
 
     fun getPeoples() {
