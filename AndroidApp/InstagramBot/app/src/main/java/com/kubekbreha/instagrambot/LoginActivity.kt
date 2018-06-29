@@ -37,7 +37,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             R.id.activity_login_button_logIn -> {
-
                 username = activity_login_editText_username.text.toString()
                 password = activity_login_editText_password.text.toString()
                 val intent = Intent(this, MainActivity::class.java)

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +18,8 @@ import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
 class MainFragment : Fragment() {
 
     var listsArray: ArrayList<String> = ArrayList()
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var recyclerViewList: RecyclerView
+    private lateinit var recyclerViewListEmpty: RelativeLayout
     private lateinit var database: DatabaseHandlerLists
     private lateinit var allLists: MutableList<UsersList>
 
@@ -32,23 +34,30 @@ class MainFragment : Fragment() {
         database = DatabaseHandlerLists(context!!)
         allLists = database.readData()
 
-        recyclerView = view.findViewById(R.id.fragment_comment_recyclerView)
+        recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
+        recyclerViewListEmpty = view.findViewById(R.id.fragment_comment_empty_relativeLayout)
+
         getLists()
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerViewList.layoutManager = LinearLayoutManager(context)
         //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        recyclerView.adapter = ListsAdapter(listsArray, context!!)
+        recyclerViewList.adapter = ListsAdapter(listsArray, context!!)
+        if(listsArray.isEmpty()){
+            recyclerViewList.visibility = View.GONE
+            recyclerViewListEmpty.visibility = View.VISIBLE
+        }
 
         return view
     }
+
 
     override fun onResume() {
         super.onResume()
         database = DatabaseHandlerLists(context!!)
         allLists = database.readData()
         getLists()
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerViewList.layoutManager = LinearLayoutManager(context)
         //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        recyclerView.adapter = ListsAdapter(listsArray, context!!)
+        recyclerViewList.adapter = ListsAdapter(listsArray, context!!)
     }
 
 

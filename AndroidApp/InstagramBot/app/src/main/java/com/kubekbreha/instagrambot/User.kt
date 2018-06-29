@@ -31,6 +31,11 @@ class User {
                         context.startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                         (context).finish()
+                    }else{
+                        val editor = context.getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
+                        editor.putString("username", username)
+                        editor.putString("password", password)
+                        editor.apply()
                     }
                 }
             })

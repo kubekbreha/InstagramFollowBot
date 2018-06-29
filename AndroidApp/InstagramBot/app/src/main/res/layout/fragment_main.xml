@@ -9,20 +9,38 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:textStyle="bold"
+        android:padding="16dp"
         android:text="Lists of peoples:"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:padding="16dp"/>
+        android:textStyle="bold" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fragment_comment_recyclerView"
-        android:layout_marginTop="72dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/fragment_comment_empty_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new list of users."
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"/>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>

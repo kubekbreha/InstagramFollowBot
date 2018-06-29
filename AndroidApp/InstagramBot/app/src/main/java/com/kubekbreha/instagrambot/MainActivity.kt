@@ -30,14 +30,10 @@ class MainActivity : AppCompatActivity() {
 
         //get values from loginActivity
         val bundle = intent.extras
-        username = bundle.get("userName") as String
-        password = bundle.get("userPassword") as String
-
-        //put shared preferences
-        val editor = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
-        editor.putString("username", username)
-        editor.putString("password", password)
-        editor.apply()
+        if(intent.extras != null) {
+            username = bundle.get("userName") as String
+            password = bundle.get("userPassword") as String
+        }
 
         //start logging
         User.logIn(username, password, this)
