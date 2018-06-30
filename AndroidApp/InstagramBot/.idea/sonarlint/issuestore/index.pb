@@ -85,3 +85,9 @@ p
 happ/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAccountSettings.kt,b/f/bf5aea53f9a7b3da474af0bd32e34a155c5058de
 h
 8app/src/main/res/layout/fragment_bottomsheet_actions.xml,3/7/379fdf7ce6eece472d97805815a2a2fb7f615a73
+q
+Aapp/src/main/res/layout/fragment_bottomsheet_add_user_to_list.xml,5/e/5e7384d334108d5c73dee6731cd77d825694eb9b
+ê
+`app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAddUser.kt,1/1/11fbfc02f70c8c4d45be8998ace0db6022964d24
+l
+<app/src/main/java/com/kubekbreha/instagrambot/UsersInList.kt,3/3/3365371fd8391fd9d4338d8890e31d3155133fb0

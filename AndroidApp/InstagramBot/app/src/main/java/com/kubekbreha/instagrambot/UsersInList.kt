@@ -24,7 +24,7 @@ class UsersInList {
 
 
     fun addUser(userName: String){
-        usersInList.add(userName)    
+        usersInList.add(userName)
     }
 
 }
