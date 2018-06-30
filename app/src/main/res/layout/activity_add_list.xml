@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.kubekbreha.instagrambot.AddListActivity">
+    tools:context="com.kubekbreha.instagrambot.AddListActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
 
     <com.kubekbreha.instagrambot.util.PrefixEditText
@@ -20,7 +22,7 @@
         android:hint="listName"
         android:inputType="textPersonName"
         android:tag="#"
-        android:focusable="false"
+        android:textColorHint="@color/colorPrimary"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
