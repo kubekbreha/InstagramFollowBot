@@ -104,4 +104,9 @@ class AddListActivity : AppCompatActivity() {
     }
 
 
+    fun addToPeoples(username: String){
+        listsArray.add(username)
+    }
+
+
 }
