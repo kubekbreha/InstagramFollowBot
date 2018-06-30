@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAccountSettings
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAddUser
@@ -25,6 +26,7 @@ class AddListActivity : AppCompatActivity() {
     private lateinit var recyclerViewUsers: RecyclerView
     private lateinit var relativeViewUsersEmpty: RecyclerView
     private lateinit var allLists: MutableList<UsersList>
+    private lateinit var fabButton: FloatingActionButton
 
 
     private var openedListId: Int = ADD_NEW_LIST
@@ -38,12 +40,6 @@ class AddListActivity : AppCompatActivity() {
         val bundle = intent.extras
         if (bundle != null) {
             openedListId = bundle.get("openedListId") as Int
-        }
-
-        //inflate add user bottom fragment
-        activity_add_list_floatingActionButton.setOnClickListener {
-            val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAddUser()
-            bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
 
 
@@ -85,9 +81,12 @@ class AddListActivity : AppCompatActivity() {
         }
 
 
+        //inflate add user bottom fragment
         activity_add_list_floatingActionButton.setOnClickListener {
-
+            val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAddUser()
+            bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
+
 
     }
 

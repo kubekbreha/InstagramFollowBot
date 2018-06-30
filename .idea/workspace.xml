@@ -1,246 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="017d26c0-6a40-47ef-8152-20d40784051d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_eaio_uuid_uuid_3_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_brunocvcunha_ghostme4j_ghostme4j_0_2.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_brunocvcunha_instagram4j_instagram4j_1_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_brunocvcunha_inutils4j_inutils4j_0_6.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_android_arm_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_android_x86_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_linux_armhf_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_linux_ppc64le_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_linux_x86_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_linux_x86_64_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_macosx_x86_64_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_platform_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_windows_x86_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_artoolkitplus_windows_x86_64_2_3_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_android_arm_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_android_x86_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_linux_armhf_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_linux_ppc64le_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_linux_x86_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_linux_x86_64_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_macosx_x86_64_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_platform_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_windows_x86_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_ffmpeg_windows_x86_64_3_2_1_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_android_arm_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_android_x86_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_linux_armhf_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_linux_ppc64le_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_linux_x86_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_linux_x86_64_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_macosx_x86_64_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_platform_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_windows_x86_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flandmark_windows_x86_64_1_07_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_linux_armhf_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_linux_x86_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_linux_x86_64_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_platform_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_windows_x86_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_flycapture_windows_x86_64_2_9_3_43_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_linux_armhf_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_linux_ppc64le_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_linux_x86_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_linux_x86_64_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_macosx_x86_64_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_platform_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_windows_x86_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libdc1394_windows_x86_64_2_2_4_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect2_0_2_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect2_linux_x86_0_2_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect2_linux_x86_64_0_2_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect2_platform_0_2_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_linux_armhf_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_linux_ppc64le_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_linux_x86_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_linux_x86_64_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_macosx_x86_64_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_platform_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_windows_x86_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_libfreenect_windows_x86_64_0_5_3_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_librealsense_1_9_6_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_librealsense_linux_x86_1_9_6_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_librealsense_linux_x86_64_1_9_6_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_librealsense_platform_1_9_6_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_android_arm_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_android_x86_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_linux_armhf_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_linux_ppc64le_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_linux_x86_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_linux_x86_64_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_macosx_x86_64_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_platform_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_windows_x86_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_opencv_windows_x86_64_3_1_0_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_videoinput_0_200_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_videoinput_platform_0_200_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_videoinput_windows_x86_0_200_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacpp_presets_videoinput_windows_x86_64_0_200_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacv_1_3_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bytedeco_javacv_platform_1_3_1.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/qaplug_profiles.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/assetWizardSettings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/caches/build_file_checksums.ser" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/codeStyles/Project.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/gradle.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/runConfigurations.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/0/0/00aae653a835972bac238ab39cf3d9771da7e7e7" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/0/7/078508c831007ccb3938b355f0d30a8368f99a8d" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/0/a/0a92b794350e7e393268a33e5ebf08310e46f40f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/0/e/0e2dbde10fa21a69e5da23f2681513bb29e1a4c4" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/1/0/10d5b41042467baa367783c4a0b53a299946a8f0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/1/1/11fbfc02f70c8c4d45be8998ace0db6022964d24" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/1/f/1f7e901185d74bf05f9fcb38f9ed35ea78cd4c6e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/3/3/3365371fd8391fd9d4338d8890e31d3155133fb0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/3/6/36f69ff08e65f23c5e4bb60961db41b4b4a3cf92" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/3/7/371f3fc95f4a0810ff16ad0eabd0948469357c0b" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/3/7/379fdf7ce6eece472d97805815a2a2fb7f615a73" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/4/0/401cb96d2121374dd5ed6d4e8183128d7515ec0a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/4/3/435e5e347b21367d9e92d1b8aa913d1ce08e73bd" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/4/9/49845c622cb06d895975c7b1e3f943e320bce688" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/5/0/5026414298ba9626b78a49d6db37d1c5ab926a9e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/5/6/566215fed65b3413fb3a06987222816561329011" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/5/e/5e338aa95a9ccc9ff14833f68ae53c39ac2dc210" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/5/e/5e7384d334108d5c73dee6731cd77d825694eb9b" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/6/2/62861527c52eefa73c6a1b5134adf95b221ba3d2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/6/5/65126b2c85d79f76dea12d6bc7debe166f7494f0" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/7/6/76b07e40f24cce093536731477540f12e7da3cb6" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/7/e/7efcebf558b37fa69b22fadf06ba50e658aa423f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/1/8100e04b0cee48bb99d93aca317b87373fbba39a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/2/82de841c40fd08b330daf8b41b8229e663fdd02f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/b/8bced72a6668a3dd684c3e47f0553968df06271a" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/c/8ca365160a3b45bd5252ffc369aa8940523a333d" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/8/f/8f9c3f197a4504a1b9330bc9a552b60afc4e7ca9" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/9/7/97593c7e6fc017c5a9a7e028534d3b05f22a6b4f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/a/1/a114985f2af6633f7272ae585c211def07475a3c" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/b/7/b76d3bf8500defbde5d594582f5a808367a8f386" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/b/d/bdc7d7ffceb56c188354b5f625ca7926b672b782" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/b/f/bf5aea53f9a7b3da474af0bd32e34a155c5058de" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/c/3/c3c1811dec2dbad2deeafb9aad505ca9631da740" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/c/e/cedbcccede8a5932c9755c5fe82acd44f9bc3fe1" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/d/2/d2281fbb3027de2722081a53408dd77628bf080e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/d/a/da3571e9d506b550aa4fc336e4e093619bee0930" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/d/f/df784ca6541b15c147780bcbd2e93abcc9e830fa" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/e/2/e29e8f9dd6c98a1a5a0497ecdca867f389fae468" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/e/7/e7af37d7205f16cb204e857c96851c69d2857d02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/e/c/ec1a9f191d65b12232973fcf5eed085f67efebbf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/f/3/f34362f4464949be1d8f397c4fa7a201cd489508" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/f/e/fe918665cba2f1cdbf3c0327fbf19d7125e61a04" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/.idea/sonarlint/issuestore/index.pb" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/.gitignore" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/proguard-rules.pro" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/androidTest/java/com/kubekbreha/instagrambot/ExampleInstrumentedTest.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/AndroidManifest.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/LoginActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/MainActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/User.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/UsersInList.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/UsersList.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/adapters/PeopleInListAdapter.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/adapters/ViewHolder.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAccountSettings.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentActions.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAddUser.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/fragments/MainFragment.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/util/DatabaseHandlerLists.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/util/PrefixEditText.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/java/com/kubekbreha/instagrambot/util/Progress.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/anim/fade_in.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/anim/fade_out.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/button_rounded_dark.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/edit_rounded_dark.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_add_white_24dp.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_favorite_white_24dp.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_launcher_background.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_menu_white_24dp.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_more_vert_white.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_search_white_24dp.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/ic_settings_white_24dp.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/drawable/side_nav_bar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/activity_add_list.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/activity_login.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/activity_main.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/fragment_bottomsheet_acount_settings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/fragment_bottomsheet_actions.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/fragment_bottomsheet_add_user_to_list.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/fragment_main.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/list_item.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/layout/progress.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/menu/bottom_nav_drawer_menu_account_settings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/menu/bottom_nav_drawer_menu_actions.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/values-v21/colors.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/values-v21/strings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/values-v21/styles.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/values/dimens.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/main/res/values/strings.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/app/src/test/java/com/kubekbreha/instagrambot/ExampleUnitTest.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/build.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/gradle.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/gradle/wrapper/gradle-wrapper.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/gradle/wrapper/gradle-wrapper.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/gradlew" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/gradlew.bat" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/AndroidApp/InstagramBot/settings.gradle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/InstagramFollowBot.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/pom.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/src/main/java/bot/Bot.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/src/main/java/bot/Main.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/target/classes/bot/Bot.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/ConsoleApp/target/classes/bot/Main.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -259,14 +29,55 @@
       <file leaf-file-name="AddListActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+            <state relative-caret-position="451">
+              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_add_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="67" column="67" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/MainActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fab</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -2389,6 +2200,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt" />
       </list>
     </option>
@@ -2432,6 +2245,24 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="instagrambot" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="instagrambot" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="fragments" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -2622,7 +2453,8 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32983682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08974359" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2655,10 +2487,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/MainFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="67" column="67" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="34" column="52" lean-forward="false" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="45" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        <state relative-caret-position="451">
+          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
