@@ -24,7 +24,6 @@ class AddListActivity : AppCompatActivity() {
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerViewUsers: RecyclerView
     private lateinit var relativeViewUsersEmpty: RecyclerView
-    private lateinit var list: UsersList
     private lateinit var allLists: MutableList<UsersList>
 
 
@@ -42,7 +41,7 @@ class AddListActivity : AppCompatActivity() {
         }
 
         //inflate add user bottom fragment
-        activity_main_bottom_account_settings_menu.setOnClickListener{
+        activity_main_bottom_account_settings_menu.setOnClickListener {
             val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAddUser()
             bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
@@ -64,18 +63,17 @@ class AddListActivity : AppCompatActivity() {
             recyclerViewUsers.layoutManager = LinearLayoutManager(this)
             //recyclerViewUsers.layoutManager = GridLayoutManager(context, 2)
             recyclerViewUsers.adapter = ListsAdapter(listsArray, this)
-            if(listsArray.isEmpty()){
+            if (listsArray.isEmpty()) {
                 recyclerViewUsers.visibility = View.GONE
                 relativeViewUsersEmpty.visibility = View.VISIBLE
-            }else{
+            } else {
                 recyclerViewUsers.visibility = View.VISIBLE
                 relativeViewUsersEmpty.visibility = View.GONE
             }
 
             activity_add_list_button.setOnClickListener {
-                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
+                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId + 1))
             }
-
 
 
         } else {
@@ -104,16 +102,8 @@ class AddListActivity : AppCompatActivity() {
     }
 
 
+    fun getPeoples(oneItemList: UsersList) {
 
-    fun getPeoples(oneItemList : UsersList) {
-        var listFromDatabase = oneItemList.list
-//        val usersFromDatabaseArray = JSONObject(listFromDatabase)
-        listsArray.add("test name ")
-    }
-
-
-    fun addToPeoples(username: String){
-        listsArray.add(username)
     }
 
 
