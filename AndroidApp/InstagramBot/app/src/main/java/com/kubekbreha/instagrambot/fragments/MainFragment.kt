@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerViewList: RecyclerView
-    private lateinit var recyclerViewListEmpty: RelativeLayout
+    private lateinit var relativeViewListEmpty: RelativeLayout
     private lateinit var database: DatabaseHandlerLists
     private lateinit var allLists: MutableList<UsersList>
 
@@ -35,8 +35,7 @@ class MainFragment : Fragment() {
         allLists = database.readData()
 
         recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
-        recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
-        recyclerViewListEmpty = view.findViewById(R.id.fragment_comment_empty_relativeLayout)
+        relativeViewListEmpty = view.findViewById(R.id.fragment_main_comment_empty_relativeLayout)
 
         getLists()
         recyclerViewList.layoutManager = LinearLayoutManager(context)
@@ -44,10 +43,10 @@ class MainFragment : Fragment() {
         recyclerViewList.adapter = ListsAdapter(listsArray, context!!)
         if(listsArray.isEmpty()){
             recyclerViewList.visibility = View.GONE
-            recyclerViewListEmpty.visibility = View.VISIBLE
+            relativeViewListEmpty.visibility = View.VISIBLE
         }else{
             recyclerViewList.visibility = View.VISIBLE
-            recyclerViewListEmpty.visibility = View.GONE
+            relativeViewListEmpty.visibility = View.GONE
         }
 
         return view

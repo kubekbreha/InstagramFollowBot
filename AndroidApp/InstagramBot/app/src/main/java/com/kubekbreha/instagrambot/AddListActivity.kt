@@ -1,6 +1,5 @@
 package com.kubekbreha.instagrambot
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -12,8 +11,9 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
-import com.kubekbreha.instagrambot.adapters.PeopleInListAdapter
 import org.jetbrains.anko.toast
+import org.json.JSONArray
+import org.json.JSONObject
 
 
 class AddListActivity : AppCompatActivity() {
@@ -21,8 +21,11 @@ class AddListActivity : AppCompatActivity() {
     private val ADD_NEW_LIST = -100
 
     var listsArray: ArrayList<String> = ArrayList()
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var recyclerViewUsers: RecyclerView
+    private lateinit var relativeViewUsersEmpty: RecyclerView
     private lateinit var list: UsersList
+    private lateinit var allLists: MutableList<UsersList>
+
 
     private var openedListId: Int = ADD_NEW_LIST
 
@@ -47,11 +50,29 @@ class AddListActivity : AppCompatActivity() {
             val editText = findViewById<View>(R.id.activity_add_list_editText) as EditText
             editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
 
+            //load list of users in list
+            recyclerViewUsers = findViewById(R.id.activity_add_list_recyclerView)
+            relativeViewUsersEmpty = findViewById(R.id.add_activity_comment_empty_relativeLayout)
+            getPeoples(oneListItem!!)
+            recyclerViewUsers.layoutManager = LinearLayoutManager(this)
+            //recyclerViewUsers.layoutManager = GridLayoutManager(context, 2)
+            recyclerViewUsers.adapter = ListsAdapter(listsArray, this)
+            if(listsArray.isEmpty()){
+                recyclerViewUsers.visibility = View.GONE
+                relativeViewUsersEmpty.visibility = View.VISIBLE
+            }else{
+                recyclerViewUsers.visibility = View.VISIBLE
+                relativeViewUsersEmpty.visibility = View.GONE
+            }
+
             activity_add_list_button.setOnClickListener {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
             }
 
-
+//            activity_add_list_floatingActionButton.setOnClickListener{
+//                var json = JSONObject()
+//                json
+//            }
 
 
 
@@ -76,10 +97,9 @@ class AddListActivity : AppCompatActivity() {
 
 
 
-
-
-
-    fun getPeoples() {
+    fun getPeoples(oneItemList : UsersList) {
+        var listFromDatabase = oneItemList.list
+//        val usersFromDatabaseArray = JSONObject(listFromDatabase)
         listsArray.add("test name ")
     }
 
