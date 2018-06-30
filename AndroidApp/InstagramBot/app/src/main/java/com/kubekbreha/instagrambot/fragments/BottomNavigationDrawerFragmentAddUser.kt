@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.fragment_bottomsheet_add_user_to_list.*
 class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_bottomsheet_actions, container, false)
+        return inflater.inflate(R.layout.fragment_bottomsheet_add_user_to_list, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

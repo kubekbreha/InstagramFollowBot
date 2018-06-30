@@ -11,6 +11,9 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
+import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAccountSettings
+import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAddUser
+import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
 
 
@@ -36,6 +39,12 @@ class AddListActivity : AppCompatActivity() {
         val bundle = intent.extras
         if (bundle != null) {
             openedListId = bundle.get("openedListId") as Int
+        }
+
+        //inflate add user bottom fragment
+        activity_main_bottom_account_settings_menu.setOnClickListener{
+            val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAddUser()
+            bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
 
 
