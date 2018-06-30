@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_add_list.*
 import android.widget.TextView
 import android.view.View
 import android.widget.EditText
+import android.widget.RelativeLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -24,7 +25,7 @@ class AddListActivity : AppCompatActivity() {
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerViewUsers: RecyclerView
-    private lateinit var relativeViewUsersEmpty: RecyclerView
+    private lateinit var relativeViewUsersEmpty: RelativeLayout
     private lateinit var allLists: MutableList<UsersList>
     private lateinit var fabButton: FloatingActionButton
 
