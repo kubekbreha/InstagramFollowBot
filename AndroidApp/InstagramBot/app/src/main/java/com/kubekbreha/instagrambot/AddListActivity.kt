@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
 import org.jetbrains.anko.toast
-import org.json.JSONArray
-import org.json.JSONObject
 
 
 class AddListActivity : AppCompatActivity() {
@@ -69,11 +67,6 @@ class AddListActivity : AppCompatActivity() {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId+1))
             }
 
-//            activity_add_list_floatingActionButton.setOnClickListener{
-//                var json = JSONObject()
-//                json
-//            }
-
 
 
         } else {
@@ -83,6 +76,12 @@ class AddListActivity : AppCompatActivity() {
                 database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
             }
         }
+
+
+        activity_add_list_floatingActionButton.setOnClickListener {
+
+        }
+
     }
 
 
