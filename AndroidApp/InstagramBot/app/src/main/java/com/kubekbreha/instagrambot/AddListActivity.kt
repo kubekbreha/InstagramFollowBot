@@ -88,7 +88,7 @@ class AddListActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        //TODO That is no way close to effectiveness
+        //TODO That is no way close to what effectiveness means
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    android:layout_height="wrap_content">
+
+
+    <com.kubekbreha.instagrambot.util.PrefixEditText
+        android:id="@+id/activity_add_list_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="userName"
+        android:inputType="textPersonName"
+        android:tag="\@"
+        android:focusable="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/activity_add_list_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/activity_add_list_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:text="Add"
+        android:textStyle="bold" />
+
+</RelativeLayout>
