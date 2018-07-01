@@ -78,7 +78,7 @@ class AddListActivity : AppCompatActivity() {
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
             activity_add_list_button.setOnClickListener {
-                database.insertData(UsersList(activity_add_list_editText.text.toString(), "{}"))
+                database.insertData(UsersList(activity_add_list_editText.text.toString(), "{\"list\":[]}"))
             }
         }
 

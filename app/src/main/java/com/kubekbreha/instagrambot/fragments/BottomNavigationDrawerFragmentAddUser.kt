@@ -30,9 +30,8 @@ class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
 
 
         bottom_drawer_add_list_button.setOnClickListener{
-            user.addUser("testUser")
+            user.addUser(bottom_drawer_list_editText.text.toString())
         }
-
     }
 
 }

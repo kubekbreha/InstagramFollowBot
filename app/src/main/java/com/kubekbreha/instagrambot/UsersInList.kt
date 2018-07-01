@@ -22,8 +22,7 @@ class UsersInList(private var id: Int, private var context: Context) {
 
 
     fun addUser(userName: String) {
-        id -= 1
-        val oneList = database.readOneListData(id)
+        val oneList = database.readOneListData( id-1)
         context.toast( oneList!!.list)
         val json = JSONObject("{\"list\":[]}")
 
@@ -31,7 +30,7 @@ class UsersInList(private var id: Int, private var context: Context) {
         val jsonArray = json.getJSONArray("list")
 
 
-        if (jsonArray.length()!=0) {
+        if (jsonArray.length() !=0 ) {
             for (i in 0..jsonArray.length()) {
                 Log.e("motherfuck", jsonArray.get(i).toString())
                 usersInList.add(jsonArray.get(i).toString())
@@ -44,7 +43,7 @@ class UsersInList(private var id: Int, private var context: Context) {
         context.toast( json.toString())
 
 
-        //database.updateTask(UsersList(oneList.name, json.toString(), oneList.id))
+        database.updateTask(UsersList(oneList.name, json.toString(), oneList.id))
     }
 
 }
