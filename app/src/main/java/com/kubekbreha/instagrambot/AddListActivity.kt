@@ -71,6 +71,10 @@ class AddListActivity : AppCompatActivity() {
 
             activity_add_list_button.setOnClickListener {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), oneListItem.list, openedListId + 1))
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
             }
 
 
@@ -79,6 +83,10 @@ class AddListActivity : AppCompatActivity() {
             activity_add_list_button.isAllCaps = false
             activity_add_list_button.setOnClickListener {
                 database.insertData(UsersList(activity_add_list_editText.text.toString(), "{\"list\":{}}"))
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                finish()
             }
         }
 

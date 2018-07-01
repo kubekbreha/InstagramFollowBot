@@ -42,7 +42,7 @@ class UsersInList(private var id: Int, private var context: Context) {
                 jsonObj.put(i.toString(), usersInList[i])
             }
         }
-        
+
         context.toast( json.toString())
         database.updateTask(UsersList(oneList.name, json.toString(), oneList.id))
     }
