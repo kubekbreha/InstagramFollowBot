@@ -4,42 +4,48 @@ import android.content.Context
 import android.util.Log
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
 import kotlinx.android.synthetic.main.activity_add_list.*
+import org.jetbrains.anko.toast
+import org.json.JSONArray
 import org.json.JSONObject
 
 
-class UsersInList {
+class UsersInList(private var id: Int, private var context: Context) {
 
-    private var id: Int = 0
-    private var context: Context
     private var usersInList: MutableList<String> =  ArrayList()
     var database: DatabaseHandlerLists
     private lateinit var stringOfUseers: String
 
 
-    constructor(id: Int, context: Context) {
-        this.id = id
-        this.context = context
-
+    init {
         database = DatabaseHandlerLists(context)
     }
 
-    fun readUsers() {
-        val database = DatabaseHandlerLists(context)
-        val oneListItem = database.readOneListData(id)
 
-        val stringOfUseers = oneListItem!!.list
+    fun addUser(userName: String) {
+        id -= 1
+        val oneList = database.readOneListData(id)
+        context.toast( oneList!!.list)
+        val json = JSONObject("{\"list\":[]}")
+
+
+        val jsonArray = json.getJSONArray("list")
+
+
+        if (jsonArray.length()!=0) {
+            for (i in 0..jsonArray.length()) {
+                Log.e("motherfuck", jsonArray.get(i).toString())
+                usersInList.add(jsonArray.get(i).toString())
+            }
+        }
+
+        usersInList.add(userName)
+
+        json.put("list", usersInList)
+        context.toast( json.toString())
+
+
+        //database.updateTask(UsersList(oneList.name, json.toString(), oneList.id))
     }
-
-    fun addUser(userName: String, listName: String) {
-        usersInList.add("first")
-        usersInList.add("second")
-
-
-        val json = JSONObject("""{"name":"test name", "age":25}""")
-        json.put("users", usersInList as Any)
-
-        Log.e("motherfuck", json.get("users").toString())
-    }
-
 
 }
+

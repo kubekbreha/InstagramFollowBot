@@ -27,7 +27,8 @@ class AddListActivity : AppCompatActivity() {
     private lateinit var recyclerViewUsers: RecyclerView
     private lateinit var relativeViewUsersEmpty: RelativeLayout
     private lateinit var allLists: MutableList<UsersList>
-    private lateinit var fabButton: FloatingActionButton
+
+    private lateinit var oneListItem: UsersList
 
 
     private var openedListId: Int = ADD_NEW_LIST
@@ -48,10 +49,10 @@ class AddListActivity : AppCompatActivity() {
             toast(openedListId.toString())
             activity_add_list_button.text = "Update"
             activity_add_list_button.isAllCaps = false
-            val oneListItem = database.readOneListData(openedListId)
+            oneListItem = database.readOneListData(openedListId)!!
 
             val editText = findViewById<View>(R.id.activity_add_list_editText) as EditText
-            editText.setText(oneListItem?.name, TextView.BufferType.EDITABLE)
+            editText.setText(oneListItem!!.name, TextView.BufferType.EDITABLE)
 
             //load list of users in list
             recyclerViewUsers = findViewById(R.id.activity_add_list_recyclerView)
@@ -69,7 +70,7 @@ class AddListActivity : AppCompatActivity() {
             }
 
             activity_add_list_button.setOnClickListener {
-                database.updateTask(UsersList(activity_add_list_editText.text.toString(), "", openedListId + 1))
+                database.updateTask(UsersList(activity_add_list_editText.text.toString(), oneListItem.list, openedListId + 1))
             }
 
 
@@ -77,17 +78,20 @@ class AddListActivity : AppCompatActivity() {
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
             activity_add_list_button.setOnClickListener {
-                database.insertData(UsersList(activity_add_list_editText.text.toString(), ""))
+                database.insertData(UsersList(activity_add_list_editText.text.toString(), "{}"))
             }
         }
 
 
         //inflate add user bottom fragment
         activity_add_list_floatingActionButton.setOnClickListener {
-            val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAddUser()
-            bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+            val bundle = Bundle()
+            bundle.putInt("listId", oneListItem.id)
+            bundle.putString("listName", oneListItem.name)
+            val fragobj = BottomNavigationDrawerFragmentAddUser()
+            fragobj.setArguments(bundle)
+            fragobj.show(supportFragmentManager, fragobj.tag)
         }
-
 
     }
 

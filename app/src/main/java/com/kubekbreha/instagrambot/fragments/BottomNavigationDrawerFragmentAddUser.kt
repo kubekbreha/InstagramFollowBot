@@ -13,7 +13,12 @@ import kotlinx.android.synthetic.main.fragment_bottomsheet_add_user_to_list.*
 
 class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
 
+    private var listId: Int = 0
+    private var listName: String = ""
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        listId = arguments!!.getInt("listId")
+        listName = arguments!!.getString("listName")
         return inflater.inflate(R.layout.fragment_bottomsheet_add_user_to_list, container, false)
     }
 
@@ -21,11 +26,11 @@ class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
         super.onActivityCreated(savedInstanceState)
 
         bottom_drawer_add_list_button.isAllCaps = false
-        val user = UsersInList(1, context!!)
+        val user = UsersInList(listId, context!!)
 
 
         bottom_drawer_add_list_button.setOnClickListener{
-            user.addUser("testUser", "")
+            user.addUser("testUser")
         }
 
     }
