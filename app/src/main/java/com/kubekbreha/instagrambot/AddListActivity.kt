@@ -42,6 +42,7 @@ class AddListActivity : AppCompatActivity() {
         }
 
 
+        //when updating already created list
         if (openedListId != ADD_NEW_LIST) {
             toast(openedListId.toString())
             activity_add_list_button.text = "Update"
@@ -78,9 +79,12 @@ class AddListActivity : AppCompatActivity() {
             }
 
 
-        } else {
+
+        } else { //when adding new list
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
+
+            //open bottom fragment
             activity_add_list_button.setOnClickListener {
                 database.insertData(UsersList(activity_add_list_editText.text.toString(), "{\"list\":{}}"))
                 val intent = Intent(this, MainActivity::class.java)
