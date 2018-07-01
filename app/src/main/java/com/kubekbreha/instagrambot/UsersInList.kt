@@ -23,7 +23,6 @@ class UsersInList(private var id: Int, private var context: Context) {
 
     fun addUser(userName: String) {
         val oneList = database.readOneListData( id-1)
-        context.toast( oneList!!.list)
         val json = JSONObject("{\"list\":[]}")
 
 
@@ -36,6 +35,8 @@ class UsersInList(private var id: Int, private var context: Context) {
                 usersInList.add(jsonArray.get(i).toString())
             }
         }
+        context.toast( oneList!!.list)
+
 
         usersInList.add(userName)
 
