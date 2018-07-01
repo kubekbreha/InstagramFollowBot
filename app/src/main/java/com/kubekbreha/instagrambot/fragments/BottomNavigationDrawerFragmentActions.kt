@@ -37,7 +37,8 @@ class BottomNavigationDrawerFragmentActions: BottomSheetDialogFragment() {
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
 
-                R.id.bottom_menu_follow -> {                }
+                R.id.bottom_menu_follow -> {       followListOfUsers(1)         }
+                R.id.bottom_menu_unfollow -> {       unFollowListOfUsers(1)         }
                 R.id.bottom_menu_comment -> {                }
                 R.id.bottom_menu_like -> {                }
 
@@ -69,7 +70,7 @@ class BottomNavigationDrawerFragmentActions: BottomSheetDialogFragment() {
             //[JB 1.7.2018]TODO add break for some time here
         }
     }
-    
+
 
     private fun follow(user: String) {
         val thread = Thread(Runnable {

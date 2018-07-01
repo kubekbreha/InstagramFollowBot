@@ -5,6 +5,7 @@
     <string name="action_logout">Logout</string>
 
     <string name="bottom_menu_follow">Follow</string>
+    <string name="bottom_menu_unfollow">Unfollow</string>
     <string name="bottom_menu_comment">Comment</string>
     <string name="bottom_menu_like">Like</string>
     <string name="bottom_menu_settings">Settings</string>
