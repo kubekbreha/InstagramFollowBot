@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersInList
-import kotlinx.android.synthetic.main.activity_add_list.*
 import kotlinx.android.synthetic.main.fragment_bottomsheet_add_user_to_list.*
 
 
@@ -36,7 +35,7 @@ class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
         }
     }
 
-    fun removeFragment(fragment: Fragment) {
+    private fun removeFragment(fragment: Fragment) {
         val fragmentTransaction = fragmentManager!!.beginTransaction()
 
         fragmentTransaction.remove(fragment)

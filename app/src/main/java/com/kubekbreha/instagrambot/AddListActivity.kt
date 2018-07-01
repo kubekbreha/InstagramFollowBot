@@ -2,20 +2,17 @@ package com.kubekbreha.instagrambot
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
-import kotlinx.android.synthetic.main.activity_add_list.*
-import android.widget.TextView
 import android.view.View
 import android.widget.EditText
 import android.widget.RelativeLayout
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
-import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAccountSettings
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAddUser
-import kotlinx.android.synthetic.main.activity_main.*
+import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
+import kotlinx.android.synthetic.main.activity_add_list.*
 import org.jetbrains.anko.toast
 
 
