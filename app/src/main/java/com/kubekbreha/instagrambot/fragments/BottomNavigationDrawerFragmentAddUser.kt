@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersInList
@@ -31,7 +32,15 @@ class BottomNavigationDrawerFragmentAddUser: BottomSheetDialogFragment() {
 
         bottom_drawer_add_list_button.setOnClickListener{
             user.addUser(bottom_drawer_list_editText.text.toString())
+            removeFragment(this)
         }
+    }
+
+    fun removeFragment(fragment: Fragment) {
+        val fragmentTransaction = fragmentManager!!.beginTransaction()
+
+        fragmentTransaction.remove(fragment)
+        fragmentTransaction.commit()
     }
 
 }
