@@ -26,7 +26,7 @@ class AddListActivity : AppCompatActivity() {
     private lateinit var allLists: MutableList<UsersList>
 
     private lateinit var oneListItem: UsersList
-
+    private lateinit var database: DatabaseHandlerLists
 
     private var openedListId: Int = ADD_NEW_LIST
 
@@ -34,7 +34,7 @@ class AddListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_list)
 
-        val database = DatabaseHandlerLists(this)
+        database = DatabaseHandlerLists(this)
 
         val bundle = intent.extras
         if (bundle != null) {
@@ -54,7 +54,10 @@ class AddListActivity : AppCompatActivity() {
             //load list of users in list
             recyclerViewUsers = findViewById(R.id.activity_add_list_recyclerView)
             relativeViewUsersEmpty = findViewById(R.id.add_activity_comment_empty_relativeLayout)
-            getPeoples(oneListItem!!)
+
+            //[JB 1.7.2018]TODO not sure if that will work
+            listsArray = getPeoples(openedListId) as ArrayList<String>
+
             recyclerViewUsers.layoutManager = LinearLayoutManager(this)
             //recyclerViewUsers.layoutManager = GridLayoutManager(context, 2)
             recyclerViewUsers.adapter = ListsAdapter(listsArray, this)
@@ -103,7 +106,7 @@ class AddListActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        //TODO That is no way close to what effectiveness means
+        //[JB 1.7.2018]TODO That is no way close to what effectiveness means
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -111,8 +114,9 @@ class AddListActivity : AppCompatActivity() {
     }
 
 
-    fun getPeoples(oneItemList: UsersList) {
-
+    fun getPeoples(listId: Int): MutableList<String> {
+        val user = UsersInList(listId, this)
+        return user.getUsers()
     }
 
 
