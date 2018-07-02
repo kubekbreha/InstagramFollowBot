@@ -15,6 +15,9 @@ import kotlinx.android.synthetic.main.list_item.view.*
 
 class ListsAdapter(private val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
+    var doubleClicked = 0
+    var firstclicked = -100
+
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
         return items.size
@@ -30,13 +33,27 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
         holder.listType.text = "#" + items[position]
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(context, AddListActivity::class.java)
-            val b = Bundle()
-            b.putInt("openedListId", position)
-            intent.putExtras(b)
-            context.startActivity(intent)
-            (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            (context).finish()
+
+            doubleClicked++
+
+            if(position == firstclicked) {
+                if (doubleClicked == 2) {
+                    val intent = Intent(context, AddListActivity::class.java)
+                    val b = Bundle()
+                    b.putInt("openedListId", position)
+                    intent.putExtras(b)
+                    context.startActivity(intent)
+                    (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    (context).finish()
+                    doubleClicked = 0
+                }
+            }else{
+                firstclicked = position
+                if(doubleClicked == 2) doubleClicked = 0
+
+
+            }
+
         }
 
     }
