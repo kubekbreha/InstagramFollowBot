@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.adapters.ListsAdapter
+import com.kubekbreha.instagrambot.adapters.PeopleInListAdapter
 import com.kubekbreha.instagrambot.fragments.BottomNavigationDrawerFragmentAddUser
 import com.kubekbreha.instagrambot.util.DatabaseHandlerLists
 import kotlinx.android.synthetic.main.activity_add_list.*
@@ -56,12 +57,13 @@ class AddListActivity : AppCompatActivity() {
             recyclerViewUsers = findViewById(R.id.activity_add_list_recyclerView)
             relativeViewUsersEmpty = findViewById(R.id.add_activity_comment_empty_relativeLayout)
 
+
             //[JB 1.7.2018]TODO not sure if that will work
             listsArray = getPeoples(openedListId) as ArrayList<String>
 
             recyclerViewUsers.layoutManager = LinearLayoutManager(this)
             //recyclerViewUsers.layoutManager = GridLayoutManager(context, 2)
-            recyclerViewUsers.adapter = ListsAdapter(listsArray, this)
+            recyclerViewUsers.adapter = PeopleInListAdapter(listsArray, this)
             if (listsArray.isEmpty()) {
                 recyclerViewUsers.visibility = View.GONE
                 relativeViewUsersEmpty.visibility = View.VISIBLE
@@ -69,6 +71,8 @@ class AddListActivity : AppCompatActivity() {
                 recyclerViewUsers.visibility = View.VISIBLE
                 relativeViewUsersEmpty.visibility = View.GONE
             }
+
+
 
             activity_add_list_button.setOnClickListener {
                 database.updateTask(UsersList(activity_add_list_editText.text.toString(), oneListItem.list, openedListId + 1))

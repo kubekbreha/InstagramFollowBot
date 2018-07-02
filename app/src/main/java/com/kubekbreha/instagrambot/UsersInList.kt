@@ -44,7 +44,7 @@ class UsersInList(private var id: Int, private var context: Context) {
 
 
     fun getUsers(): MutableList<String> {
-        val oneList = database.readOneListData( id-1)
+        val oneList = database.readOneListData(id)
         val json = JSONObject(oneList!!.list)
 
         val jsonObj = json.getJSONObject("list")

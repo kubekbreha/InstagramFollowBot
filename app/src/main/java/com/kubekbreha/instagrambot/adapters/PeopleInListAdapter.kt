@@ -23,9 +23,8 @@ class PeopleInListAdapter(private val items : ArrayList<String>, val context: Co
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.listType.text = "@" + items[position]
 
-        holder.itemView.setOnClickListener {
-            //[JB 28.6.2018]TODO: add dialog with options
-        }
+//        holder.itemView.setOnClickListener {
+//        }
 
     }
 }
