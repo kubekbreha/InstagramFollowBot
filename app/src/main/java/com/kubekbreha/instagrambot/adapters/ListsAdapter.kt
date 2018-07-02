@@ -5,18 +5,16 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.AddListActivity
 import com.kubekbreha.instagrambot.R
-import kotlinx.android.synthetic.main.list_item.view.*
 
 
 class ListsAdapter(private val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
-    var doubleClicked = 0
-    var firstclicked = -100
+    private var doubleClicked = 0
+    var markedItem = -100
 
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
@@ -31,12 +29,9 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.listType.text = "#" + items[position]
-
         holder.itemView.setOnClickListener {
-
             doubleClicked++
-
-            if(position == firstclicked) {
+            if(position == markedItem) {
                 if (doubleClicked == 2) {
                     val intent = Intent(context, AddListActivity::class.java)
                     val b = Bundle()
@@ -48,13 +43,9 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
                     doubleClicked = 0
                 }
             }else{
-                firstclicked = position
+                markedItem = position
                 if(doubleClicked == 2) doubleClicked = 0
-
-
             }
-
         }
-
     }
 }
