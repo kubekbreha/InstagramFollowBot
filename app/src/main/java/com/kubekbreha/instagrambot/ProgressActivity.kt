@@ -29,7 +29,6 @@ class ProgressActivity : AppCompatActivity() {
 
 
 
-
     private fun followListOfUsers(selectedList: Int){
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
