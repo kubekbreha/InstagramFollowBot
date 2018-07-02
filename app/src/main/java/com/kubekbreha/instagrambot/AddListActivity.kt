@@ -23,7 +23,7 @@ class AddListActivity : AppCompatActivity() {
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerViewUsers: RecyclerView
-    private lateinit var relativeViewUsersEmpty: RelativeLayout
+    private lateinit var relativeViewUsersEmpty: TextView
     private lateinit var allLists: MutableList<UsersList>
 
     private lateinit var oneListItem: UsersList
@@ -55,7 +55,7 @@ class AddListActivity : AppCompatActivity() {
 
             //load list of users in list
             recyclerViewUsers = findViewById(R.id.activity_add_list_recyclerView)
-            relativeViewUsersEmpty = findViewById(R.id.add_activity_comment_empty_relativeLayout)
+            relativeViewUsersEmpty = findViewById(R.id.add_activity_comment_empty_textView)
 
 
             //[JB 1.7.2018]TODO not sure if that will work
