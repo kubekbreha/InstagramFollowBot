@@ -1,12 +1,13 @@
 package com.kubekbreha.instagrambot
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
+import org.jetbrains.anko.toast
 
 class ProgressActivity : AppCompatActivity() {
 

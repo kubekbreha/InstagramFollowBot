@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.AddListActivity
 import com.kubekbreha.instagrambot.R
+import com.kubekbreha.instagrambot.util.StoreListAplicationClass
 
 
 class ListsAdapter(private val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
@@ -28,8 +29,14 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+
         holder.listType.text = "#" + items[position]
         holder.itemView.setOnClickListener {
+
+            //save to application class picked list
+            (context as StoreListAplicationClass).setData(position)
+
             doubleClicked++
             if(position == markedItem) {
                 if (doubleClicked == 2) {
@@ -44,6 +51,7 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
                 }
             }else{
                 markedItem = position
+
                 if(doubleClicked == 2) doubleClicked = 0
             }
         }
