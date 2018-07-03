@@ -7,7 +7,6 @@ import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
-import org.jetbrains.anko.toast
 
 class ProgressActivity : AppCompatActivity() {
 
@@ -25,6 +24,25 @@ class ProgressActivity : AppCompatActivity() {
         if (bundle != null) {
             selectedListId = bundle.get("listSelected") as Int
             action = bundle.get("action") as String
+        }
+
+
+        when(action){
+            "follow" -> {
+                followListOfUsers(selectedListId)
+            }
+
+            "unfollow" -> {
+                unFollowListOfUsers(selectedListId)
+            }
+
+            "comment" -> {
+
+            }
+
+            "like" -> {
+
+            }
         }
     }
 
