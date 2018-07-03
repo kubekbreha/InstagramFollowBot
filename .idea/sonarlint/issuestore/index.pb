@@ -43,3 +43,13 @@ h
 8app/src/main/res/menu/bottom_nav_drawer_menu_actions.xml,9/7/97593c7e6fc017c5a9a7e028534d3b05f22a6b4f
 ê
 `app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentActions.kt,f/e/fe918665cba2f1cdbf3c0327fbf19d7125e61a04
+<
+build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+v
+Fapp/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt,3/6/36f69ff08e65f23c5e4bb60961db41b4b4a3cf92
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+]
+-app/src/main/res/layout/activity_progress.xml,4/5/4576d4d0ff861f21046752f47aa4053f2028c41f
+q
+Aapp/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt,b/4/b475047d7706af5faaf14f182c7a8a2970ce6818

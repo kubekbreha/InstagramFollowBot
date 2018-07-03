@@ -50,9 +50,7 @@ class MainActivity : AppCompatActivity() {
             val bottomNavDrawerFragment = BottomNavigationDrawerFragmentAccountSettings()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
         }
-
-
-
+        
     }
 
 
