@@ -7,31 +7,30 @@
     tools:context="com.kubekbreha.instagrambot.ProgressActivity">
 
 
-    <at.grabner.circleprogress.CircleProgressView
-        android:id="@+id/circleView"
-        android:layout_width="277dp"
-        android:layout_height="277dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="134dp"
-        CircleProgressView:cpv_autoTextSize="true"
-        CircleProgressView:cpv_barColor="@color/colorAccent"
-        CircleProgressView:cpv_barWidth="35dp"
-        CircleProgressView:cpv_innerContourSize="0dp"
-        CircleProgressView:cpv_maxValue="100"
-        CircleProgressView:cpv_outerContourSize="0dp"
-        CircleProgressView:cpv_rimColor="@color/colorPrimary"
-        CircleProgressView:cpv_rimWidth="35dp"
-        CircleProgressView:cpv_seekMode="true"
-        CircleProgressView:cpv_showUnit="true"
-        CircleProgressView:cpv_spinColor="@color/colorPrimary"
-        CircleProgressView:cpv_textColor="@color/colorPrimary"
-        CircleProgressView:cpv_textScale="1"
-        CircleProgressView:cpv_unit="%"
-        CircleProgressView:cpv_unitColor="@color/colorPrimary"
-        CircleProgressView:cpv_unitPosition="right_top"
-        CircleProgressView:cpv_unitScale="1"
-        CircleProgressView:cpv_value="10" />
+    <!--<devlight.io.library.ArcProgressStackView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:apsv_rounded="true"-->
+        <!--app:apsv_shadowed="true"-->
+        <!--app:apsv_animated="true"-->
+        <!--app:apsv_dragged="true"-->
+        <!--app:apsv_leveled="true"-->
+        <!--app:apsv_typeface="fonts/agency.ttf"-->
+        <!--app:apsv_text_color="#fff"-->
+        <!--app:apsv_shadow_distance="5dp"-->
+        <!--app:apsv_shadow_angle="90"-->
+        <!--app:apsv_shadow_radius="10dp"-->
+        <!--app:apsv_shadow_color="#000"-->
+        <!--app:apsv_animation_duration="1000"-->
+        <!--app:apsv_interpolator="@android:anim/bounce_interpolator"-->
+        <!--app:apsv_draw_width="75%"-->
+        <!--app:apsv_model_offset="5dp"-->
+        <!--app:apsv_model_bg_enabled="true"-->
+        <!--app:apsv_start_angle="270"-->
+        <!--app:apsv_sweep_angle="360"-->
+        <!--app:apsv_indicator_orientation="vertical"-->
+        <!--app:apsv_preview_colors="@array/default_preview"-->
+        <!--app:apsv_preview_bg="#ccc"/>-->
 
 
 </RelativeLayout>
