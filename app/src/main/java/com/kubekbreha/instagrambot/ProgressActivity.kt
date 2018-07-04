@@ -50,11 +50,11 @@ class ProgressActivity : AppCompatActivity() {
 
         when (action) {
             "follow" -> {
-                followListOfUsers(selectedListId)
+                followListOfUsers(selectedListId, true)
             }
 
             "unfollow" -> {
-                unFollowListOfUsers(selectedListId)
+                followListOfUsers(selectedListId, false)
             }
 
             "comment" -> {
@@ -68,7 +68,7 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun followListOfUsers(selectedList: Int) {
+    private fun followListOfUsers(selectedList: Int, follow: Boolean) {
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
 
@@ -76,14 +76,17 @@ class ProgressActivity : AppCompatActivity() {
         val percentage = (1f / fullSize) * 99
         var addValue = percentage
 
-
         toast(fullSize.toString() + " " + percentage.toString())
 
         var user = 0
-        val cdt = object : CountDownTimer(fullSize*3000L, 3000) {
+        val cdt = object : CountDownTimer(fullSize*7000L, 7000) {
 
             override fun onTick(millisUntilFinished: Long) {
-                follow(namesOfUsers[user])
+                if (follow) {
+                    follow(namesOfUsers[user], true)
+                }else{
+                    follow(namesOfUsers[user], false)
+                }
                 models[0].progress = addValue
                 models[1].progress = addValue
                 addValue += percentage
@@ -100,14 +103,18 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun follow(user: String) {
+    private fun follow(user: String, follow: Boolean) {
         toast(user)
 
         val thread = Thread(Runnable {
             try {
                 val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
                 val user = result.user
-                User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
+                if (follow) {
+                    User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
+                }else{
+                    User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -116,30 +123,10 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun unFollowListOfUsers(selectedList: Int) {
-        val users = UsersInList(selectedList, this)
-        val namesOfUsers = users.getUsers()
-        for (user in namesOfUsers) {
-            toast(user)
-            unFollow(user)
-            //[JB 1.7.2018]TODO add break for some time here
-        }
-    }
 
 
 
-    private fun unFollow(user: String) {
-        val thread = Thread(Runnable {
-            try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
-                val user = result.user
-                User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
-            } catch (e: Exception) {
-                e.printStackTrace()
-            }
-        })
-        thread.start()
-    }
+
 
 
     private fun like(pk: Long) {
