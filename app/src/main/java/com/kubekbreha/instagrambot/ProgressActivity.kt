@@ -7,6 +7,7 @@ import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
+import org.jetbrains.anko.toast
 
 class ProgressActivity : AppCompatActivity() {
 
@@ -25,6 +26,8 @@ class ProgressActivity : AppCompatActivity() {
             selectedListId = bundle.get("listSelected") as Int
             action = bundle.get("action") as String
         }
+
+        toast(selectedListId.toString() + " " + action).show()
 
 
         when(action){
