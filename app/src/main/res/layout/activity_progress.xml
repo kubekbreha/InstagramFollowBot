@@ -8,38 +8,34 @@
     tools:context="com.kubekbreha.instagrambot.ProgressActivity">
 
 
-    <!--<com.kubekbreha.instagrambot.util.ArcProgressStackView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--app:apsv_rounded="true"-->
-        <!--app:apsv_shadowed="true"-->
-        <!--app:apsv_animated="true"-->
-        <!--app:apsv_dragged="true"-->
-        <!--app:apsv_leveled="true"-->
-        <!--app:apsv_typeface="fonts/agency.ttf"-->
-        <!--app:apsv_text_color="#fff"-->
-        <!--app:apsv_shadow_distance="5dp"-->
-        <!--app:apsv_shadow_angle="90"-->
-        <!--app:apsv_shadow_radius="10dp"-->
-        <!--app:apsv_shadow_color="#000"-->
-        <!--app:apsv_animation_duration="1000"-->
-        <!--app:apsv_interpolator="@android:anim/bounce_interpolator"-->
-        <!--app:apsv_draw_width="75%"-->
-        <!--app:apsv_model_offset="5dp"-->
-        <!--app:apsv_model_bg_enabled="true"-->
-        <!--app:apsv_start_angle="270"-->
-        <!--app:apsv_sweep_angle="360"-->
-        <!--app:apsv_indicator_orientation="vertical"-->
-        <!--app:apsv_preview_colors="@array/default_preview"-->
-        <!--app:apsv_preview_bg="#ccc"/>-->
-
     <com.kubekbreha.instagrambot.util.ArcProgressStackView
-        android:id="@+id/apsv"
+        android:id="@+id/activity_progress_arcProgressStackView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_margin="24dp"
+        app:apsv_rounded="true"
+        app:apsv_shadowed="true"
+        app:apsv_animated="true"
+        app:apsv_dragged="true"
+        app:apsv_leveled="true"
+        app:apsv_typeface="fonts/agency.ttf"
+        app:apsv_text_color="#fff"
+        app:apsv_shadow_distance="0dp"
+        app:apsv_shadow_angle="90"
+        app:apsv_shadow_radius="10dp"
+        app:apsv_shadow_color="#000"
+        app:apsv_animation_duration="1000"
+        app:apsv_interpolator="@android:anim/bounce_interpolator"
+        app:apsv_draw_width="30%"
+        app:apsv_model_offset="0dp"
+        app:apsv_model_bg_enabled="true"
+        app:apsv_start_angle="270"
+        app:apsv_sweep_angle="360"
+        app:apsv_indicator_orientation="vertical"
         app:apsv_preview_colors="@array/default_preview"
-        app:apsv_model_bg_enabled="true"/>
+        app:apsv_preview_bg="#ccc"/>
+
+
 
 
 </RelativeLayout>

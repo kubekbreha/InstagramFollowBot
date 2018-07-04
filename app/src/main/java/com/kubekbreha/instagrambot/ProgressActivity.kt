@@ -29,12 +29,14 @@ class ProgressActivity : AppCompatActivity() {
         setContentView(R.layout.activity_progress)
 
 
-        mArcProgressStackView = findViewById(R.id.apsv) as ArcProgressStackView
+        mArcProgressStackView = findViewById(R.id.activity_progress_arcProgressStackView)
 
         // Set models
         val models = ArrayList<Model>()
-        models.add(Model("Strategy", 0, Color.parseColor("#ff34ff"), R.color.colorAccent))
-        models.add(Model("Design", 0, Color.parseColor("#ff98ff"), R.color.colorAccentDark))
+        models.add(Model("WholeList", 0, Color.parseColor("#6D8DFA"), R.color.colorAccent))
+        models.add(Model("OneItem", 0, Color.parseColor("#6052E5"), R.color.colorAccent))
+        models[0].progress = 40.0f
+        models[1].progress = 20.0f
         mArcProgressStackView!!.setModels(models)
 
 
