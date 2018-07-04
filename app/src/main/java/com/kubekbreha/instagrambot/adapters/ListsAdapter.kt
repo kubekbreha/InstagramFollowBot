@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.kubekbreha.instagrambot.AddListActivity
 import com.kubekbreha.instagrambot.R
-import com.kubekbreha.instagrambot.util.StoreListAplicationClass
 
 
 class ListsAdapter(private val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
@@ -35,7 +34,9 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
         holder.itemView.setOnClickListener {
 
             //save to application class picked list
-            (context as StoreListAplicationClass).setData(position)
+            val editor = context.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+            editor.putInt("listId", position)
+            editor.apply()
 
             doubleClicked++
             if(position == markedItem) {

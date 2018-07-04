@@ -1,6 +1,7 @@
 package com.kubekbreha.instagrambot.fragments
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +11,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kubekbreha.instagrambot.ProgressActivity
 import com.kubekbreha.instagrambot.R
-import com.kubekbreha.instagrambot.util.StoreListAplicationClass
 import kotlinx.android.synthetic.main.fragment_bottomsheet_actions.*
 import org.jetbrains.anko.toast
-import java.lang.Exception
 
 
 class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
@@ -31,14 +30,15 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
 
         fragment_bottomsheet_navigation_view.setNavigationItemSelectedListener { menuItem ->
 
-            try {
-                selectedList = (context as StoreListAplicationClass).getData()!!
-                (context as Activity).toast(selectedList)
-                openActivity = true
+            val prefs = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE)
+            selectedList = prefs.getInt("listId", -1)
 
-            } catch (e: Exception) {
+            if (selectedList == -1) {
                 (context as Activity).toast("You need to pick a list!")
+            }else{
+                openActivity = true
             }
+
 
 
             // Bottom Navigation Drawer menu item clicks
