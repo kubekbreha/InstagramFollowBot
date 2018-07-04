@@ -55,6 +55,7 @@ class ProgressActivity : AppCompatActivity() {
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
         for (user in namesOfUsers){
+            toast(user)
             follow(user)
             //[JB 1.7.2018]TODO add break for some time here
         }
@@ -66,6 +67,7 @@ class ProgressActivity : AppCompatActivity() {
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
         for (user in namesOfUsers){
+            toast(user)
             unFollow(user)
             //[JB 1.7.2018]TODO add break for some time here
         }
