@@ -39,6 +39,9 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                 openActivity = true
             }
 
+            val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+            editor.putInt("listId", -1)
+            editor.apply()
 
 
             // Bottom Navigation Drawer menu item clicks
@@ -51,6 +54,7 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                         intent.putExtra("action", "follow")
                         startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        removeFragment(this)
 //                    (context as Activity).finish()
                     }
                 }
@@ -62,6 +66,7 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                         intent.putExtra("action", "unfollow")
                         startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        removeFragment(this)
                     }
                 }
 
@@ -72,6 +77,7 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                         intent.putExtra("action", "comment")
                         startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        removeFragment(this)
                     }
                 }
 
@@ -82,6 +88,7 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                         intent.putExtra("action", "like")
                         startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        removeFragment(this)
                     }
                 }
 
@@ -90,7 +97,6 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
             // For example, swap UI fragments here
             true
         }
-
     }
 
     private fun removeFragment(fragment: Fragment) {

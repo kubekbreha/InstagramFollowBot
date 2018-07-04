@@ -22,6 +22,7 @@ class MainFragment : Fragment() {
     private lateinit var relativeViewListEmpty: RelativeLayout
     private lateinit var database: DatabaseHandlerLists
     private lateinit var allLists: MutableList<UsersList>
+    private lateinit var adapter: ListsAdapter
 
     companion object {
         fun newInstance(): MainFragment = MainFragment()
@@ -40,7 +41,8 @@ class MainFragment : Fragment() {
         getLists()
         recyclerViewList.layoutManager = LinearLayoutManager(context)
         //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        recyclerViewList.adapter = ListsAdapter(listsArray, context!!)
+        adapter =  ListsAdapter(listsArray, context!!)
+        recyclerViewList.adapter = adapter
         if(listsArray.isEmpty()){
             recyclerViewList.visibility = View.GONE
             relativeViewListEmpty.visibility = View.VISIBLE
@@ -57,6 +59,12 @@ class MainFragment : Fragment() {
         allLists.forEach { oneList ->
             listsArray.add(oneList.name)
         }
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        adapter.resetDoubleClicked()
     }
 
 }

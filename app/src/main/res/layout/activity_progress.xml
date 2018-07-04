@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.kubekbreha.instagrambot.ProgressActivity">
 
-
     <com.kubekbreha.instagrambot.util.ArcProgressStackView
         android:id="@+id/activity_progress_arcProgressStackView"
         android:layout_width="match_parent"
@@ -34,8 +33,5 @@
         app:apsv_indicator_orientation="vertical"
         app:apsv_preview_colors="@array/default_preview"
         app:apsv_preview_bg="#ccc"/>
-
-
-
 
 </RelativeLayout>

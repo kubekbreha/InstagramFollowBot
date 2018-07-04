@@ -41,6 +41,8 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
             doubleClicked++
             if(position == markedItem) {
                 if (doubleClicked == 2) {
+                    resetDoubleClicked()
+
                     val intent = Intent(context, AddListActivity::class.java)
                     val b = Bundle()
                     b.putInt("openedListId", position)
@@ -48,13 +50,18 @@ class ListsAdapter(private val items : ArrayList<String>, val context: Context) 
                     context.startActivity(intent)
                     (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                     (context).finish()
-                    doubleClicked = 0
                 }
             }else{
                 markedItem = position
-
                 if(doubleClicked == 2) doubleClicked = 0
             }
         }
     }
+
+
+    public fun resetDoubleClicked(){
+        doubleClicked = 0
+        markedItem = -100
+    }
+
 }
