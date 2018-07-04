@@ -1,13 +1,17 @@
 package com.kubekbreha.instagrambot
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.kubekbreha.instagrambot.util.ArcProgressStackView
+import com.kubekbreha.instagrambot.util.Model
 import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import org.jetbrains.anko.toast
+import java.util.ArrayList
 
 class ProgressActivity : AppCompatActivity() {
 
@@ -17,9 +21,24 @@ class ProgressActivity : AppCompatActivity() {
     private var selectedListId : Int = -1
     private var action: String = ""
 
+    private var mArcProgressStackView: ArcProgressStackView? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_progress)
+
+
+        mArcProgressStackView = findViewById(R.id.apsv) as ArcProgressStackView
+
+        // Set models
+        val models = ArrayList<Model>()
+        models.add(Model("Strategy", 0, Color.parseColor("#ff34ff"), R.color.colorAccent))
+        models.add(Model("Design", 0, Color.parseColor("#ff98ff"), R.color.colorAccentDark))
+        mArcProgressStackView!!.setModels(models)
+
+
+
 
         val bundle = intent.extras
         if (bundle != null) {

@@ -26,9 +26,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.CornerPathEffect;
 import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.PathMeasure;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.SweepGradient;
 import android.graphics.Typeface;
@@ -775,9 +772,9 @@ public class ArcProgressStackView extends View {
                 for (int i = 0; i < mModels.size(); i++) {
                     final Model model = mModels.get(i);
                     // Check if our model contains touch points
-                    if (model.mBounds.contains(event.getX(), event.getY())) {
+                    if (model.getMBounds().contains(event.getX(), event.getY())) {
                         // Check variables for handle touch in progress model zone
-                        float modelRadius = model.mBounds.width() * 0.5F;
+                        float modelRadius = model.getMBounds().width() * 0.5F;
                         float modelOffset = mProgressModelSize * 0.5F;
                         float mainRadius = mSize * 0.5F;
 
@@ -840,16 +837,16 @@ public class ArcProgressStackView extends View {
                     (paintOffset + shadowOffset) - (mProgressModelOffset * i);
 
             // Set bounds to progress
-            model.mBounds.set(
+            model.getMBounds().set(
                     modelOffset, modelOffset,
                     mSize - modelOffset, mSize - modelOffset
             );
 
             // Set sweep gradient shader
             if (model.getColors() != null)
-                model.mSweepGradient = new SweepGradient(
-                        model.mBounds.centerX(), model.mBounds.centerY(), model.getColors(), null
-                );
+                model.setMSweepGradient(new SweepGradient(
+                        model.getMBounds().centerX(), model.getMBounds().centerY(), model.getColors(), null
+                ));
         }
 
         // Set square measured dimension
@@ -869,8 +866,8 @@ public class ArcProgressStackView extends View {
         for (int i = 0; i < mModels.size(); i++) {
             final Model model = mModels.get(i);
             // Get progress for current model
-            float progressFraction = mIsAnimated && !isInEditMode() ? (model.mLastProgress + (mAnimatedFraction *
-                    (model.getProgress() - model.mLastProgress))) / MAX_PROGRESS :
+            float progressFraction = mIsAnimated && !isInEditMode() ? (model.getMLastProgress() + (mAnimatedFraction *
+                    (model.getProgress() - model.getMLastProgress()))) / MAX_PROGRESS :
                     model.getProgress() / MAX_PROGRESS;
             if (i != mActionMoveModelIndex && mActionMoveModelIndex != ANIMATE_ALL_INDEX)
                 progressFraction = model.getProgress() / MAX_PROGRESS;
@@ -882,8 +879,8 @@ public class ArcProgressStackView extends View {
             mProgressPaint.setStrokeWidth(mProgressModelSize);
 
             // Set model arc progress
-            model.mPath.reset();
-            model.mPath.addArc(model.mBounds, 0.0F, progress);
+            model.getMPath().reset();
+            model.getMPath().addArc(model.getMBounds(), 0.0F, progress);
 
             // Draw gradient progress or solid
             resetShadowLayer();
@@ -893,24 +890,24 @@ public class ArcProgressStackView extends View {
             if (mIsModelBgEnabled) {
                 //noinspection ResourceAsColor
                 mProgressPaint.setColor(isInEditMode() ? mPreviewModelBgColor : model.getBgColor());
-                canvas.drawArc(model.mBounds, 0.0F, mSweepAngle, false, mProgressPaint);
+                canvas.drawArc(model.getMBounds(), 0.0F, mSweepAngle, false, mProgressPaint);
                 if (!isInEditMode()) mProgressPaint.clearShadowLayer();
             }
 
             // Check if gradient for draw shadow at first and then gradient progress
             if (isGradient) {
                 if (!mIsModelBgEnabled) {
-                    canvas.drawPath(model.mPath, mProgressPaint);
+                    canvas.drawPath(model.getMPath(), mProgressPaint);
 
                     if (!isInEditMode()) mProgressPaint.clearShadowLayer();
                 }
 
-                mProgressPaint.setShader(model.mSweepGradient);
+                mProgressPaint.setShader(model.getMSweepGradient());
             } else mProgressPaint.setColor(model.getColor());
 
             // Here we draw main progress
             mProgressPaint.setAlpha(255);
-            canvas.drawPath(model.mPath, mProgressPaint);
+            canvas.drawPath(model.getMPath(), mProgressPaint);
 
             // Preview mode
             if (isInEditMode()) continue;
@@ -920,86 +917,86 @@ public class ArcProgressStackView extends View {
             mTextPaint.getTextBounds(
                     model.getTitle(),
                     0, model.getTitle().length(),
-                    model.mTextBounds
+                    model.getMTextBounds()
             );
 
             // Draw title at start with offset
-            final float titleHorizontalOffset = model.mTextBounds.height() * 0.5F;
+            final float titleHorizontalOffset = model.getMTextBounds().height() * 0.5F;
             final float progressLength =
-                    (float) (Math.PI / 180.0F) * progress * model.mBounds.width() * 0.5F;
+                    (float) (Math.PI / 180.0F) * progress * model.getMBounds().width() * 0.5F;
             final String title = (String) TextUtils.ellipsize(
                     model.getTitle(), mTextPaint,
                     progressLength - titleHorizontalOffset * (mIsRounded ? 0 : 2), TextUtils.TruncateAt.END
             );
             canvas.drawTextOnPath(
                     title,
-                    model.mPath,
+                    model.getMPath(),
                     mIsRounded ? 0.0F : titleHorizontalOffset, titleHorizontalOffset,
                     mTextPaint
             );
 
             // Get pos and tan at final path point
-            model.mPathMeasure.setPath(model.mPath, false);
-            model.mPathMeasure.getPosTan(model.mPathMeasure.getLength(), model.mPos, model.mTan);
+            model.getMPathMeasure().setPath(model.getMPath(), false);
+            model.getMPathMeasure().getPosTan(model.getMPathMeasure().getLength(), model.getMPos(), model.getMTan());
 
             // Get title width
-            final float titleWidth = model.mTextBounds.width();
+            final float titleWidth = model.getMTextBounds().width();
 
             // Create model progress like : 23%
             final String percentProgress = String.format("%d%%", (int) model.getProgress());
             // Get progress text bounds
             mTextPaint.setTextSize(mProgressModelSize * 0.35f);
             mTextPaint.getTextBounds(
-                    percentProgress, 0, percentProgress.length(), model.mTextBounds
+                    percentProgress, 0, percentProgress.length(), model.getMTextBounds()
             );
 
             // Get pos tan with end point offset and check whether the rounded corners for offset
             final float progressHorizontalOffset =
                     mIndicatorOrientation == IndicatorOrientation.VERTICAL ?
-                            model.mTextBounds.height() * 0.5F : model.mTextBounds.width() * 0.5F;
+                            model.getMTextBounds().height() * 0.5F : model.getMTextBounds().width() * 0.5F;
             final float indicatorProgressOffset = (mIsRounded ? progressFraction : 1.0F) *
                     (-progressHorizontalOffset - titleHorizontalOffset
-                            - (mIsRounded ? model.mTextBounds.height() * 2.0F : 0.0F));
-            model.mPathMeasure.getPosTan(
-                    model.mPathMeasure.getLength() + indicatorProgressOffset, model.mPos,
+                            - (mIsRounded ? model.getMTextBounds().height() * 2.0F : 0.0F));
+            model.getMPathMeasure().getPosTan(
+                    model.getMPathMeasure().getLength() + indicatorProgressOffset, model.getMPos(),
                     mIndicatorOrientation == IndicatorOrientation.VERTICAL && !mIsRounded ?
                             new float[2] :
-                            model.mTan
+                            model.getMTan()
             );
 
             // Check if there available place for indicator
-            if ((titleWidth + model.mTextBounds.height() + titleHorizontalOffset * 2.0F) -
+            if ((titleWidth + model.getMTextBounds().height() + titleHorizontalOffset * 2.0F) -
                     indicatorProgressOffset < progressLength) {
                 // Get rotate indicator progress angle for progress value
                 float indicatorProgressAngle =
-                        (float) (Math.atan2(model.mTan[1], model.mTan[0]) * (180.0F / Math.PI));
+                        (float) (Math.atan2(model.getMTan()[1], model.getMTan()[0]) * (180.0F / Math.PI));
                 // Get arc angle of progress indicator
                 final float indicatorLengthProgressAngle = ((progressLength + indicatorProgressOffset) /
-                        (model.mBounds.width() * 0.5F)) * (float) (180.0F / Math.PI);
+                        (model.getMBounds().width() * 0.5F)) * (float) (180.0F / Math.PI);
 
                 // Detect progress indicator position : left or right and then rotate
                 if (mIndicatorOrientation == IndicatorOrientation.VERTICAL) {
                     // Get X point of arc angle progress indicator
-                    final float x = (float) (model.mBounds.width() * 0.5F *
+                    final float x = (float) (model.getMBounds().width() * 0.5F *
                             (Math.cos((indicatorLengthProgressAngle + mStartAngle) *
-                                    Math.PI / 180.0F))) + model.mBounds.centerX();
+                                    Math.PI / 180.0F))) + model.getMBounds().centerX();
                     indicatorProgressAngle += (x > radius) ? -90.0F : 90.0F;
                 } else {
                     // Get Y point of arc angle progress indicator
-                    final float y = (float) (model.mBounds.height() * 0.5F *
+                    final float y = (float) (model.getMBounds().height() * 0.5F *
                             (Math.sin((indicatorLengthProgressAngle + mStartAngle) *
-                                    Math.PI / 180.0F))) + model.mBounds.centerY();
+                                    Math.PI / 180.0F))) + model.getMBounds().centerY();
                     indicatorProgressAngle += (y > radius) ? 180.0F : 0.0F;
                 }
 
                 // Draw progress value
                 canvas.save();
-                canvas.rotate(indicatorProgressAngle, model.mPos[0], model.mPos[1]);
+                canvas.rotate(indicatorProgressAngle, model.getMPos()[0], model.getMPos()[1]);
                 if (mIsShowProgress) {
                     canvas.drawText(
                             percentProgress,
-                            model.mPos[0] - model.mTextBounds.exactCenterX(),
-                            model.mPos[1] - model.mTextBounds.exactCenterY(),
+                            model.getMPos()[0] - model.getMTextBounds().exactCenterX(),
+                            model.getMPos()[1] - model.getMTextBounds().exactCenterY(),
                             mTextPaint
                     );
                 }
@@ -1009,7 +1006,7 @@ public class ArcProgressStackView extends View {
             // Check if gradient and have rounded corners, because we must to create elevation effect
             // for start progress corner
             if ((isGradient || mIsLeveled) && mIsRounded && progress != 0) {
-                model.mPathMeasure.getPosTan(0.0F, model.mPos, model.mTan);
+                model.getMPathMeasure().getPosTan(0.0F, model.getMPos(), model.getMTan());
 
                 // Set paint for overlay rounded gradient with shadow
                 setLevelShadowLayer();
@@ -1019,8 +1016,8 @@ public class ArcProgressStackView extends View {
                 // Get bounds of start pump
                 final float halfSize = mProgressModelSize * 0.5F;
                 final RectF arcRect = new RectF(
-                        model.mPos[0] - halfSize, model.mPos[1] - halfSize,
-                        model.mPos[0] + halfSize, model.mPos[1] + halfSize + 2.0F
+                        model.getMPos()[0] - halfSize, model.getMPos()[1] - halfSize,
+                        model.getMPos()[0] + halfSize, model.getMPos()[1] + halfSize + 2.0F
                 );
                 canvas.drawArc(arcRect, 0.0F, -180.0F, true, mLevelPaint);
             }
@@ -1030,94 +1027,8 @@ public class ArcProgressStackView extends View {
         canvas.restore();
     }
 
-    public static class Model {
 
-        private String mTitle;
-        private float mLastProgress;
-        private float mProgress;
 
-        private int mColor;
-        private int mBgColor;
-        private int[] mColors;
-
-        private final RectF mBounds = new RectF();
-        private final Rect mTextBounds = new Rect();
-
-        private final Path mPath = new Path();
-        private SweepGradient mSweepGradient;
-
-        private final PathMeasure mPathMeasure = new PathMeasure();
-        private final float[] mPos = new float[2];
-        private final float[] mTan = new float[2];
-
-        public Model(final String title, final float progress, final int color) {
-            setTitle(title);
-            setProgress(progress);
-            setColor(color);
-        }
-
-        public Model(final String title, final float progress, final int[] colors) {
-            setTitle(title);
-            setProgress(progress);
-            setColors(colors);
-        }
-
-        public Model(final String title, final float progress, final int bgColor, final int color) {
-            setTitle(title);
-            setProgress(progress);
-            setColor(color);
-            setBgColor(bgColor);
-        }
-
-        public Model(final String title, final float progress, final int bgColor, final int[] colors) {
-            setTitle(title);
-            setProgress(progress);
-            setColors(colors);
-            setBgColor(bgColor);
-        }
-
-        public String getTitle() {
-            return mTitle;
-        }
-
-        public void setTitle(final String title) {
-            mTitle = title;
-        }
-
-        public float getProgress() {
-            return mProgress;
-        }
-
-        public void setProgress(@FloatRange(from = MIN_PROGRESS, to = MAX_PROGRESS) final float progress) {
-            mLastProgress = mProgress;
-            mProgress = (int) Math.max(MIN_PROGRESS, Math.min(progress, MAX_PROGRESS));
-        }
-
-        public int getColor() {
-            return mColor;
-        }
-
-        public void setColor(final int color) {
-            mColor = color;
-        }
-
-        public int getBgColor() {
-            return mBgColor;
-        }
-
-        public void setBgColor(final int bgColor) {
-            mBgColor = bgColor;
-        }
-
-        public int[] getColors() {
-            return mColors;
-        }
-
-        public void setColors(final int[] colors) {
-            if (colors != null && colors.length >= 2) mColors = colors;
-            else mColors = null;
-        }
-    }
 
     public enum IndicatorOrientation {
         HORIZONTAL, VERTICAL
