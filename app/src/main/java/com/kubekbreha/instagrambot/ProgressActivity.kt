@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.util.ArcProgressStackView
 import com.kubekbreha.instagrambot.util.Model
 import dev.niekirk.com.instagram4android.requests.*
+import dev.niekirk.com.instagram4android.requests.payload.InstagramComment
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import kotlinx.android.synthetic.main.activity_progress.*
-import org.jetbrains.anko.toast
 import java.util.*
 
 
@@ -62,7 +62,7 @@ class ProgressActivity : AppCompatActivity() {
             }
 
             "like" -> {
-
+                likeListOfUsersPosts(selectedListId)
             }
         }
     }
@@ -83,18 +83,18 @@ class ProgressActivity : AppCompatActivity() {
         var addValue = 0f
 
         var user = 0
-        val bigCircle = object : CountDownTimer(fullSize*pauseBetweenUsers, pauseBetweenUsers.toLong()) {
+        val bigCircle = object : CountDownTimer(fullSize * pauseBetweenUsers, pauseBetweenUsers.toLong()) {
             override fun onTick(millisUntilFinished: Long) {
                 if (follow) {
                     follow(namesOfUsers[user], true)
-                }else{
+                } else {
                     follow(namesOfUsers[user], false)
                 }
                 mArcProgressStackView!!.models[0].progress = addValue
                 mArcProgressStackView!!.animateProgress()
 
                 //one user circle
-                val miniValue = ((pauseBetweenOneUser/(pauseBetweenUsers-pauseBetweenOneUser))*100)
+                val miniValue = ((pauseBetweenOneUser / (pauseBetweenUsers - pauseBetweenOneUser)) * 100)
                 var addValueSmall = 0f
                 val smallCircle = object : CountDownTimer(pauseBetweenUsers.toLong(), pauseBetweenOneUser.toLong()) {
                     override fun onTick(millisUntilFinished: Long) {
@@ -123,19 +123,19 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun follow(user: String, follow: Boolean) {
-        if(follow) {
-            activity_progress_currentlyInAction_textView.text = "Following: " + user
-        }else{
-            activity_progress_currentlyInAction_textView.text = "Unfollowing: " + user
+    private fun follow(userName: String, follow: Boolean) {
+        if (follow) {
+            activity_progress_currentlyInAction_textView.text = "Following: " + userName
+        } else {
+            activity_progress_currentlyInAction_textView.text = "Unfollowing: " + userName
         }
         val thread = Thread(Runnable {
             try {
-                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))
                 val user = result.user
                 if (follow) {
                     User.getUser().sendRequest(InstagramFollowRequest(user.getPk()))
-                }else{
+                } else {
                     User.getUser().sendRequest(InstagramUnfollowRequest(user.getPk()))
                 }
             } catch (e: Exception) {
@@ -146,30 +146,71 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
+    private fun likeListOfUsersPosts(selectedList: Int) {
 
+        val users = UsersInList(selectedList, this)
+        val namesOfUsers = users.getUsers()
 
+        val fullSize = namesOfUsers.size.toLong()
+        val percentage = (1f / fullSize) * 99
+        var addValue = 0f
 
-    private fun like(pk: Long) {
-        val thread = Thread(Runnable {
-            try {
-                User.getUser().sendRequest(InstagramLikeRequest(pk))
-            } catch (e: Exception) {
-                e.printStackTrace()
+        var user = 0
+        val bigCircle = object : CountDownTimer(fullSize * pauseBetweenUsers, pauseBetweenUsers.toLong()) {
+            override fun onTick(millisUntilFinished: Long) {
+                likePosts(namesOfUsers[user])
+                mArcProgressStackView!!.models[0].progress = addValue
+                mArcProgressStackView!!.animateProgress()
+
+                //one user circle
+                val miniValue = ((pauseBetweenOneUser / (pauseBetweenUsers - pauseBetweenOneUser)) * 100)
+                var addValueSmall = 0f
+                val smallCircle = object : CountDownTimer(pauseBetweenUsers.toLong(), pauseBetweenOneUser.toLong()) {
+                    override fun onTick(millisUntilFinished: Long) {
+                        mArcProgressStackView!!.models[0].progress = addValue
+                        mArcProgressStackView!!.models[1].progress = addValueSmall
+                        mArcProgressStackView!!.animateProgress()
+                        addValueSmall += miniValue
+                    }
+
+                    override fun onFinish() {
+                        addValueSmall = 0f
+                    }
+                }.start()
+
+                //add value to big circle
+                addValue += percentage
+                user++
             }
-        })
-        thread.start()
+
+            override fun onFinish() {
+                models[0].progress = 100.0f
+                models[1].progress = 100.0f
+                mArcProgressStackView!!.animateProgress()
+            }
+        }.start()
+
+
     }
 
 
-    private fun getPostIDs(userName: String) {
+    private fun likePosts(userName: String) {
+        activity_progress_currentlyInAction_textView.text = "Liking posts of: " + userName
+
         var tagFeed: InstagramFeedResult?
+
         val thread = Thread(Runnable {
             try {
                 val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))
+                Log.e("preDEBUG", (result.user.pk).toString())
+
                 tagFeed = User.getUser().sendRequest(InstagramUserFeedRequest(result.user.pk, 5.toString(), 50))
+
                 for (feedResult in tagFeed!!.items) {
                     Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())
+                    User.getUser().sendRequest(InstagramLikeRequest(feedResult.getPk()))
                 }
+
                 tagFeedClass = tagFeed!!
                 Log.e("POSTDEBUG", "Finished")
 
@@ -182,21 +223,28 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun getUserFollowers(userResult: InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
-        val githubFollowers = User.getUser().sendRequest(InstagramGetUserFollowersRequest(userResult.user.getPk()))
-        val users = githubFollowers.getUsers()
-        for (user in users) {
-            println("User " + user.getUsername() + " follows " + userResult.user.username)
-        }
-        return users
-    }
 
 
-    private fun searchUser(userName: String): InstagramSearchUsernameResult {
-        val userResult = User.getUser().sendRequest(InstagramSearchUsernameRequest(userName))
-        Log.i(TAG, "ID for @" + userResult.user.username + " " + userResult.user.getPk())
-        Log.i(TAG, "Number of followers: " + userResult.user.getFollower_count())
-        return userResult
-    }
+
+//    private fun getUserFollowers(userResult: InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
+//        val githubFollowers = User.getUser().sendRequest((userResult.user.getPk()))
+//        val users = githubFollowers.getUsers()
+//        for (user in users) {
+//            println("User " + user.getUsername() + " follows " + userResult.user.username)
+//        }
+//        return users
+//    }
+//
+//    private fun getUserFollowing(userResult: InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
+//        val githubFollowers = User.getUser().sendRequest((userResult.user.getPk()))
+//        val users = githubFollowers.getUsers()
+//        for (user in users) {
+//            println("User " + user.getUsername() + " follows " + userResult.user.username)
+//        }
+//        return users
+//    }
+
+
+
 
 }
