@@ -85,6 +85,7 @@ class AddListActivity : AppCompatActivity() {
 
 
         } else { //when adding new list
+
             activity_add_list_button.text = "Add"
             activity_add_list_button.isAllCaps = false
 
@@ -100,13 +101,17 @@ class AddListActivity : AppCompatActivity() {
 
 
         //inflate add user bottom fragment
-        activity_add_list_floatingActionButton.setOnClickListener {
-            val bundle = Bundle()
-            bundle.putInt("listId", oneListItem.id)
-            bundle.putString("listName", oneListItem.name)
-            val fragobj = BottomNavigationDrawerFragmentAddUser()
-            fragobj.setArguments(bundle)
-            fragobj.show(supportFragmentManager, fragobj.tag)
+        if(openedListId != ADD_NEW_LIST) {
+            activity_add_list_floatingActionButton.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putInt("listId", oneListItem.id)
+                bundle.putString("listName", oneListItem.name)
+                val fragobj = BottomNavigationDrawerFragmentAddUser()
+                fragobj.setArguments(bundle)
+                fragobj.show(supportFragmentManager, fragobj.tag)
+            }
+        }else{
+            activity_add_list_floatingActionButton.visibility = View.GONE
         }
 
     }

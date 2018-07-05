@@ -51,8 +51,6 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
             if (position == markedItem) {
                 if (doubleClicked == 2) {
                     resetDoubleClicked()
-                    var card = holder.itemView.list_item_cardView
-                    card.setCardBackgroundColor(context.resources.getColor(R.color.white))
 
                     val intent = Intent(context, AddListActivity::class.java)
                     val b = Bundle()
@@ -62,6 +60,8 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
                     (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                     (context).finish()
 
+                    var card = holder.itemView.list_item_cardView
+                    card.setCardBackgroundColor(context.resources.getColor(R.color.white))
                 }
             } else {
                 var card = holder.itemView.list_item_cardView
