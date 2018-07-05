@@ -84,6 +84,10 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
     fun resetDoubleClicked() {
         doubleClicked = 0
         markedItem = -100
+        if(!itemsInAdapter.isEmpty()) {
+            var card = itemsInAdapter[itemsInAdapter.size - 1]
+            card.setCardBackgroundColor(context.resources.getColor(R.color.white))
+        }
     }
 
 
