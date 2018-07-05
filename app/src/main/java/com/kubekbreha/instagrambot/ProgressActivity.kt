@@ -14,6 +14,9 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernam
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import kotlinx.android.synthetic.main.activity_progress.*
 import java.util.*
+import dev.niekirk.com.instagram4android.requests.InstagramTagFeedRequest
+
+
 
 
 class ProgressActivity : AppCompatActivity() {
@@ -158,7 +161,7 @@ class ProgressActivity : AppCompatActivity() {
         var user = 0
         val bigCircle = object : CountDownTimer(fullSize * pauseBetweenUsers, pauseBetweenUsers.toLong()) {
             override fun onTick(millisUntilFinished: Long) {
-                likePosts(namesOfUsers[user])
+                likePostsByUser(namesOfUsers[user])
                 mArcProgressStackView!!.models[0].progress = addValue
                 mArcProgressStackView!!.animateProgress()
 
@@ -194,7 +197,7 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-    private fun likePosts(userName: String) {
+    private fun likePostsByUser(userName: String) {
         activity_progress_currentlyInAction_textView.text = "Liking posts of: " + userName
 
         var tagFeed: InstagramFeedResult?
@@ -226,25 +229,31 @@ class ProgressActivity : AppCompatActivity() {
 
 
 
-//    private fun getUserFollowers(userResult: InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
-//        val githubFollowers = User.getUser().sendRequest((userResult.user.getPk()))
-//        val users = githubFollowers.getUsers()
-//        for (user in users) {
-//            println("User " + user.getUsername() + " follows " + userResult.user.username)
-//        }
-//        return users
-//    }
-//
-//    private fun getUserFollowing(userResult: InstagramSearchUsernameResult): MutableList<InstagramUserSummary>? {
-//        val githubFollowers = User.getUser().sendRequest((userResult.user.getPk()))
-//        val users = githubFollowers.getUsers()
-//        for (user in users) {
-//            println("User " + user.getUsername() + " follows " + userResult.user.username)
-//        }
-//        return users
-//    }
+    private fun likePostsByTag(tag: String) {
+        activity_progress_currentlyInAction_textView.text = "Liking posts of tag: " + tag
+
+        var tagFeed: InstagramFeedResult?
+
+        val thread = Thread(Runnable {
+            try {
+                tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "10"))
+                Log.e("POSTDEBUG",  tag+" Post ID: " + tagFeed!!.items.size)
+
+                for (feedResult in tagFeed!!.items) {
+                    Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())
+                    User.getUser().sendRequest(InstagramLikeRequest(feedResult.getPk()))
+                }
+
+                tagFeedClass = tagFeed!!
+                Log.e("POSTDEBUG", "Finished")
 
 
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+    }
 
 
 }
