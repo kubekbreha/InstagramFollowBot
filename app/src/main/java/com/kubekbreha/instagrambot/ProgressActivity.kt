@@ -34,14 +34,12 @@ class ProgressActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_progress)
 
-
         mArcProgressStackView = findViewById(R.id.activity_progress_arcProgressStackView)
 
         // Set models
         models.add(Model("WholeList", 0, Color.parseColor("#6D8DFA"), R.color.colorAccent))
-        models.add(Model("OneItem", 0, Color.parseColor("#6052E5"), R.color.colorAccent))
+        models.add(Model("OneUser", 0, Color.parseColor("#6052E5"), R.color.colorAccent))
         mArcProgressStackView!!.models = models
-
 
         val bundle = intent.extras
         if (bundle != null) {
