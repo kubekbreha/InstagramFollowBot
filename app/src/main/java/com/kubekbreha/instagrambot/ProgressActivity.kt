@@ -68,6 +68,12 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+    }
+
     private fun followListOfUsers(selectedList: Int, follow: Boolean) {
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
