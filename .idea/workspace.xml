@@ -44,11 +44,21 @@
       <file leaf-file-name="ProgressActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="81" column="52" lean-forward="false" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+            <state relative-caret-position="61">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
-                <element signature="e#37#738#0" expanded="true" />
+                <element signature="e#37#761#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,6 +88,7 @@
       <find>model</find>
       <find>Model</find>
       <find>need</find>
+      <find>addValue</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -2445,11 +2456,11 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_progress.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/MainFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentActions.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt" />
       </list>
     </option>
@@ -3263,14 +3274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="80" column="40" lean-forward="false" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/MainFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -3279,12 +3282,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="81" column="52" lean-forward="false" selection-start-line="81" selection-start-column="52" selection-end-line="81" selection-end-column="52" />
+        <state relative-caret-position="61">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
-            <element signature="e#37#738#0" expanded="true" />
+            <element signature="e#37#761#0" expanded="true" />
           </folding>
         </state>
       </provider>

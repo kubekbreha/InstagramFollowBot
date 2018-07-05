@@ -15,7 +15,7 @@ import java.lang.Thread.sleep
 import java.util.ArrayList
 import java.util.concurrent.atomic.AtomicInteger
 import android.os.CountDownTimer
-
+import kotlin.math.min
 
 
 class ProgressActivity : AppCompatActivity() {
@@ -74,23 +74,37 @@ class ProgressActivity : AppCompatActivity() {
 
         val fullSize = namesOfUsers.size
         val percentage = (1f / fullSize) * 99
-        var addValue = percentage
-
-        toast(fullSize.toString() + " " + percentage.toString())
+        var addValue = 0f
 
         var user = 0
-        val cdt = object : CountDownTimer(fullSize*7000L, 7000) {
-
+        val bigCircle = object : CountDownTimer(fullSize*7000L, 7000) {
             override fun onTick(millisUntilFinished: Long) {
                 if (follow) {
                     follow(namesOfUsers[user], true)
                 }else{
                     follow(namesOfUsers[user], false)
                 }
-                models[0].progress = addValue
-                models[1].progress = addValue
-                addValue += percentage
+                mArcProgressStackView!!.models[0].progress = addValue
                 mArcProgressStackView!!.animateProgress()
+
+                //one user circle
+                val miniValue = ((500f/7000)*100)+1f
+                var addValueSmall = 0f
+                val smallCircle = object : CountDownTimer(7000, 500) {
+                    override fun onTick(millisUntilFinished: Long) {
+                        mArcProgressStackView!!.models[0].progress = addValue
+                        mArcProgressStackView!!.models[1].progress = addValueSmall
+                        mArcProgressStackView!!.animateProgress()
+                        addValueSmall += miniValue
+                    }
+
+                    override fun onFinish() {
+                        addValueSmall = 0f
+                    }
+                }.start()
+
+                //add value to big circle
+                addValue += percentage
                 user++
             }
 
