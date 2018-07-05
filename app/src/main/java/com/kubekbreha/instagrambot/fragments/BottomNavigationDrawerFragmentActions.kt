@@ -39,11 +39,6 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                 openActivity = true
             }
 
-            val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
-            editor.putInt("listId", -1)
-            editor.apply()
-
-
             // Bottom Navigation Drawer menu item clicks
             when (menuItem.itemId) {
 
@@ -101,7 +96,6 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
 
     private fun removeFragment(fragment: Fragment) {
         val fragmentTransaction = fragmentManager!!.beginTransaction()
-
         fragmentTransaction.remove(fragment)
         fragmentTransaction.commit()
     }

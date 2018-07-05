@@ -36,6 +36,10 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
     @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+        val editor = context.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+        editor.putInt("listIdSize", itemCount)
+        editor.apply()
+
         holder.listType.text = "#" + items[position]
 
         holder.itemView.setOnClickListener {
@@ -43,7 +47,6 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
             //save to application class picked list
             val editor = context.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
             editor.putInt("listId", position)
-            editor.putInt("listIdSize", itemCount)
             editor.apply()
 
             doubleClicked++
@@ -71,7 +74,6 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
                 if (doubleClicked == 2) doubleClicked = 0
 
                 if (itemsInAdapter.size >= 2) {
-                    Log.i("ADAPTERTAG", "IM IN")
                     var card = itemsInAdapter[itemsInAdapter.size - 2]
                     card.setCardBackgroundColor(context.resources.getColor(R.color.white))
                 }

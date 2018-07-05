@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             finish()
+
+            val editor = getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+            editor.putInt("listId", -1)
+            editor.apply()
         }
 
         activity_main_bottom_account_settings_menu.setOnClickListener{

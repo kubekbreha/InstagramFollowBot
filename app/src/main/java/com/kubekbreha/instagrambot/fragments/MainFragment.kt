@@ -1,6 +1,7 @@
 package com.kubekbreha.instagrambot.fragments
 
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -65,6 +66,9 @@ class MainFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         adapter.resetDoubleClicked()
+        val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+        editor.putInt("listId", -1)
+        editor.apply()
     }
 
 }
