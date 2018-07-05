@@ -88,7 +88,7 @@ class ProgressActivity : AppCompatActivity() {
                 mArcProgressStackView!!.animateProgress()
 
                 //one user circle
-                val miniValue = ((500f/7000)*100)+1f
+                val miniValue = ((500f/(7000-500))*100)
                 var addValueSmall = 0f
                 val smallCircle = object : CountDownTimer(7000, 500) {
                     override fun onTick(millisUntilFinished: Long) {
