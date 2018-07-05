@@ -2,6 +2,7 @@ package com.kubekbreha.instagrambot
 
 import android.graphics.Color
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.kubekbreha.instagrambot.util.ArcProgressStackView
@@ -11,11 +12,7 @@ import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import org.jetbrains.anko.toast
-import java.lang.Thread.sleep
-import java.util.ArrayList
-import java.util.concurrent.atomic.AtomicInteger
-import android.os.CountDownTimer
-import kotlin.math.min
+import java.util.*
 
 
 class ProgressActivity : AppCompatActivity() {
@@ -28,6 +25,10 @@ class ProgressActivity : AppCompatActivity() {
 
     private var mArcProgressStackView: ArcProgressStackView? = null
     val models = ArrayList<Model>()
+
+    private val pauseBetweenUsers = 7000
+    private val pauseBetweenOneUser = 500f
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,12 +73,12 @@ class ProgressActivity : AppCompatActivity() {
         val users = UsersInList(selectedList, this)
         val namesOfUsers = users.getUsers()
 
-        val fullSize = namesOfUsers.size
+        val fullSize = namesOfUsers.size.toLong()
         val percentage = (1f / fullSize) * 99
         var addValue = 0f
 
         var user = 0
-        val bigCircle = object : CountDownTimer(fullSize*7000L, 7000) {
+        val bigCircle = object : CountDownTimer(fullSize*pauseBetweenUsers, pauseBetweenUsers.toLong()) {
             override fun onTick(millisUntilFinished: Long) {
                 if (follow) {
                     follow(namesOfUsers[user], true)
@@ -88,9 +89,9 @@ class ProgressActivity : AppCompatActivity() {
                 mArcProgressStackView!!.animateProgress()
 
                 //one user circle
-                val miniValue = ((500f/(7000-500))*100)
+                val miniValue = ((pauseBetweenOneUser/(pauseBetweenUsers-pauseBetweenOneUser))*100)
                 var addValueSmall = 0f
-                val smallCircle = object : CountDownTimer(7000, 500) {
+                val smallCircle = object : CountDownTimer(pauseBetweenUsers.toLong(), pauseBetweenOneUser.toLong()) {
                     override fun onTick(millisUntilFinished: Long) {
                         mArcProgressStackView!!.models[0].progress = addValue
                         mArcProgressStackView!!.models[1].progress = addValueSmall
