@@ -1,5 +1,5 @@
 
-Isquid:S1068"/Remove this unused "progressBar" private field.(â˜ˆçøÿÿÿÿ
-ksquid:S1450"QRemove the "ll" field and declare it as a local variable in the relevant methods.(•£Õ¥úÿÿÿÿ
-@squid:S1068"&Remove this unused "ll" private field.(•£Õ¥úÿÿÿÿ
 tsquid:S1450"ZRemove the "progressBar" field and declare it as a local variable in the relevant methods.(â˜ˆçøÿÿÿÿ
+Isquid:S1068"/Remove this unused "progressBar" private field.(â˜ˆçøÿÿÿÿ
+@squid:S1068"&Remove this unused "ll" private field.(•£Õ¥úÿÿÿÿ
+ksquid:S1450"QRemove the "ll" field and declare it as a local variable in the relevant methods.(•£Õ¥úÿÿÿÿ

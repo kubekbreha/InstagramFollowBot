@@ -53,7 +53,13 @@ Fapp/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt,3/6/36f
 -app/src/main/res/layout/activity_progress.xml,4/5/4576d4d0ff861f21046752f47aa4053f2028c41f
 q
 Aapp/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt,b/4/b475047d7706af5faaf14f182c7a8a2970ce6818
-~
-Napp/src/main/java/com/kubekbreha/instagrambot/util/StoreListAplicationClass.kt,7/6/76f2dadf44bd88bc993b87cd8776627a02e79527
 p
 @app/src/main/java/com/kubekbreha/instagrambot/util/Progress.java,5/0/5026414298ba9626b78a49d6db37d1c5ab926a9e
+e
+5app/src/main/java/com/kubekbreha/instagrambot/User.kt,4/3/435e5e347b21367d9e92d1b8aa913d1ce08e73bd
+V
+&app/src/main/res/values-v21/arrays.xml,4/8/489454207cbd8411ed899536e0ba70aca8b705aa
+|
+Lapp/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java,6/5/653bdd1b4f0c4e6ccf9f5f6b4ab3b2b8b0ac6626
+k
+;app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt,f/9/f9acaf0d5aab6e5adca9a27013cc2bfd9983e960

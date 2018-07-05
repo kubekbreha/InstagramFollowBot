@@ -11,6 +11,7 @@ import dev.niekirk.com.instagram4android.requests.*
 import dev.niekirk.com.instagram4android.requests.payload.InstagramFeedResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramSearchUsernameResult
 import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
+import kotlinx.android.synthetic.main.activity_progress.*
 import org.jetbrains.anko.toast
 import java.util.*
 
@@ -117,8 +118,11 @@ class ProgressActivity : AppCompatActivity() {
 
 
     private fun follow(user: String, follow: Boolean) {
-        toast(user)
-
+        if(follow) {
+            activity_progress_currentlyInAction_textView.text = "Following: " + user
+        }else{
+            activity_progress_currentlyInAction_textView.text = "Unfollowing: " + user
+        }
         val thread = Thread(Runnable {
             try {
                 val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(user))
@@ -134,9 +138,6 @@ class ProgressActivity : AppCompatActivity() {
         })
         thread.start()
     }
-
-
-
 
 
 
