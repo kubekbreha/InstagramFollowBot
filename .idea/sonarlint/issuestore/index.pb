@@ -63,3 +63,11 @@ V
 Lapp/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java,6/5/653bdd1b4f0c4e6ccf9f5f6b4ab3b2b8b0ac6626
 k
 ;app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt,f/9/f9acaf0d5aab6e5adca9a27013cc2bfd9983e960
+U
+%app/src/main/res/layout/list_item.xml,0/e/0e2dbde10fa21a69e5da23f2681513bb29e1a4c4
+X
+(gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
+?
+settings.gradle,0/5/05efc8b1657769a27696d478ded1e95f38737233
+A
+gradle.properties,2/a/2afbb999f001938c88fa43fc2ef52abf0f8213e4

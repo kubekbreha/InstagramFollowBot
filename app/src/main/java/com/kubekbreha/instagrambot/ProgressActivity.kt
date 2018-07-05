@@ -17,8 +17,6 @@ import java.util.*
 import dev.niekirk.com.instagram4android.requests.InstagramTagFeedRequest
 
 
-
-
 class ProgressActivity : AppCompatActivity() {
 
     private val TAG = "BotNavDrawFrag"
@@ -226,9 +224,6 @@ class ProgressActivity : AppCompatActivity() {
     }
 
 
-
-
-
     private fun likePostsByTag(tag: String) {
         activity_progress_currentlyInAction_textView.text = "Liking posts of tag: " + tag
 
@@ -237,7 +232,7 @@ class ProgressActivity : AppCompatActivity() {
         val thread = Thread(Runnable {
             try {
                 tagFeed = User.getUser().sendRequest(InstagramTagFeedRequest(tag, "10"))
-                Log.e("POSTDEBUG",  tag+" Post ID: " + tagFeed!!.items.size)
+                Log.e("POSTDEBUG", tag + " Post ID: " + tagFeed!!.items.size)
 
                 for (feedResult in tagFeed!!.items) {
                     Log.e("POSTDEBUG", "Post ID: " + feedResult.getPk())

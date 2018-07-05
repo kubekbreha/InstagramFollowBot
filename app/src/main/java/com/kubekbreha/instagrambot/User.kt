@@ -6,7 +6,6 @@ import android.content.Intent
 import com.kubekbreha.instagrambot.util.Progress
 import dev.niekirk.com.instagram4android.Instagram4Android
 
-
 class User {
     companion object {
 

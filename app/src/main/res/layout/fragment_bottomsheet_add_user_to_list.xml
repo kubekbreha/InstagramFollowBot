@@ -7,13 +7,45 @@
 
 
     <com.kubekbreha.instagrambot.util.PrefixEditText
-        android:id="@+id/bottom_drawer_list_editText"
+        android:id="@+id/bottom_drawer_usersFol_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="128dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="usersFollowing"
+        android:inputType="textPersonName"
+        android:tag=" @"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/bottom_drawer_add_usersFol_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bottom_drawer_usersFol_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:text="AddAll"
+        android:textStyle="bold" />
+
+
+
+    <com.kubekbreha.instagrambot.util.PrefixEditText
+        android:id="@+id/bottom_drawer_list_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bottom_drawer_usersFol_editText"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="102dp"
         android:layout_marginBottom="40dp"
         android:ems="10"
         android:hint="userName"
@@ -23,16 +55,16 @@
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
-
     <Button
         android:id="@+id/bottom_drawer_add_list_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/bottom_drawer_list_editText"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
         android:textAllCaps="false"
+        android:layout_alignBottom="@+id/bottom_drawer_list_editText"
         android:text="Add"
         android:textStyle="bold" />
+
 
 </RelativeLayout>

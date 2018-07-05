@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import android.widget.Toast
 import com.kubekbreha.instagrambot.UsersList
 
@@ -37,9 +38,9 @@ class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context, DAT
         val _success = db.update(TABLE_NAME, values, "Id" + "=?", arrayOf(list.id.toString())).toLong()
         db.close()
         if (_success == (-1).toLong())
-            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
+            Log.i("DATABASE HELPER", "Failed")
         else
-            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+            Log.i("DATABASE HELPER", "Success")
     }
 
 
@@ -54,9 +55,9 @@ class DatabaseHandlerLists(var context: Context) : SQLiteOpenHelper(context, DAT
 
         val result = db.insert(TABLE_NAME, null, cv)
         if (result == (-1).toLong())
-            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
+            Log.i("DATABASE HELPER", "Failed")
         else
-            Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show()
+            Log.i("DATABASE HELPER", "Success")
     }
 
     fun readData(): MutableList<UsersList> {
