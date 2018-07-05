@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -39,12 +38,12 @@ class ListsAdapter(private val items: ArrayList<String>, val context: Context) :
 
         holder.listType.text = "#" + items[position]
 
-
         holder.itemView.setOnClickListener {
 
             //save to application class picked list
             val editor = context.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
             editor.putInt("listId", position)
+            editor.putInt("listIdSize", itemCount)
             editor.apply()
 
             doubleClicked++

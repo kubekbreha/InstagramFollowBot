@@ -55,7 +55,7 @@ class MainFragment : Fragment() {
     }
 
 
-    fun getLists() {
+    private fun getLists() {
         allLists.forEach { oneList ->
             listsArray.add(oneList.name)
         }

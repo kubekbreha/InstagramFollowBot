@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -91,11 +92,25 @@ class AddListActivity : AppCompatActivity() {
 
             //open bottom fragment
             activity_add_list_button.setOnClickListener {
-                database.insertData(UsersList(activity_add_list_editText.text.toString(), "{\"list\":{}}"))
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                finish()
+
+                val prefs = this.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE)
+                val newId = prefs.getInt("listIdSize", -1)
+
+                if(newId != -1) {
+                    database.insertData(UsersList(activity_add_list_editText.text.toString(), "{\"list\":{}}"))
+                    val intent = Intent(this, AddListActivity::class.java)
+                    val b = Bundle()
+                    b.putInt("openedListId", newId)
+                    intent.putExtras(b)
+                    startActivity(intent)
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
+                }else{
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                    finish()
+                }
             }
         }
 
@@ -107,7 +122,7 @@ class AddListActivity : AppCompatActivity() {
                 bundle.putInt("listId", oneListItem.id)
                 bundle.putString("listName", oneListItem.name)
                 val fragobj = BottomNavigationDrawerFragmentAddUser()
-                fragobj.setArguments(bundle)
+                fragobj.arguments = bundle
                 fragobj.show(supportFragmentManager, fragobj.tag)
             }
         }else{
