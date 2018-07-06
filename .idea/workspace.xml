@@ -18,10 +18,6 @@
   <component name="ChangeListManager">
     <list default="true" id="017d26c0-6a40-47ef-8152-20d40784051d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/SpringDotsIndicator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/SpringDotsIndicator.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/WormDotsIndicator.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/WormDotsIndicator.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" />
     </list>
@@ -46,50 +42,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="activity_walkthrough.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="activity_walkthrough.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="495">
+              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WalkthroughActivity.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WalkthroughActivity.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
               <folding>
-                <element signature="e#49#432#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArcProgressStackView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-235">
-              <caret line="400" column="8" lean-forward="false" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WormDotsIndicator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/WormDotsIndicator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#49#477#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2641,10 +2613,10 @@
         <option value="$PROJECT_DIR$/gradle.properties" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/WormDotsIndicator.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/SpringDotsIndicator.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" />
       </list>
     </option>
   </component>
@@ -2767,7 +2739,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="21f56150720d7ece" />
+    <property name="device.picker.selection" value="Pixel_XL_API_27" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="android.profiler.active" value="true" />
@@ -3017,7 +2989,7 @@
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.59467757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09416582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3025,7 +2997,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3776868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3468,7 +3440,7 @@
         <state relative-caret-position="30">
           <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3478,17 +3450,7 @@
         <state relative-caret-position="-235">
           <caret line="400" column="8" lean-forward="false" selection-start-line="400" selection-start-column="8" selection-end-line="400" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#49#432#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3498,9 +3460,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="495">
+          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
+          <folding>
+            <element signature="e#49#477#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

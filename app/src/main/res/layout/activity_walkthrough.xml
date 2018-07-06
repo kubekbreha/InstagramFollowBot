@@ -14,31 +14,33 @@
     </androidx.viewpager.widget.ViewPager>
 
 
-
-    <com.kubekbreha.instagrambot.indicatorDots.DotsIndicator
-        android:id="@+id/activity_walkthrough_dotsLayout"
+    <com.kubekbreha.instagrambot.indicatorDots.WormDotsIndicator
+        android:id="@+id/activity_walkthrough_wormDotsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         app:dampingRatio="0.5"
         app:dotsColor="@color/white"
-        app:dotsStrokeColor="@color/colorAccent"
-        app:dotsSize="12dp"
+        app:dotsStrokeColor="@color/white"
+        app:dotsSize="10dp"
         app:dotsSpacing="6dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="18dp"
         app:dotsStrokeWidth="2dp"
         app:stiffness="300" />
 
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/activity_walkthrough_loginButton"
-        android:layout_width="80dp"
-        android:layout_height="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="@color/transparent"
-        android:text="Login"/>
+        android:text="Login"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
 
 
 </RelativeLayout>
