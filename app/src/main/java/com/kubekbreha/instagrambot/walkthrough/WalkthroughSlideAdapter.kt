@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot.walkthrough
 
+import android.app.Activity
 import android.app.AppComponentFactory
 import android.content.Context
 import android.content.Intent
@@ -65,8 +66,8 @@ class WalkthroughSlideAdapter(context: Context) : PagerAdapter() {
             loginButton.setOnClickListener {
                 val intent = Intent(context, LoginActivity::class.java)
                 context.startActivity(intent)
-                (context as MainActivity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                (context as MainActivity).finish()
+                (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                (context as Activity).finish()
             }
         }
 
