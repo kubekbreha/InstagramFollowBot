@@ -24,4 +24,14 @@
     </LinearLayout>
 
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_walkthrough_loginButton"
+        android:layout_width="80dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/transparent"
+        android:text="Login"/>
+
+
 </RelativeLayout>

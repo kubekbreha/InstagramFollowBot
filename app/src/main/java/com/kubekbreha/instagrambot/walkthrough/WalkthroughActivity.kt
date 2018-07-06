@@ -1,5 +1,6 @@
 package com.kubekbreha.instagrambot.walkthrough
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Html
 import android.util.Log
@@ -10,6 +11,9 @@ import androidx.viewpager.widget.ViewPager
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.UsersList
 import androidx.viewpager.widget.ViewPager.OnPageChangeListener
+import com.kubekbreha.instagrambot.LoginActivity
+import com.kubekbreha.instagrambot.MainActivity
+import kotlinx.android.synthetic.main.activity_walkthrough.*
 import java.text.FieldPosition
 
 
@@ -40,6 +44,13 @@ class WalkthroughActivity : AppCompatActivity() {
                 addDotsIndicator(position)
             }
         })
+
+        activity_walkthrough_loginButton.setOnClickListener{
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            finish()
+        }
 
     }
 
