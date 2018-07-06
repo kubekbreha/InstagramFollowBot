@@ -39,11 +39,11 @@ class WalkthroughActivity : AppCompatActivity() {
         slideViewPager.addOnPageChangeListener(object : OnPageChangeListener {
             override fun onPageScrollStateChanged(state: Int) {}
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
-
             override fun onPageSelected(position: Int) {
                 addDotsIndicator(position)
             }
         })
+
 
         activity_walkthrough_loginButton.setOnClickListener{
             val intent = Intent(this, LoginActivity::class.java)
@@ -56,7 +56,6 @@ class WalkthroughActivity : AppCompatActivity() {
 
     private fun addDotsIndicator(position: Int) {
 
-        Log.e("WTF", position.toString())
 
         val dots = arrayOfNulls<TextView>(3)
 
@@ -75,8 +74,6 @@ class WalkthroughActivity : AppCompatActivity() {
             dots[i] = TextView(this)
             dots[i]!!.text = Html.fromHtml("&#8226;")
             dots[i]!!.textSize = 35F
-            dots[i]!!.setTextColor(resources.getColor(R.color.white))
-            Log.e("WTFWTFWTFWTFWTF", i.toString())
 
             dotsLayout.addView(dots[i], i)
         }

@@ -32,6 +32,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     implementation 'com.google.android.material:material:1.0.0-alpha3'
     implementation 'androidx.appcompat:appcompat:1.0.0-alpha3'
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
@@ -49,5 +51,9 @@ dependencies {
 
     //instagram4android
     implementation 'com.github.charlieAndroidDev:Instagram4Android:0.2.7'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:support-dynamic-animation:25.4.0'
+
 
 }
