@@ -47,6 +47,9 @@ class MainFragment : Fragment() {
         if(listsArray.isEmpty()){
             recyclerViewList.visibility = View.GONE
             relativeViewListEmpty.visibility = View.VISIBLE
+            val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+            editor.putInt("listIdSize", 0)
+            editor.apply()
         }else{
             recyclerViewList.visibility = View.VISIBLE
             relativeViewListEmpty.visibility = View.GONE

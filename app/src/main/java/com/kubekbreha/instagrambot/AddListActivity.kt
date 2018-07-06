@@ -20,7 +20,7 @@ import org.jetbrains.anko.toast
 
 class AddListActivity : AppCompatActivity() {
 
-    private val ADD_NEW_LIST = -100
+    private val ADD_NEW_LIST = -1
 
     var listsArray: ArrayList<String> = ArrayList()
     private lateinit var recyclerViewUsers: RecyclerView
@@ -42,6 +42,7 @@ class AddListActivity : AppCompatActivity() {
         if (bundle != null) {
             openedListId = bundle.get("openedListId") as Int
         }
+        toast(openedListId.toString())
 
 
         //when updating already created list
