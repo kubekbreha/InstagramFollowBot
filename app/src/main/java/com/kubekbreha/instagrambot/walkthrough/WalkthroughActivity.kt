@@ -1,19 +1,13 @@
 package com.kubekbreha.instagrambot.walkthrough
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.kubekbreha.instagrambot.LoginActivity
 import com.kubekbreha.instagrambot.R
-import com.kubekbreha.instagrambot.indicatorDots.SpringDotsIndicator
 import com.kubekbreha.instagrambot.indicatorDots.WormDotsIndicator
-import kotlinx.android.synthetic.main.activity_walkthrough.*
 
 
 class WalkthroughActivity : AppCompatActivity() {
-
-
 
     private lateinit var sliderAdapter: WalkthroughSlideAdapter
 
@@ -27,14 +21,7 @@ class WalkthroughActivity : AppCompatActivity() {
         viewPager.adapter = adapter
         wormDotsIndicator.setViewPager(viewPager)
 
-
-        activity_walkthrough_loginButton.setOnClickListener{
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-            finish()
-        }
-
     }
 
 }
+

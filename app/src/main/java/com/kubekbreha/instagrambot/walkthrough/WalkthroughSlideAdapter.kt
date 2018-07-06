@@ -1,6 +1,8 @@
 package com.kubekbreha.instagrambot.walkthrough
 
+import android.app.AppComponentFactory
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +12,10 @@ import androidx.viewpager.widget.PagerAdapter
 import com.kubekbreha.instagrambot.R
 import androidx.viewpager.widget.ViewPager
 import android.widget.TextView
-
+import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat.startActivity
+import com.kubekbreha.instagrambot.LoginActivity
+import com.kubekbreha.instagrambot.MainActivity
 
 
 class WalkthroughSlideAdapter(context: Context) : PagerAdapter() {
@@ -52,6 +57,19 @@ class WalkthroughSlideAdapter(context: Context) : PagerAdapter() {
         text.text = slideTexts[position]
 
         container.addView(viewPagerItem)
+
+        val loginButton = viewPagerItem.findViewById<AppCompatButton>(R.id.activity_walkthrough_loginButton)
+
+        if (position == 2) {
+            loginButton.visibility = View.VISIBLE
+            loginButton.setOnClickListener {
+                val intent = Intent(context, LoginActivity::class.java)
+                context.startActivity(intent)
+                (context as MainActivity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                (context as MainActivity).finish()
+            }
+        }
+
         return viewPagerItem
     }
 

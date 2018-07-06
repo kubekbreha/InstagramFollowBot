@@ -11,4 +11,17 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_walkthrough_loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/transparent"
+        android:text="Login"
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+
 </RelativeLayout>
