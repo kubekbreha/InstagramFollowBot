@@ -13,15 +13,22 @@
 
     </androidx.viewpager.widget.ViewPager>
 
-    <LinearLayout
+
+
+    <com.kubekbreha.instagrambot.indicatorDots.DotsIndicator
         android:id="@+id/activity_walkthrough_dotsLayout"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-    </LinearLayout>
+        app:dampingRatio="0.5"
+        app:dotsColor="@color/white"
+        app:dotsStrokeColor="@color/colorAccent"
+        app:dotsSize="12dp"
+        app:dotsSpacing="6dp"
+        android:layout_marginBottom="16dp"
+        app:dotsStrokeWidth="2dp"
+        app:stiffness="300" />
 
 
     <androidx.appcompat.widget.AppCompatButton

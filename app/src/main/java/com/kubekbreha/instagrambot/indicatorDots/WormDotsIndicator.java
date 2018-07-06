@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
 import android.graphics.drawable.GradientDrawable;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
-import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.support.animation.FloatPropertyCompat;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -23,6 +19,10 @@ import com.kubekbreha.instagrambot.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.core.content.ContextCompat;
+import androidx.dynamicanimation.animation.FloatPropertyCompat;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
 import androidx.viewpager.widget.ViewPager;
 
 import static android.widget.LinearLayout.HORIZONTAL;

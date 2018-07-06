@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
 import android.graphics.drawable.GradientDrawable;
-import android.support.animation.SpringAnimation;
-import android.support.animation.SpringForce;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -22,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.core.content.ContextCompat;
+import androidx.dynamicanimation.animation.SpringAnimation;
+import androidx.dynamicanimation.animation.SpringForce;
 import androidx.viewpager.widget.ViewPager;
 
 import static android.widget.LinearLayout.HORIZONTAL;

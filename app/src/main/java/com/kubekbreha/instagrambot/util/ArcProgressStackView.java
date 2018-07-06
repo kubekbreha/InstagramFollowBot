@@ -30,7 +30,6 @@ import android.graphics.RectF;
 import android.graphics.SweepGradient;
 import android.graphics.Typeface;
 import android.os.Build;
-import android.support.annotation.FloatRange;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -47,6 +46,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import androidx.annotation.FloatRange;
 import androidx.core.view.ViewCompat;
 
 /**

@@ -3,18 +3,13 @@ package com.kubekbreha.instagrambot.walkthrough
 import android.content.Intent
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
-import com.kubekbreha.instagrambot.R
-import com.kubekbreha.instagrambot.UsersList
-import androidx.viewpager.widget.ViewPager.OnPageChangeListener
 import com.kubekbreha.instagrambot.LoginActivity
-import com.kubekbreha.instagrambot.MainActivity
+import com.kubekbreha.instagrambot.R
 import kotlinx.android.synthetic.main.activity_walkthrough.*
-import java.text.FieldPosition
 
 
 class WalkthroughActivity : AppCompatActivity() {
@@ -36,13 +31,13 @@ class WalkthroughActivity : AppCompatActivity() {
         slideViewPager.adapter = sliderAdapter
 
         addDotsIndicator(0)
-        slideViewPager.addOnPageChangeListener(object : OnPageChangeListener {
-            override fun onPageScrollStateChanged(state: Int) {}
-            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
-            override fun onPageSelected(position: Int) {
-                addDotsIndicator(position)
-            }
-        })
+//        slideViewPager.addOnPageChangeListener(object : OnPageChangeListener {
+//            override fun onPageScrollStateChanged(state: Int) {}
+//            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+//            override fun onPageSelected(position: Int) {
+//                addDotsIndicator(position)
+//            }
+//        })
 
 
         activity_walkthrough_loginButton.setOnClickListener{
