@@ -64,6 +64,11 @@ class WalkthroughSlideAdapter(context: Context) : PagerAdapter() {
         if (position == 2) {
             loginButton.visibility = View.VISIBLE
             loginButton.setOnClickListener {
+
+                val editor = context.getSharedPreferences("walkthrough", Context.MODE_PRIVATE).edit()
+                editor.putBoolean("done", true)
+                editor.apply()
+
                 val intent = Intent(context, LoginActivity::class.java)
                 context.startActivity(intent)
                 (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
