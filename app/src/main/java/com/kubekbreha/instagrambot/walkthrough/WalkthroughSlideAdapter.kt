@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import androidx.viewpager.widget.PagerAdapter
 import com.kubekbreha.instagrambot.R
 import androidx.viewpager.widget.ViewPager
@@ -12,7 +13,7 @@ import android.widget.TextView
 
 
 
-class WalkthroughSlideWallpaper(context: Context) : PagerAdapter() {
+class WalkthroughSlideAdapter(context: Context) : PagerAdapter() {
 
     private var context = context
     private lateinit var layoutInflater: LayoutInflater
@@ -47,11 +48,15 @@ class WalkthroughSlideWallpaper(context: Context) : PagerAdapter() {
         val viewPagerItem = LayoutInflater.from(container.context).inflate(R.layout.walkthrough_slide_layout, container, false)
 
         val text = viewPagerItem.findViewById<TextView>(R.id.walkthrough_slide_layout_text)
-        
+
         text.text = slideTexts[position]
 
         container.addView(viewPagerItem)
         return viewPagerItem
     }
 
+
+    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
+        container.removeView(`object` as RelativeLayout)
+    }
 }

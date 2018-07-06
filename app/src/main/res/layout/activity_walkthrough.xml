@@ -7,12 +7,14 @@
     tools:context="com.kubekbreha.instagrambot.walkthrough.WalkthroughActivity">
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_walkthrough_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </androidx.viewpager.widget.ViewPager>
 
     <LinearLayout
+        android:id="@+id/activity_walkthrough_dotsLayout"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
+            android:name=".walkthrough.WalkthroughActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +31,7 @@
             android:name=".ProgressActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".walkthrough.WalkthroughActivity"
+            android:name=".LoginActivity"
             android:screenOrientation="portrait" />
     </application>
 
