@@ -11,8 +11,11 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.kubekbreha.instagrambot.R
 import com.kubekbreha.instagrambot.User
 import com.kubekbreha.instagrambot.UsersInList
+import com.kubekbreha.instagrambot.UsersList
+import com.kubekbreha.instagrambot.util.Progress
 import dev.niekirk.com.instagram4android.requests.InstagramGetUserFollowingRequest
 import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUserSummary
 import kotlinx.android.synthetic.main.fragment_bottomsheet_add_user_to_list.*
 
 
@@ -70,20 +73,7 @@ class BottomNavigationDrawerFragmentAddUser : BottomSheetDialogFragment() {
                     usersList.add(userItem.getPk())
                 }
                 Log.e("MOTHERFUCK", instaUser.username + " follows " + instaUser.getFollowing_count() + " users.")
-
-
-                val bigCircle = object : CountDownTimer((users.size * timeBetweenOneUser).toLong(), timeBetweenOneUser.toLong()) {
-                    override fun onTick(millisUntilFinished: Long) {
-                        for (userItem in users) {
-                            userDat.addUser(userItem.username)
-                        }
-                    }
-
-                    override fun onFinish() {
-
-                    }
-                }.start()
-
+                userDat.addUsersList(users)
 
             } catch (e: Exception) {
                 e.printStackTrace()
