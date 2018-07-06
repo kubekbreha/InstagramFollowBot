@@ -28,7 +28,6 @@
             android:name=".AddListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:keepScreenOn="true"
             android:name=".ProgressActivity"
             android:screenOrientation="portrait" />
     </application>
