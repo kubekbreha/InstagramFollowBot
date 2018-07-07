@@ -65,17 +65,6 @@ class BottomNavigationDrawerFragmentActions : BottomSheetDialogFragment() {
                     }
                 }
 
-                R.id.bottom_menu_comment -> {
-                    if (openActivity) {
-                        val intent = Intent(context, ProgressActivity::class.java)
-                        intent.putExtra("listSelected", selectedList)
-                        intent.putExtra("action", "comment")
-                        startActivity(intent)
-                        (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-                        removeFragment(this)
-                    }
-                }
-
                 R.id.bottom_menu_like -> {
                     if (openActivity) {
                         val intent = Intent(context, ProgressActivity::class.java)

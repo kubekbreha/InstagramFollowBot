@@ -13,10 +13,6 @@
             android:title="@string/bottom_menu_unfollow" />
 
         <item
-            android:id="@+id/bottom_menu_comment"
-            android:title="@string/bottom_menu_comment" />
-
-        <item
             android:id="@+id/bottom_menu_like"
             android:title="@string/bottom_menu_like" />
 

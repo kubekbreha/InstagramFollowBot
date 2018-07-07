@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_login.*
+import org.jetbrains.anko.toast
 
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -20,6 +21,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         val prefs = getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE)
         username = prefs.getString("username", "")
         password = prefs.getString("password", "")
+
         if (username != "" && password != "") {
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("userName", username)
