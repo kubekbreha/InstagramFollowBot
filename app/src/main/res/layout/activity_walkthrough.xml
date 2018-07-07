@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bottom_gradient"
     tools:context="com.kubekbreha.instagrambot.walkthroughActivity.WalkthroughActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/activity_walkthrough_viewPager"
         android:layout_width="match_parent"
+        android:background="@drawable/main_bottom_gradient"
         android:layout_height="match_parent">
 
     </androidx.viewpager.widget.ViewPager>
