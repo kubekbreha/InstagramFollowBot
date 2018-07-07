@@ -3,6 +3,7 @@ package com.kubekbreha.instagrambot.walkthroughActivity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.kubekbreha.instagrambot.loginActivity.LoginActivity
@@ -27,6 +28,9 @@ class WalkthroughActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_walkthrough)
+
+        //hide status bar
+        window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 
         val wormDotsIndicator = findViewById<WormDotsIndicator>(R.id.activity_walkthrough_wormDotsLayout)
         val viewPager = findViewById<ViewPager>(R.id.activity_walkthrough_viewPager)
