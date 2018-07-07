@@ -17,43 +17,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017d26c0-6a40-47ef-8152-20d40784051d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/653bdd1b4f0c4e6ccf9f5f6b4ab3b2b8b0ac6626" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/5/653bdd1b4f0c4e6ccf9f5f6b4ab3b2b8b0ac6626" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/first_layer.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/main_bottom_gradient.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/second_layer.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/third_layer.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/AddListActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/LoginActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/loginActivity/LoginActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/MainActivity.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/ProgressActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/ProgressActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/User.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/UsersInList.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/UsersList.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ListsAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/adapters/PeopleInListAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/listActivity/PeopleInListAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/adapters/ViewHolder.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ViewHolder.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAccountSettings.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentActions.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/fragments/BottomNavigationDrawerFragmentAddUser.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/listActivity/BottomNavigationDrawerFragmentAddUser.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/DotsIndicator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/SpringDotsIndicator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/UiUtils.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots/WormDotsIndicator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/main/MainFragment.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/ArcProgressStackView.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/DatabaseHandlerLists.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/databaseHandlers/SQLLiteDatabaseHandlerLists.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Model.kt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/PrefixEditText.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/listActivity/PrefixEditText.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Progress.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ProgressDialog.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughActivity.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughActivity.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthrough/WalkthroughSlideAdapter.kt" afterPath="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughSlideAdapter.kt" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_list.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_progress.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_progress.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_walkthrough.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottomsheet_add_user_to_list.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_bottomsheet_add_user_to_list.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_drawer_menu_actions.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_drawer_menu_actions.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,100 +45,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WalkthroughSlideAdapter.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughSlideAdapter.kt">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="e#57#498#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgressActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/ProgressActivity.kt">
+      <file leaf-file-name="MainActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="182" column="13" lean-forward="false" selection-start-line="182" selection-start-column="13" selection-end-line="182" selection-end-column="13" />
+            <state relative-caret-position="194">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddListActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/listActivity/AddListActivity.kt">
+      <file leaf-file-name="main_bottom_gradient.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/main_bottom_gradient.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArcProgressStackView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/ArcProgressStackView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5675">
-              <caret line="55" column="13" lean-forward="false" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-              <folding />
-            </state>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgressDialog.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ProgressDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Model.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/Model.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-              <folding>
-                <element signature="e#54#292#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BottomNavigationDrawerFragmentActions.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/BottomNavigationDrawerFragmentActions.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/loginActivity/LoginActivity.kt">
+      <file leaf-file-name="first_layer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/first_layer.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-              <folding>
-                <element signature="e#51#362#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WalkthroughActivity.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="51" />
-              <folding>
-                <element signature="e#57#420#0" expanded="true" />
-              </folding>
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -182,6 +99,7 @@
         <option value="layoutResourceFile" />
         <option value="Kotlin File" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -2692,8 +2610,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values-v21/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/adapters/ListsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Instagram4Android/requests/InstagramTimelineFeedRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Instagram4Android/requests/InstagramTagFeedRequest.java" />
@@ -2743,6 +2659,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/Model.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/Progress.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ProgressDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/main_bottom_gradient.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -2826,6 +2744,23 @@
             </path>
             <path>
               <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="InstagramFollowBot" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -2854,7 +2789,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="device.picker.selection" value="21f56150720d7ece" />
+    <property name="device.picker.selection" value="Pixel_XL_API_27" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="android.profiler.active" value="true" />
@@ -2881,11 +2816,11 @@
       <recent name="com.kubekbreha.instagrambot.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/indicatorDots" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/util/Instagram4Android" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -3119,8 +3054,8 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32234433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3776868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32234433" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3776868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32958034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3180,33 +3115,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bottomsheet_add_user_to_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/databaseHandlers/SQLLiteDatabaseHandlerLists.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="89" column="40" lean-forward="false" selection-start-line="89" selection-start-column="40" selection-end-line="89" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/loginActivity/User.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="12" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="17" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/listActivity/UsersInList.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="915">
@@ -3230,6 +3138,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3237,6 +3146,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3244,6 +3154,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3251,6 +3162,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3258,6 +3170,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3265,6 +3178,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3272,6 +3186,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3279,6 +3194,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3286,6 +3202,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3293,6 +3210,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3300,6 +3218,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3338,6 +3257,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3477,14 +3397,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/MainActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="47" column="12" lean-forward="true" selection-start-line="47" selection-start-column="12" selection-end-line="49" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/google-services.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -3526,17 +3438,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
           <folding>
-            <element signature="e#51#362#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="51" />
-          <folding>
-            <element signature="e#57#420#0" expanded="true" />
+            <element signature="e#51#362#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3546,16 +3448,6 @@
         <state relative-caret-position="390">
           <caret line="65" column="17" lean-forward="false" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughSlideAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#57#498#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3583,6 +3475,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/Model.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding>
+            <element signature="e#54#292#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ProgressDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/ArcProgressStackView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5675">
@@ -3591,22 +3503,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/progressActivity/Model.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughSlideAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#54#292#0" expanded="true" />
+            <element signature="e#57#498#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/ProgressDialog.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/walkthroughActivity/WalkthroughActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="18" column="51" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="51" />
+          <folding>
+            <element signature="e#57#420#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/kubekbreha/instagrambot/mainActivity/MainActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/main_bottom_gradient.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/first_layer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
