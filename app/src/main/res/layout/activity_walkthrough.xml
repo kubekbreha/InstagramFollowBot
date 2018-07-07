@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kubekbreha.instagrambot.walkthrough.WalkthroughActivity">
+    tools:context="com.kubekbreha.instagrambot.walkthroughActivity.WalkthroughActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/activity_walkthrough_viewPager"
@@ -14,7 +14,7 @@
     </androidx.viewpager.widget.ViewPager>
 
 
-    <com.kubekbreha.instagrambot.indicatorDots.WormDotsIndicator
+    <com.kubekbreha.instagrambot.walkthroughActivity.indicatorDots.WormDotsIndicator
         android:id="@+id/activity_walkthrough_wormDotsLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

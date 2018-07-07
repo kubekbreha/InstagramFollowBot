@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.kubekbreha.instagrambot.AddListActivity"
+    tools:context="com.kubekbreha.instagrambot.listActivity.AddListActivity"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
 
-    <com.kubekbreha.instagrambot.util.PrefixEditText
+    <com.kubekbreha.instagrambot.listActivity.PrefixEditText
         android:id="@+id/activity_add_list_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

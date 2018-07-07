@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
 
-    <com.kubekbreha.instagrambot.util.PrefixEditText
+    <com.kubekbreha.instagrambot.listActivity.PrefixEditText
         android:id="@+id/bottom_drawer_usersFol_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
 
 
 
-    <com.kubekbreha.instagrambot.util.PrefixEditText
+    <com.kubekbreha.instagrambot.listActivity.PrefixEditText
         android:id="@+id/bottom_drawer_list_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

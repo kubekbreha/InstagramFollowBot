@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".walkthrough.WalkthroughActivity"
+            android:name=".walkthroughActivity.WalkthroughActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,16 +22,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".mainActivity.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AddListActivity"
+            android:name=".listActivity.AddListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ProgressActivity"
+            android:name=".progressActivity.ProgressActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".loginActivity.LoginActivity"
             android:screenOrientation="portrait" />
     </application>
 
