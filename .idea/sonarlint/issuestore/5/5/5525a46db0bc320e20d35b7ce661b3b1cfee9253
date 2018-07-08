@@ -1,5 +1,0 @@
-
-Osquid:S1172".Remove this unused method parameter "context".(¬ο©„ώÿÿÿÿ8–ϊχƒΗ,
-squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(—Κ–O8–ϊχƒΗ,
-Άsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£Η…τωÿÿÿÿ8–ϊχƒΗ,
-wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬Β„8–ϊχƒΗ,

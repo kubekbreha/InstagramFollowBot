@@ -1,0 +1,6 @@
+
+Psquid:S1068"/Remove this unused "progressBar" private field.(â˜ˆçøÿÿÿÿ8Û¯à¬Ç,
+Gsquid:S1068"&Remove this unused "ll" private field.(•£Õ¥úÿÿÿÿ8Û¯à¬Ç,
+{squid:S1450"ZRemove the "progressBar" field and declare it as a local variable in the relevant methods.(â˜ˆçøÿÿÿÿ8Û¯à¬Ç,
+rsquid:S1450"QRemove the "ll" field and declare it as a local variable in the relevant methods.(•£Õ¥úÿÿÿÿ8Û¯à¬Ç,
+|squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ù­Æùÿÿÿÿ8Û¯à¬Ç,
