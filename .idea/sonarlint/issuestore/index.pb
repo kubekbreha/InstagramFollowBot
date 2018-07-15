@@ -107,3 +107,5 @@ Z
 *app/src/main/res/drawable/second_layer.xml,9/8/98fc88d18ac8e688f7b72940f0ba3968025b7237
 Z
 *app/src/main/res/layout/activity_login.xml,1/f/1f7e901185d74bf05f9fcb38f9ed35ea78cd4c6e
+`
+0app/src/main/res/drawable/edit_rounded_light.xml,f/d/fde2adc0c446506b4ad78ae3ce06182a9d473821
