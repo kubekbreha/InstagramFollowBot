@@ -33,25 +33,25 @@ class MainFragment : Fragment() {
 
         database = DatabaseHandlerLists(context!!)
         allLists = database.readData()
-
-        recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
-        relativeViewListEmpty = view.findViewById(R.id.fragment_main_comment_empty_relativeLayout)
-
-        getLists()
-        recyclerViewList.layoutManager = LinearLayoutManager(context)
-        //recyclerView.layoutManager = GridLayoutManager(context, 2)
-        adapter = ListsAdapter(listsArray, context!!)
-        recyclerViewList.adapter = adapter
-        if(listsArray.isEmpty()){
-            recyclerViewList.visibility = View.GONE
-            relativeViewListEmpty.visibility = View.VISIBLE
-            val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
-            editor.putInt("listIdSize", 0)
-            editor.apply()
-        }else{
-            recyclerViewList.visibility = View.VISIBLE
-            relativeViewListEmpty.visibility = View.GONE
-        }
+//
+//        recyclerViewList = view.findViewById(R.id.fragment_comment_recyclerView)
+//        relativeViewListEmpty = view.findViewById(R.id.fragment_main_comment_empty_relativeLayout)
+//
+//        getLists()
+//        recyclerViewList.layoutManager = LinearLayoutManager(context)
+//        //recyclerView.layoutManager = GridLayoutManager(context, 2)
+//        adapter = ListsAdapter(listsArray, context!!)
+//        recyclerViewList.adapter = adapter
+//        if(listsArray.isEmpty()){
+//            recyclerViewList.visibility = View.GONE
+//            relativeViewListEmpty.visibility = View.VISIBLE
+//            val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+//            editor.putInt("listIdSize", 0)
+//            editor.apply()
+//        }else{
+//            recyclerViewList.visibility = View.VISIBLE
+//            relativeViewListEmpty.visibility = View.GONE
+//        }
 
         return view
     }
@@ -64,13 +64,13 @@ class MainFragment : Fragment() {
     }
 
 
-    override fun onResume() {
-        super.onResume()
-        adapter.resetDoubleClicked()
-        val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
-        editor.putInt("listId", -1)
-        editor.apply()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        adapter.resetDoubleClicked()
+//        val editor = context!!.getSharedPreferences("instagrambot_listId", Context.MODE_PRIVATE).edit()
+//        editor.putInt("listId", -1)
+//        editor.apply()
+//    }
 
 }
 
