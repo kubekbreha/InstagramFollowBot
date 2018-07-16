@@ -24,7 +24,7 @@
         app:dampingRatio="0.5"
         app:dotsColor="@color/white"
         app:dotsStrokeColor="@color/white"
-        app:dotsSize="32dp"
+        app:dotsSize="10dp"
         app:dotsSpacing="6dp"
         android:layout_marginBottom="18dp"
         app:dotsStrokeWidth="2dp"
