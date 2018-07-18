@@ -17,7 +17,7 @@ import android.widget.LinearLayout;
  * Created by yarolegovich on 08.03.2017.
  */
 
-public class ForecastView extends LinearLayout {
+public class CardView extends LinearLayout {
 
     private Paint gradientPaint;
     private int[] currentGradient;
@@ -25,20 +25,20 @@ public class ForecastView extends LinearLayout {
 
     private ArgbEvaluator evaluator;
 
-    public ForecastView(Context context) {
+    public CardView(Context context) {
         super(context);
     }
 
-    public ForecastView(Context context, AttributeSet attrs) {
+    public CardView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public ForecastView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CardView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public ForecastView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public CardView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
@@ -77,9 +77,9 @@ public class ForecastView extends LinearLayout {
         super.onDraw(canvas);
     }
 
-    public void setForecast(Forecast forecast) {
-        Weather weather = forecast.getWeather();
-        currentGradient = weatherToGradient(weather);
+    public void setForecast(ListItem forecast) {
+        int gradient = forecast.getGradient();
+        currentGradient = getGradient(gradient);
         if (getWidth() != 0 && getHeight() != 0) {
             initGradient();
         }
@@ -89,10 +89,10 @@ public class ForecastView extends LinearLayout {
 
     }
 
-    public void onScroll(float fraction, Forecast oldF, Forecast newF) {
+    public void onScroll(float fraction, ListItem oldF, ListItem newF) {
         currentGradient = mix(fraction,
-                weatherToGradient(newF.getWeather()),
-                weatherToGradient(oldF.getWeather()));
+                getGradient(newF.getGradient()),
+                getGradient(oldF.getGradient()));
         initGradient();
         invalidate();
     }
@@ -105,17 +105,17 @@ public class ForecastView extends LinearLayout {
         };
     }
 
-    private int[] weatherToGradient(Weather weather) {
-        switch (weather) {
-            case PERIODIC_CLOUDS:
+    private int[] getGradient(int number) {
+        switch (number) {
+            case 0:
                 return colors(R.array.gradientPeriodicClouds);
-            case CLOUDY:
+            case 1:
                 return colors(R.array.gradientCloudy);
-            case MOSTLY_CLOUDY:
+            case 2:
                 return colors(R.array.gradientMostlyCloudy);
-            case PARTLY_CLOUDY:
+            case 3:
                 return colors(R.array.gradientPartlyCloudy);
-            case CLEAR:
+            case 4:
                 return colors(R.array.gradientClear);
             default:
                 throw new IllegalArgumentException();
