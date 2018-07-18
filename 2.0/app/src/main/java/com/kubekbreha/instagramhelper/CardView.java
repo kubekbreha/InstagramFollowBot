@@ -50,7 +50,6 @@ public class CardView extends LinearLayout {
 
         setOrientation(VERTICAL);
         setGravity(Gravity.CENTER_HORIZONTAL);
-        inflate(getContext(), R.layout.view_forecast, this);
 
     }
 
@@ -77,8 +76,8 @@ public class CardView extends LinearLayout {
         super.onDraw(canvas);
     }
 
-    public void setForecast(ListItem forecast) {
-        int gradient = forecast.getGradient();
+    public void setForecast(ListItem oneList) {
+        int gradient = oneList.getGradient();
         currentGradient = getGradient(gradient);
         if (getWidth() != 0 && getHeight() != 0) {
             initGradient();
