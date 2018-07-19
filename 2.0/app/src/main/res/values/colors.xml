@@ -29,9 +29,9 @@
         <item>@color/gradientPeriodicClouds_c3</item>
     </array>
 
-    <color name="gradientCloudy_c1">#62bff5</color>
-    <color name="gradientCloudy_c2">#61b3e5</color>
-    <color name="gradientCloudy_c3">#5d8fb2</color>
+    <color name="gradientCloudy_c1">#FCE38A</color>
+    <color name="gradientCloudy_c2">#F38131</color>
+    <color name="gradientCloudy_c3">#F38181</color>
 
     <array name="gradientCloudy">
         <item>@color/gradientCloudy_c1</item>
