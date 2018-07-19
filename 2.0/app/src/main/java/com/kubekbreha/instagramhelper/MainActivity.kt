@@ -54,6 +54,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
             activity_main_settings_button -> {
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
             }
         }
     }
