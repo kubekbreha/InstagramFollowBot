@@ -1,15 +1,20 @@
 package com.kubekbreha.instagramhelper
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.view.WindowManager
 
 
 import com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
 import com.kubekbreha.instagramhelper.discretescrollview.transform.ScaleTransformer
+import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<CardAdapter.ViewHolder>, DiscreteScrollView.OnItemChangedListener<CardAdapter.ViewHolder> {
+class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<CardAdapter.ViewHolder>,
+        DiscreteScrollView.OnItemChangedListener<CardAdapter.ViewHolder>,
+        View.OnClickListener {
 
     private var lists: List<UsersListItem>? = null
 
@@ -20,9 +25,11 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //set fullscreen activity
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 
-        cardListVIew = findViewById(R.id.activity_main_cardView)
+        //settings button
+        activity_main_settings_button.setOnClickListener(this)
 
         lists = UsersListItemsHandler.get().lists
         listPicker = findViewById(R.id.activity_main_discreteScrollView)
@@ -36,14 +43,25 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
                 .setMinScale(0.8f)
                 .build())
 
-        cardListVIew!!.setForecast(lists!![0])
+        cardListVIew = findViewById(R.id.activity_main_cardView)
+        cardListVIew!!.setGradientView(lists!![0])
 
+    }
+
+
+    override fun onClick(p0: View?) {
+        when(p0) {
+            activity_main_settings_button -> {
+                val intent = Intent(this, SettingsActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 
     override fun onCurrentItemChanged(holder: CardAdapter.ViewHolder?, position: Int) {
         //viewHolder will never be null, because we never remove items from adapter's list
         if (holder != null) {
-            cardListVIew!!.setForecast(lists!![position])
+            cardListVIew!!.setGradientView(lists!![position])
             holder.showText()
         }
     }

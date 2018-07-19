@@ -63,7 +63,7 @@ class CardView : LinearLayout {
         super.onDraw(canvas)
     }
 
-    fun setForecast(oneList: UsersListItem) {
+    fun setGradientView(oneList: UsersListItem) {
         val gradient = oneList.gradient
         currentGradient = getGradient(gradient)
         if (width != 0 && height != 0) {
