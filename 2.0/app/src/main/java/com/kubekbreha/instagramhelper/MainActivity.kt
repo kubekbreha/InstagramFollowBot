@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
+import com.kubekbreha.instagrambot.loginActivity.User
 
 
 import com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
@@ -15,6 +16,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<CardAdapter.ViewHolder>,
         DiscreteScrollView.OnItemChangedListener<CardAdapter.ViewHolder>,
         View.OnClickListener {
+
+    private lateinit var username: String
+    private lateinit var password: String
 
     private var lists: List<UsersListItem>? = null
 
@@ -30,6 +34,15 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
         //settings button
         activity_main_settings_button.setOnClickListener(this)
+
+        //get values from loginActivity
+        val bundle = intent.extras
+        if(intent.extras != null) {
+            username = bundle.get("userName") as String
+            password = bundle.get("userPassword") as String
+            User.logIn(username, password, this)
+        }
+
 
         lists = UsersListItemsHandler.get().lists
         listPicker = findViewById(R.id.activity_main_discreteScrollView)

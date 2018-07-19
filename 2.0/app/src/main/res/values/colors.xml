@@ -72,5 +72,7 @@
 
     <color name="colorTransparent">#00ff4081</color>
 
+    <color name="colorGray">#378f8f8f</color>
+    <color name="colorGrayLight">#c4c4c4</color>
 
 </resources>
