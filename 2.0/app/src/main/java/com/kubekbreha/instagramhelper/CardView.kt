@@ -63,7 +63,7 @@ class CardView : LinearLayout {
         super.onDraw(canvas)
     }
 
-    fun setForecast(oneList: ListItem) {
+    fun setForecast(oneList: UsersListItem) {
         val gradient = oneList.gradient
         currentGradient = getGradient(gradient)
         if (width != 0 && height != 0) {
@@ -75,7 +75,7 @@ class CardView : LinearLayout {
 
     }
 
-    fun onScroll(fraction: Float, oldF: ListItem, newF: ListItem) {
+    fun onScroll(fraction: Float, oldF: UsersListItem, newF: UsersListItem) {
         currentGradient = mix(fraction,
                 getGradient(newF.gradient),
                 getGradient(oldF.gradient))

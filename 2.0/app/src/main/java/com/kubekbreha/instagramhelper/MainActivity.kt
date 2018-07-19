@@ -11,7 +11,7 @@ import com.kubekbreha.instagramhelper.discretescrollview.transform.ScaleTransfor
 
 class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<CardAdapter.ViewHolder>, DiscreteScrollView.OnItemChangedListener<CardAdapter.ViewHolder> {
 
-    private var lists: List<ListItem>? = null
+    private var lists: List<UsersListItem>? = null
 
     private var cardListVIew: CardView? = null
     private var listPicker: DiscreteScrollView? = null
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
         cardListVIew = findViewById(R.id.activity_main_cardView)
 
-        lists = UsersList.get().forecasts
+        lists = UsersListItemsHandler.get().lists
         listPicker = findViewById(R.id.activity_main_discreteScrollView)
         listPicker!!.setSlideOnFling(true)
         listPicker!!.adapter = CardAdapter(lists!!)

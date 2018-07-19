@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class CardAdapter(private val data: List<ListItem>) : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
+class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
     private var parentRecycler: RecyclerView? = null
 
