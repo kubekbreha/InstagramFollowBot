@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <com.kubekbreha.instagramhelper.CardView
-            android:id="@+id/forecast_view"
+            android:id="@+id/activity_main_cardView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -20,13 +20,14 @@
     </LinearLayout>
 
     <com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
-        android:id="@+id/forecast_city_picker"
+        android:id="@+id/activity_main_discreteScrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_marginBottom="32dp" />
 
     <ImageButton
+        android:id="@+id/activity_main_settings_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="end"

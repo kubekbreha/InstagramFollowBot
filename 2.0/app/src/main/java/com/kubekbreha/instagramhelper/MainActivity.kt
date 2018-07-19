@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 
-        cardListVIew = findViewById(R.id.forecast_view)
+        cardListVIew = findViewById(R.id.activity_main_cardView)
 
         lists = UsersList.get().forecasts
-        listPicker = findViewById(R.id.forecast_city_picker)
+        listPicker = findViewById(R.id.activity_main_discreteScrollView)
         listPicker!!.setSlideOnFling(true)
         listPicker!!.adapter = CardAdapter(lists!!)
         listPicker!!.addOnItemChangedListener(this)
