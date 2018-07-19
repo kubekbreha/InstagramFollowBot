@@ -50,5 +50,8 @@ dependencies {
     //instagram4android
     implementation 'com.github.charlieAndroidDev:Instagram4Android:0.2.7'
 
+    //anko
+    implementation 'org.jetbrains.anko:anko-commons:0.10.5'
+    implementation 'org.jetbrains.anko:anko-design:0.10.5'
 
 }

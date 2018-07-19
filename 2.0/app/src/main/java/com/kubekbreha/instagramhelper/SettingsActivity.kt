@@ -3,6 +3,8 @@ package com.kubekbreha.instagramhelper
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import com.kubekbreha.instagrambot.loginActivity.User
+import org.jetbrains.anko.toast
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -12,6 +14,10 @@ class SettingsActivity : AppCompatActivity() {
 
         //set fullscreen activity
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+
+        if (User.getUser().isLoggedIn) {
+            toast(User.getAccessToken().toString()).show()
+        }
     }
 
     override fun onBackPressed() {

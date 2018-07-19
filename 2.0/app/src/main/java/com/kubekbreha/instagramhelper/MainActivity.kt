@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
             User.logIn(username, password, this)
         }
 
-
         lists = UsersListItemsHandler.get().lists
         listPicker = findViewById(R.id.activity_main_discreteScrollView)
         listPicker!!.setSlideOnFling(true)
@@ -61,6 +60,10 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        activity_main_user_name.text = User.getUser().username
+    }
 
     override fun onClick(p0: View?) {
         when(p0) {

@@ -4,8 +4,10 @@ import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import com.kubekbreha.instagramhelper.LoginActivity
 import dev.niekirk.com.instagram4android.Instagram4Android
+import org.jetbrains.anko.toast
 
 class User {
     companion object {
@@ -26,12 +28,12 @@ class User {
                     e.printStackTrace()
                 } finally {
                     progress.dismiss()
-                    if(!getUser().isLoggedIn){
+                    if (!getUser().isLoggedIn) {
                         val intent = Intent(context, LoginActivity::class.java)
                         context.startActivity(intent)
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                         (context).finish()
-                    }else{
+                    } else {
                         val editor = context.getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
                         editor.putString("username", username)
                         editor.putString("password", password)
@@ -46,7 +48,6 @@ class User {
         fun getUser(): Instagram4Android {
             return instagramUser
         }
-
 
     }
 }
