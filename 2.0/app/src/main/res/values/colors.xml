@@ -69,4 +69,8 @@
         <item>@color/gradientClear_c3</item>
     </array>
 
+
+    <color name="colorTransparent">#00ff4081</color>
+
+
 </resources>

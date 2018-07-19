@@ -22,15 +22,14 @@ class CardView : LinearLayout {
 
     private var evaluator: ArgbEvaluator? = null
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) {}
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
 
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {}
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes) {
-    }
+    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
 
     init {
         evaluator = ArgbEvaluator()
@@ -89,12 +88,12 @@ class CardView : LinearLayout {
     }
 
     private fun getGradient(number: Int): IntArray {
-        when (number) {
-            0 -> return colors(R.array.gradientPeriodicClouds)
-            1 -> return colors(R.array.gradientCloudy)
-            2 -> return colors(R.array.gradientMostlyCloudy)
-            3 -> return colors(R.array.gradientPartlyCloudy)
-            4 -> return colors(R.array.gradientClear)
+        return when (number) {
+            0 -> colors(R.array.gradientPeriodicClouds)
+            1 -> colors(R.array.gradientCloudy)
+            2 -> colors(R.array.gradientMostlyCloudy)
+            3 -> colors(R.array.gradientPartlyCloudy)
+            4 -> colors(R.array.gradientClear)
             else -> throw IllegalArgumentException()
         }
     }
