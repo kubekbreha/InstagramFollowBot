@@ -9,7 +9,7 @@
     android:focusableInTouchMode="true">
 
 
-    <EditText
+    <com.kubekbreha.instagramhelper.PrefixEditText
         android:id="@+id/activity_add_list_editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
