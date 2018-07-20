@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewActivity">
+    tools:context=".AddNewActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/activity_add_list_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="listName"
+        android:inputType="textPersonName"
+        android:tag="#"
+        android:textColorHint="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/activity_add_list_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/activity_add_list_editText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_add_list_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/activity_add_list_button"
+        android:layout_marginTop="72dp">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/add_activity_comment_empty_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp">
+
+        <TextView
+            android:id="@+id/add_activity_comment_empty_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new list of users."
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/activity_add_list_floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_add_white_24dp"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>
