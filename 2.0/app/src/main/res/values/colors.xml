@@ -59,9 +59,9 @@
         <item>@color/gradientPartlyCloudy_c3</item>
     </array>
 
-    <color name="gradientClear_c1">#6d4fbe</color>
+    <color name="gradientClear_c1">#5b5b5b</color>
     <color name="gradientClear_c2">#6c56be</color>
-    <color name="gradientClear_c3">#a189f1</color>
+    <color name="gradientClear_c3">#262626</color>
 
     <array name="gradientClear">
         <item>@color/gradientClear_c1</item>

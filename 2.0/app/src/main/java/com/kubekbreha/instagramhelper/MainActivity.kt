@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         if (holder != null) {
             cardListVIew!!.setGradientView(lists!![position])
             holder.showText()
+
         }
     }
 

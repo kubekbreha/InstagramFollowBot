@@ -36,11 +36,8 @@ class CardView : LinearLayout {
 
         gradientPaint = Paint(Paint.ANTI_ALIAS_FLAG)
         setWillNotDraw(false)
-
-        orientation = LinearLayout.VERTICAL
-        gravity = Gravity.CENTER_HORIZONTAL
-
     }
+
 
     private fun initGradient() {
         val centerX = width * 0.5f

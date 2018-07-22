@@ -1,9 +1,11 @@
 package com.kubekbreha.instagramhelper
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import org.jetbrains.anko.toast
 
 class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<CardAdapter.ViewHolder>() {
 
@@ -44,7 +46,8 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
         }
 
         override fun onClick(v: View) {
-            parentRecycler!!.smoothScrollToPosition(adapterPosition)
+            itemView.context.toast(adapterPosition.toString())
+//            parentRecycler!!.smoothScrollToPosition(adapterPosition)
         }
     }
 }
