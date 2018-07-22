@@ -63,6 +63,8 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
     override fun onResume() {
         super.onResume()
         activity_main_user_name.text = User.getUser().username
+        activity_main_user_name.text = User.getUser().username
+        activity_main_user_name.text = User.getUser().username
     }
 
     override fun onClick(p0: View?) {
