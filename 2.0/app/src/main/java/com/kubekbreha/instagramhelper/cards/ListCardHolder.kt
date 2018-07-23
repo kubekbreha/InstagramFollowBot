@@ -11,13 +11,6 @@ class ListCardHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.O
         itemView.findViewById<View>(R.id.item_card_container).setOnClickListener(this)
     }
 
-    fun showText() {
-
-    }
-
-    fun hideText() {
-
-    }
 
     override fun onClick(v: View) {
         itemView.context.toast(adapterPosition.toString())
