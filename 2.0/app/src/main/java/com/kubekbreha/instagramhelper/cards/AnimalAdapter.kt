@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.user_in_list.view.*
 class AnimalAdapter(val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvAnimalType?.text = items.get(position)
+        holder.userName?.text = items.get(position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,5 +27,5 @@ class AnimalAdapter(val items : ArrayList<String>, val context: Context) : Recyc
 
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     // Holds the TextView that will add each animal to
-    val tvAnimalType = view.user_in_list_name
+    val userName = view.user_in_list_name
 }

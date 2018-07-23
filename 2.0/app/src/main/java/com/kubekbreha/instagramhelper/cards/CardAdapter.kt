@@ -23,12 +23,8 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-
         val inflater = LayoutInflater.from(parent.context)
         val v: View
-
-        Log.e("wtf22222", viewType.toString())
-
 
         return if (viewType == UsersListItem.ADD_NEW_TYPE) {
             v = inflater.inflate(R.layout.item_card, parent, false)
@@ -42,20 +38,13 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        Log.e("wtf", holder.javaClass.toString())
-
         val `object` = data[position]
         when (`object`.type) {
 
-
-
             UsersListItem.ADD_NEW_TYPE -> {
-
                 (holder as AddCardHolder).layoutAdd.visibility = View.VISIBLE
                 holder.addButton.setOnClickListener{
                     val intent = Intent(holder.addButton.context, AddNewActivity::class.java)
-                    holder.addButton.context.startActivity(intent)
-                    holder.addButton.context.startActivity(intent)
                     val activity = holder.addButton.context as Activity
                     activity.startActivity(intent)
                     activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
@@ -64,14 +53,10 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
 
             UsersListItem.PEOPLE_LIST_TYPE -> {
                 (holder as ListCardHolder).layoutList.visibility = View.VISIBLE
-
                 addUsers()
                 holder.listView.layoutManager = LinearLayoutManager(holder.listView.context)
                 holder.listView.adapter = AnimalAdapter(users, holder.listView.context)
-
-
             }
-
 
         }
     }
