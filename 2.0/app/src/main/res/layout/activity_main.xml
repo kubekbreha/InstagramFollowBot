@@ -56,5 +56,49 @@
         android:layout_marginStart="132dp"
         android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/activity_main_user_followers_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="followers"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="132dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/activity_main_user_followers_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="104dp"
+        android:layout_marginStart="132dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/activity_main_user_following_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="following"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="240dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/activity_main_user_following_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:layout_marginTop="104dp"
+        android:layout_marginStart="240dp"
+        android:textStyle="bold"/>
+
 
 </FrameLayout>
