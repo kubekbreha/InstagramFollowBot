@@ -8,7 +8,30 @@
     android:layout_margin="4dp">
 
     <RelativeLayout
-        android:id="@+id/item_card_container"
+        android:id="@+id/item_card_container_list"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="4dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/item_card_users_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/item_card_container_add"
         android:layout_width="match_parent"
         android:visibility="gone"
         android:layout_height="match_parent"
@@ -27,10 +50,6 @@
             android:layout_centerVertical="true"
             android:src="@drawable/ic_add_black_24dp"
             android:background="@color/colorTransparent"/>
-
-
-
-
     </RelativeLayout>
 
 

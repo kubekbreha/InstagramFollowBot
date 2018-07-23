@@ -1,23 +1,21 @@
 package com.kubekbreha.instagramhelper.cards
 
 import android.content.Intent
-import android.media.MediaPlayer
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import com.kubekbreha.instagramhelper.MainActivity
 import com.kubekbreha.instagramhelper.R
-import android.support.v4.content.ContextCompat.startActivity
 import android.app.Activity
+import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.kubekbreha.instagramhelper.AddNewActivity
 
 
 class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var parentRecycler: RecyclerView? = null
+    val users: ArrayList<String> = ArrayList()
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
@@ -29,28 +27,32 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
         val inflater = LayoutInflater.from(parent.context)
         val v: View
 
-        when (viewType) {
-            UsersListItem.ADD_NEW_TYPE -> {
-                v = inflater.inflate(R.layout.item_card, parent, false)
-                return AddCardHolder(v)
-            }
-            UsersListItem.PEOPLE_LIST_TYPE -> {
-                v = inflater.inflate(R.layout.item_card, parent, false)
-                return ListCardHolder(v)
-            }
+        Log.e("wtf22222", viewType.toString())
+
+
+        return if (viewType == UsersListItem.ADD_NEW_TYPE) {
+            v = inflater.inflate(R.layout.item_card, parent, false)
+            AddCardHolder(v)
+        } else {
+            v = inflater.inflate(R.layout.item_card, parent, false)
+            ListCardHolder(v)
         }
 
-        v = inflater.inflate(R.layout.item_card, parent, false)
-        return AddCardHolder(v)
+
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        Log.e("wtf", holder.javaClass.toString())
 
         val `object` = data[position]
         when (`object`.type) {
-            UsersListItem.ADD_NEW_TYPE -> {
 
-                (holder as AddCardHolder).layout.visibility = View.VISIBLE
+
+
+            UsersListItem.PEOPLE_LIST_TYPE -> {
+
+
+                (holder as AddCardHolder).layoutAdd.visibility = View.VISIBLE
                 holder.addButton.setOnClickListener{
                     val intent = Intent(holder.addButton.context, AddNewActivity::class.java)
                     holder.addButton.context.startActivity(intent)
@@ -59,15 +61,41 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
                     activity.startActivity(intent)
                     activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 }
+            }
+
+            UsersListItem.ADD_NEW_TYPE -> {
+                (holder as ListCardHolder).layoutList.visibility = View.VISIBLE
+
+                addUsers()
+                holder.listView.layoutManager = LinearLayoutManager(holder.listView.context)
+                holder.listView.adapter = AnimalAdapter(users, holder.listView.context)
+
 
             }
+
 
         }
     }
 
 
+    fun addUsers() {
+        users.add("dog")
+        users.add("cat")
+        users.add("owl")
+        users.add("cheetah")
+        users.add("bird")
+        users.add("snake")
+        users.add("lizard")
+        users.add("hamster")
+    }
 
-
+    override fun getItemViewType(position: Int): Int {
+        return when (data[position].type) {
+            0 -> UsersListItem.ADD_NEW_TYPE
+            1 -> UsersListItem.PEOPLE_LIST_TYPE
+            else -> -1
+        }
+    }
 
     override fun getItemCount(): Int {
         return data.size
