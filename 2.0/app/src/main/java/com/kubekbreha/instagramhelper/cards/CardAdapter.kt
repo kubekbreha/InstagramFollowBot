@@ -50,7 +50,7 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
         when (`object`.type) {
             UsersListItem.ADD_NEW_TYPE -> {
 
-                (holder as AddCardHolder).addButton.visibility = View.VISIBLE
+                (holder as AddCardHolder).layout.visibility = View.VISIBLE
                 holder.addButton.setOnClickListener{
                     val intent = Intent(holder.addButton.context, AddNewActivity::class.java)
                     holder.addButton.context.startActivity(intent)
