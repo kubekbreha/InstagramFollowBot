@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import com.kubekbreha.instagramhelper.LoginActivity
+import com.kubekbreha.instagramhelper.MainActivity
 import dev.niekirk.com.instagram4android.Instagram4Android
 import org.jetbrains.anko.toast
 
@@ -34,10 +35,10 @@ class User {
                         (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                         (context).finish()
                     } else {
-                        val editor = context.getSharedPreferences("instagrambot_login", Context.MODE_PRIVATE).edit()
-                        editor.putString("username", username)
-                        editor.putString("password", password)
-                        editor.apply()
+                        val intent = Intent(context, MainActivity::class.java)
+                        context.startActivity(intent)
+                        (context as Activity).overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+                        (context).finish()
                     }
                 }
             })

@@ -48,17 +48,9 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         followersCount = findViewById(R.id.activity_main_user_followers_count)
         followingCount = findViewById(R.id.activity_main_user_following_count)
 
+
         //settings button
         activity_main_settings_button.setOnClickListener(this)
-
-        //get values from loginActivity
-        val bundle = intent.extras
-        if (intent.extras != null) {
-            username = bundle.get("userName") as String
-            password = bundle.get("userPassword") as String
-            User.logIn(username, password, this)
-           
-        }
 
 
         lists = UsersListItemsHandler.get().lists
@@ -81,8 +73,8 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
     override fun onResume() {
         super.onResume()
         activity_main_user_name.text = User.getUser().username
-        activity_main_user_name.text = User.getUser().username
-        activity_main_user_name.text = User.getUser().username
+        getFollowingCout()
+        getFollowersCout()
     }
 
     override fun onClick(p0: View?) {
