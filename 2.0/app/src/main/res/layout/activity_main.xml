@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.kubekbreha.instagramhelper.CardView
+        <com.kubekbreha.instagramhelper.cards.CardView
             android:id="@+id/activity_main_cardView"
             android:layout_width="match_parent"
             android:layout_height="0dp"

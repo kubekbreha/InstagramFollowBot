@@ -1,4 +1,4 @@
-package com.kubekbreha.instagramhelper
+package com.kubekbreha.instagramhelper.cards
 
 import android.animation.ArgbEvaluator
 import android.content.Context
@@ -10,8 +10,8 @@ import android.os.Build
 import android.support.annotation.ArrayRes
 import android.support.annotation.RequiresApi
 import android.util.AttributeSet
-import android.view.Gravity
 import android.widget.LinearLayout
+import com.kubekbreha.instagramhelper.R
 
 
 class CardView : LinearLayout {
@@ -19,13 +19,10 @@ class CardView : LinearLayout {
     private var gradientPaint: Paint? = null
     private var currentGradient: IntArray? = null
 
-
     private var evaluator: ArgbEvaluator? = null
 
     constructor(context: Context) : super(context)
-
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs)
-
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -68,8 +65,6 @@ class CardView : LinearLayout {
         }
 
         invalidate()
-
-
     }
 
     fun onScroll(fraction: Float, oldF: UsersListItem, newF: UsersListItem) {

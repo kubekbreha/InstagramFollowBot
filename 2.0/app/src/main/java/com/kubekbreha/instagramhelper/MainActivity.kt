@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
 import com.kubekbreha.instagrambot.loginActivity.User
+import com.kubekbreha.instagramhelper.cards.CardAdapter
+import com.kubekbreha.instagramhelper.cards.CardView
+import com.kubekbreha.instagramhelper.cards.UsersListItem
 
 
 import com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
@@ -49,7 +52,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         listPicker!!.adapter = CardAdapter(lists!!)
         listPicker!!.addOnItemChangedListener(this)
         listPicker!!.addScrollStateChangeListener(this)
-        listPicker!!.scrollToPosition(2)
+        listPicker!!.scrollToPosition(0)
         listPicker!!.setItemTransitionTimeMillis(300)
         listPicker!!.setItemTransformer(ScaleTransformer.Builder()
                 .setMinScale(0.8f)
