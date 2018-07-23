@@ -3,12 +3,14 @@ package com.kubekbreha.instagramhelper
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.WindowManager
 import com.kubekbreha.instagrambot.loginActivity.User
 import com.kubekbreha.instagramhelper.cards.CardAdapter
 import com.kubekbreha.instagramhelper.cards.CardView
 import com.kubekbreha.instagramhelper.cards.UsersListItem
+import com.kubekbreha.instagramhelper.cards.UsersListItemsHandler
 
 
 import com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
@@ -16,8 +18,8 @@ import com.kubekbreha.instagramhelper.discretescrollview.transform.ScaleTransfor
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<CardAdapter.ViewHolder>,
-        DiscreteScrollView.OnItemChangedListener<CardAdapter.ViewHolder>,
+class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeListener<RecyclerView.ViewHolder>,
+        DiscreteScrollView.OnItemChangedListener<RecyclerView.ViewHolder>,
         View.OnClickListener {
 
     private lateinit var username: String
@@ -80,24 +82,18 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         }
     }
 
-    override fun onCurrentItemChanged(holder: CardAdapter.ViewHolder?, position: Int) {
+    override fun onCurrentItemChanged(holder: RecyclerView.ViewHolder?, position: Int) {
         //viewHolder will never be null, because we never remove items from adapter's list
         if (holder != null) {
             cardListVIew!!.setGradientView(lists!![position])
-            holder.showText()
 
         }
     }
 
-    override fun onScrollStart(holder: CardAdapter.ViewHolder, position: Int) {
-        holder.hideText()
+    override fun onScrollStart(holder: RecyclerView.ViewHolder, position: Int) {
     }
 
-    override fun onScroll(
-            position: Float,
-            currentIndex: Int, newIndex: Int,
-            currentHolder: CardAdapter.ViewHolder?,
-            newHolder: CardAdapter.ViewHolder?) {
+    override fun onScroll(position: Float, currentIndex: Int, newIndex: Int, currentHolder: RecyclerView.ViewHolder?, newHolder: RecyclerView.ViewHolder?) {
         val current = lists!![currentIndex]
         if (newIndex >= 0 && newIndex < listPicker!!.adapter.itemCount) {
             val next = lists!![newIndex]
@@ -106,7 +102,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
     }
 
 
-    override fun onScrollEnd(holder: CardAdapter.ViewHolder, position: Int) {
+    override fun onScrollEnd(holder: RecyclerView.ViewHolder, position: Int) {
 
     }
 }

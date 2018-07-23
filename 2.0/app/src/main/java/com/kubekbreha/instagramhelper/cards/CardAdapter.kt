@@ -12,7 +12,7 @@ import com.kubekbreha.instagramhelper.MainActivity
 import com.kubekbreha.instagramhelper.R
 import android.support.v4.content.ContextCompat.startActivity
 import android.app.Activity
-
+import com.kubekbreha.instagramhelper.AddNewActivity
 
 
 class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -50,11 +50,12 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
         when (`object`.type) {
             UsersListItem.ADD_NEW_TYPE -> {
 
-                (holder as ImageButton).setOnClickListener{
-                    val intent = Intent(holder.context, MainActivity::class.java)
-                    holder.context.startActivity(intent)
-                    holder.context.startActivity(intent)
-                    val activity = holder.context as Activity
+                (holder as AddCardHolder).addButton.visibility = View.VISIBLE
+                holder.addButton.setOnClickListener{
+                    val intent = Intent(holder.addButton.context, AddNewActivity::class.java)
+                    holder.addButton.context.startActivity(intent)
+                    holder.addButton.context.startActivity(intent)
+                    val activity = holder.addButton.context as Activity
                     activity.startActivity(intent)
                     activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 }
