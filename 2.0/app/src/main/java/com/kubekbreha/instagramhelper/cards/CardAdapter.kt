@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import com.kubekbreha.instagramhelper.R
 import android.app.Activity
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import com.kubekbreha.instagramhelper.AddNewActivity
 
 
@@ -53,9 +52,13 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
 
             UsersListItem.PEOPLE_LIST_TYPE -> {
                 (holder as ListCardHolder).layoutList.visibility = View.VISIBLE
+                holder.addButton.visibility = View.VISIBLE
+                holder.cardName.visibility = View.VISIBLE
+                holder.listView.visibility = View.VISIBLE
+
                 addUsers()
                 holder.listView.layoutManager = LinearLayoutManager(holder.listView.context)
-                holder.listView.adapter = AnimalAdapter(users, holder.listView.context)
+                holder.listView.adapter = ListInCardAdapter(users, holder.listView.context)
             }
 
         }
