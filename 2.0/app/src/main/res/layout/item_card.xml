@@ -60,19 +60,19 @@
     <RelativeLayout
         android:id="@+id/item_card_container_add"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:layout_margin="4dp"
         android:background="?android:selectableItemBackground"
         android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone">
+        android:focusable="true">
 
 
         <ImageButton
             android:id="@+id/item_card_add_new"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@color/colorTransparent"

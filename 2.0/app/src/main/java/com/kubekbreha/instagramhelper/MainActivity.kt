@@ -4,8 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import android.widget.TextView
 import com.kubekbreha.instagrambot.loginActivity.User
 import com.kubekbreha.instagramhelper.cards.CardAdapter
 import com.kubekbreha.instagramhelper.cards.CardView
@@ -15,6 +17,9 @@ import com.kubekbreha.instagramhelper.cards.UsersListItemsHandler
 
 import com.kubekbreha.instagramhelper.discretescrollview.DiscreteScrollView
 import com.kubekbreha.instagramhelper.discretescrollview.transform.ScaleTransformer
+import dev.niekirk.com.instagram4android.requests.InstagramGetUserFollowingRequest
+import dev.niekirk.com.instagram4android.requests.InstagramSearchUsernameRequest
+import dev.niekirk.com.instagram4android.requests.payload.InstagramUser
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -24,6 +29,9 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
     private lateinit var username: String
     private lateinit var password: String
+
+    private lateinit var followersCount: TextView
+    private lateinit var followingCount: TextView
 
     private var lists: List<UsersListItem>? = null
 
@@ -37,16 +45,21 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         //set fullscreen activity
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
 
+        followersCount = findViewById(R.id.activity_main_user_followers_count)
+        followingCount = findViewById(R.id.activity_main_user_following_count)
+
         //settings button
         activity_main_settings_button.setOnClickListener(this)
 
         //get values from loginActivity
         val bundle = intent.extras
-        if(intent.extras != null) {
+        if (intent.extras != null) {
             username = bundle.get("userName") as String
             password = bundle.get("userPassword") as String
             User.logIn(username, password, this)
+           
         }
+
 
         lists = UsersListItemsHandler.get().lists
         listPicker = findViewById(R.id.activity_main_discreteScrollView)
@@ -73,7 +86,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
     }
 
     override fun onClick(p0: View?) {
-        when(p0) {
+        when (p0) {
             activity_main_settings_button -> {
                 val intent = Intent(this, SettingsActivity::class.java)
                 startActivity(intent)
@@ -104,5 +117,35 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
 
     override fun onScrollEnd(holder: RecyclerView.ViewHolder, position: Int) {
 
+    }
+
+
+    private fun getFollowersCout(){
+        var instaUser: InstagramUser? = null
+        val thread = Thread(Runnable {
+            try {
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(User.instagramUser.username))
+                instaUser = result.getUser()
+                followersCount.text = instaUser!!.getFollower_count().toString()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
+    }
+
+
+    private fun getFollowingCout() {
+        var instaUser: InstagramUser? = null
+        val thread = Thread(Runnable {
+            try {
+                val result = User.getUser().sendRequest(InstagramSearchUsernameRequest(User.instagramUser.username))
+                instaUser = result.getUser()
+                followingCount.text = instaUser!!.getFollowing_count().toString()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        })
+        thread.start()
     }
 }
