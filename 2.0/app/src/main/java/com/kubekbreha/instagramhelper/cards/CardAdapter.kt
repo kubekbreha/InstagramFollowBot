@@ -49,8 +49,7 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
 
 
 
-            UsersListItem.PEOPLE_LIST_TYPE -> {
-
+            UsersListItem.ADD_NEW_TYPE -> {
 
                 (holder as AddCardHolder).layoutAdd.visibility = View.VISIBLE
                 holder.addButton.setOnClickListener{
@@ -63,7 +62,7 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
                 }
             }
 
-            UsersListItem.ADD_NEW_TYPE -> {
+            UsersListItem.PEOPLE_LIST_TYPE -> {
                 (holder as ListCardHolder).layoutList.visibility = View.VISIBLE
 
                 addUsers()
