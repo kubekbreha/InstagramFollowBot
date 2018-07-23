@@ -3,8 +3,6 @@ package com.kubekbreha.instagramhelper
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.WindowManager
-import android.graphics.drawable.AnimationDrawable
-import kotlinx.android.synthetic.main.activity_login.*
 
 
 class AddNewActivity : AppCompatActivity() {
@@ -16,12 +14,6 @@ class AddNewActivity : AppCompatActivity() {
 
         //hide status bar
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-
-
-        val animationDrawable = activity_login_root_layout.background as AnimationDrawable
-        animationDrawable.setEnterFadeDuration(2000)
-        animationDrawable.setExitFadeDuration(4000)
-        animationDrawable.start()
 
     }
 
