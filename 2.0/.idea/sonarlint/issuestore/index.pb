@@ -95,3 +95,9 @@ w
 Gapp/src/main/java/com/kubekbreha/instagramhelper/cards/AddCardHolder.kt,4/c/4c4b8b1c415cd4999ad233020c3011ab9ccc1678
 x
 Happ/src/main/java/com/kubekbreha/instagramhelper/cards/ListCardHolder.kt,8/2/82186ea0690d8906864aab171987ef38d64c8098
+~
+Napp/src/main/java/com/kubekbreha/instagramhelper/cards/ItemInCardViewHolder.kt,0/1/0159a2878cee543d1cf8c1de1d17b6b117d3df8a
+{
+Kapp/src/main/java/com/kubekbreha/instagramhelper/cards/ListInCardAdapter.kt,f/4/f45d75929e23b33aad8df4d681e1d18b4e8008a2
+H
+app/google-services.json,f/d/fd8d34b142d02ec743a8efefefd2c097961666e9
