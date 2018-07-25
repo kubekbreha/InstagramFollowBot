@@ -56,7 +56,7 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
                 holder.cardName.visibility = View.VISIBLE
                 holder.listView.visibility = View.VISIBLE
 
-                addUsers()
+//                addUsers()
                 holder.listView.layoutManager = LinearLayoutManager(holder.listView.context)
                 holder.listView.adapter = ListInCardAdapter(users, holder.listView.context)
             }
@@ -65,16 +65,8 @@ class CardAdapter(private val data: List<UsersListItem>) : RecyclerView.Adapter<
     }
 
 
-    fun addUsers() {
-        users.add("dog")
-        users.add("cat")
-        users.add("owl")
-        users.add("cheetah")
-        users.add("bird")
-        users.add("snake")
-        users.add("lizard")
-        users.add("hamster")
-    }
+
+
 
     override fun getItemViewType(position: Int): Int {
         return when (data[position].type) {

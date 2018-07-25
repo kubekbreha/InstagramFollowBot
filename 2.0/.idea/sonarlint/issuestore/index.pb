@@ -81,8 +81,6 @@ r
 Bapp/src/main/java/com/kubekbreha/instagramhelper/AddNewActivity.kt,c/5/c53b4f4096debce6aa21ee867e3b082655de60d7
 X
 (app/src/main/res/layout/user_in_list.xml,2/1/2175c91e934cde4bb6e60f82d2cf92f10d8e32fa
-w
-Gapp/src/main/java/com/kubekbreha/instagramhelper/cards/AnimalAdapter.kt,e/d/edc1ff37a0723b75bf1fe573b7e6a970bd2c18dd
 
 Oapp/src/main/java/com/kubekbreha/instagramhelper/cards/UsersListItemsHandler.kt,1/5/15f15279c931af6961174ad76b989a1932ba31a3
 u
