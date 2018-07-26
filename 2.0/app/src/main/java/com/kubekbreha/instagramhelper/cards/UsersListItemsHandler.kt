@@ -1,24 +1,37 @@
 package com.kubekbreha.instagramhelper.cards
 
-import java.util.Arrays
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.kubekbreha.instagrambot.loginActivity.User
 
 
-class UsersListItemsHandler private constructor() {
+class UsersListItemsHandler(listName: String) {
 
-    val lists: List<UsersListItem>
-        get() = Arrays.asList(
-                UsersListItem( 1,"0", 0),
-                UsersListItem(1, "1", 1),
-                UsersListItem(1, "2", 2),
-                UsersListItem(1, "3", 3),
-                UsersListItem(0, "4", 4))
+    var mDatabase: DatabaseReference? = null
+    var lists: MutableList<UsersListItem>? = null
 
 
+    init {
+        lists = mutableListOf()
+        mDatabase = FirebaseDatabase.getInstance().reference
+        lists!!.add(UsersListItem(0, "addNew", 2))
+    }
 
 
-    companion object {
-        fun get(): UsersListItemsHandler {
-            return UsersListItemsHandler()
-        }
+    fun addToCardLists(type: Int, listName: String, gradient: Int) {
+        lists!!.add(0,UsersListItem(type,listName, gradient))
+    }
+
+    fun addCardToDatabase(type: Int, listName: String, gradient: Int) {
+        val userItem = UsersListItem(type,listName, gradient)
+        mDatabase!!.child(User.instagramUser.username).child(listName).setValue(userItem)
+    }
+
+    fun getCardsFromDatabase(){
+
+    }
+
+    fun getCardsList(): MutableList<UsersListItem>? {
+        return lists
     }
 }

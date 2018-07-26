@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), DiscreteScrollView.ScrollStateChangeLi
         activity_main_settings_button.setOnClickListener(this)
 
 
-        lists = UsersListItemsHandler.get().lists
+        lists = UsersListItemsHandler("test").getCardsList()
         listPicker = findViewById(R.id.activity_main_discreteScrollView)
         listPicker!!.setSlideOnFling(true)
         listPicker!!.adapter = CardAdapter(lists!!)
